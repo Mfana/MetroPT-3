@@ -1,13 +1,13 @@
-reference windows 219405 median 0.103 p95 0.278
-{'failure': 'apr18', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.008, 'reference_share_at_or_above': 0.9852}
-{'failure': 'apr18', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.013}
-{'failure': 'apr18', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.019}
-{'failure': 'may29', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.133, 'reference_share_at_or_above': 0.2096}
-{'failure': 'may29', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.102}
-{'failure': 'may29', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.114}
-{'failure': 'jun05', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.142, 'reference_share_at_or_above': 0.1703}
-{'failure': 'jun05', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.111}
-{'failure': 'jun05', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.095}
-{'failure': 'jul15', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.483, 'reference_share_at_or_above': 0.0387}
-{'failure': 'jul15', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.516}
-{'failure': 'jul15', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.6}
+reference windows 219405 median 0.112 p95 0.286
+{'failure': 'apr18', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.2043, 'reference_share_at_or_above': 0.0798}
+{'failure': 'apr18', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.2087}
+{'failure': 'apr18', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.2149}
+{'failure': 'may29', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.1452, 'reference_share_at_or_above': 0.2172}
+{'failure': 'may29', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.1124}
+{'failure': 'may29', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.1177}
+{'failure': 'jun05', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.1448, 'reference_share_at_or_above': 0.2186}
+{'failure': 'jun05', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.1168}
+{'failure': 'jun05', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.1079}
+{'failure': 'jul15', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.4978, 'reference_share_at_or_above': 0.0385}
+{'failure': 'jul15', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.5354}
+{'failure': 'jul15', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.6302}

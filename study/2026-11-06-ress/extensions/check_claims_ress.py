@@ -108,9 +108,9 @@ c+=[("C85","Results","taking 3 of 280 to 6 of 280",f"taking {ad('seed','active')
 ("C86","Results","adds three further-seed catches, all by M6 on 5 June",f"adds {'three' if sum(r['set'].startswith('seed') for r in BD)==3 and len(BD)==3 else 'x'} further-seed catches, all by {'M6' if all(r['model']=='M6' for r in BD) else 'x'} on {'5 June' if all(r['failure']=='jun05' for r in BD) else 'x'}","tables/alarm-boundary.csv","all rows"),
 ("C87","Discussion","31 of the 32 catches first fired at or after",f"{sum(v>=0 for v in _v)} of the {len(_v)} catches first fired at or after","tables/gaps-shift-plus60-alarm-timing.csv","minutes_after_reported_start")]
 OL=list(csv.DictReader(open("tables/onset-load-share.csv")));ol=lambda f:next(n(r["load_share"]) for r in OL if r["failure"]==f and r["window_start"]=="-360")
-c+=[("C75","Discussion","loaded for 48\\% of the six hours",f"loaded for {100*ol('jul15'):.0f}\\% of the six hours","tables/onset-load-share.csv","jul15 -360 to 0"),
+c+=[("C75","Discussion","was 50\\% in the six hours",f"was {100*ol('jul15'):.0f}\\% in the six hours","tables/onset-load-share.csv","jul15 -360 to 0"),
 ("C76","Discussion","only 3.9\\% of those windows",f"only {100*next(n(r['reference_share_at_or_above']) for r in OL if r['failure']=='jul15' and r['window_start']=='-360'):.1f}\\% of those windows","tables/onset-load-share.csv","reference_share_at_or_above"),
-("C77","Discussion","was 1\\%, 13\\% and 14\\% before",f"was {100*ol('apr18'):.0f}\\%, {100*ol('may29'):.0f}\\% and {100*ol('jun05'):.0f}\\% before","tables/onset-load-share.csv","apr18, may29, jun05")]
+("C77","Discussion","It was 20\\%, 15\\% and 14\\% before",f"It was {100*ol('apr18'):.0f}\\%, {100*ol('may29'):.0f}\\% and {100*ol('jun05'):.0f}\\% before","tables/onset-load-share.csv","apr18, may29, jun05")]
 for r in csv.DictReader(open("provenance/literature-extracts-2026-11-07.csv")):c.append((r["claim_id"],r["manuscript_location"],r["claim_text"],r["claim_text"],"provenance/literature-extracts-2026-11-07.csv",r["source"]+": "+r["locator"]))
 sha=lambda p:hashlib.sha256(open(p,"rb").read()).hexdigest()
 bad=0;rows=[]

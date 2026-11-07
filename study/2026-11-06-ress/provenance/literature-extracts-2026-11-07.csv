@@ -14,5 +14,5 @@ L12,Related work,within 30 minutes before it,Chakri et al. 2026,Section III-H
 L13,Related work,scores 99\% of the June failure rows above the threshold and none of the July rows,Kulkarni and Digalwar 2026,Section VI-D
 L14,Discussion,5.4 hours before that failure,Kulkarni and Digalwar 2026,Section VI-D and Table E1
 L15,Discussion,early flags of 1 to 2 hours,Alhammadi et al. 2025,Section III on Test Split 4
-L16,Discussion,against a median of 10\% in report-free windows,This study,logs/onset-load-share.txt reference windows median 0.103
+L16,Discussion,against a median of 11\% in report-free windows,This study,logs/onset-load-share.txt reference windows median 0.112
 L17,Related work,54 simulated turbofan units,Basora et al. 2025,Section 3.2.1: N-CMAPSS D1 to D5; 33 development and 21 test units

@@ -14,7 +14,7 @@ d785bdf88deeea302bfb584dce1419d16765314904e6facf1bbec2977153fc54  ./study/2026-1
 bebf84aa3f72f949cb21270dd67cbe664324ae28a8249f678e47efcc73610f6b  ./study/2026-11-06-ress/extensions/build_gaps_ress.py
 d335ea3639df192ebaed367209e821b3bab078a00ffb5d702cf9dcb8c3bf8c16  ./study/2026-11-06-ress/extensions/build_ress.py
 42c5f072964a5eb2f4974e96bf0b368eabe7aa164c2789984caaa43c8cb603e4  ./study/2026-11-06-ress/extensions/build_tables.py
-69f35b11148e1b6c4ad5007a41920f754ee6296eecb99961e3a95e8ed7fba23a  ./study/2026-11-06-ress/extensions/check_claims_ress.py
+2e4a9d5c20402d45295bbf42d0dd56d04c006e01cf7547be198c9a901dfe22d5  ./study/2026-11-06-ress/extensions/check_claims_ress.py
 563dcc0a52046cbfa2c651a8aa307965486b9023a9f32eab783ea6b4d5502bb0  ./study/2026-11-06-ress/extensions/event_study.py
 80967adb36416449398d58e62f1c733b3c16c54b841f86412eee3662d0c09ab6  ./study/2026-11-06-ress/extensions/extra16.py
 507a84d3cfc96849491b9db040e897e2ccd62acd3b18833aa73af0fb46f1e9f6  ./study/2026-11-06-ress/extensions/extra16_tables.py
@@ -23,7 +23,7 @@ d335ea3639df192ebaed367209e821b3bab078a00ffb5d702cf9dcb8c3bf8c16  ./study/2026-1
 11f8e1da07724ee5f62a3af31764a8e6b4b42c318f74a6817afbfb6f1e7791aa  ./study/2026-11-06-ress/extensions/gaps_oracle.py
 68b5878ec0878cf1bf45cf0c5ee407a0bc07fb42ac5ab84b6703d6d1145c3be1  ./study/2026-11-06-ress/extensions/gaps_tables.py
 692e3233b8768207b1bb7fdcda3a68b220c794a796e8babec15361d179b43667  ./study/2026-11-06-ress/extensions/leakage_demo.py
-f715c2782a969a5aa858d0537088b52115979da67146166f7abc46f88f7f4653  ./study/2026-11-06-ress/extensions/onset_load_share.py
+97594ce9953610aac07ffb48a48e8c8786bf606cc992299266bc6c6c8d30166a  ./study/2026-11-06-ress/extensions/onset_load_share.py
 f3c722ec1415728dd474110ee1dfaa66b88545756e2a4a00258b74e4e882759b  ./study/2026-11-06-ress/extensions/patch_extra16_ress.py
 d04698d0939427600510b5034a9935562b65c60ed987fb81907bcfb11c156baf  ./study/2026-11-06-ress/extensions/patch_fulltext_ress.py
 db7c60111c4e078cf60a4c656dfe77fe5860e9eaef8dd5ae6461ce4de74329fe  ./study/2026-11-06-ress/extensions/patch_literature_ress.py
@@ -78,7 +78,7 @@ d918c088712cf0f568a20b8eed7429d4609c41aff811c90095b252034f7d4bd9  ./study/2026-1
 b7ccf7578e0376d65303ce7d7b8a1e92fa640b7b84e5c8edd91a13761db3bab9  ./study/2026-11-06-ress/logs/latex-manuscript.log
 8f940cbf631c7579dec2f9a3707f4b3ad681045f364590b580a1b3e8f1f73b55  ./study/2026-11-06-ress/logs/latex-title.log
 c965563a5324d7aad5e038253d135585bfa2b34c8eefa28ee77f43847f5cffd4  ./study/2026-11-06-ress/logs/leakage-demo.txt
-929f1bbbf8530304456bcc5ddfb79fbdba85d2af59b8de461aaac5985b04a197  ./study/2026-11-06-ress/logs/onset-load-share.txt
+bdb376ee22eba0e7f6d3c6ae82dd6e8e7811ee2a36a3cbe3aa5e6a0d044d3fae  ./study/2026-11-06-ress/logs/onset-load-share.txt
 d6df61d799090d5a1336e4ab06ea81aeffa1d5da731e8d3ba84f93dd7ca23cfa  ./study/2026-11-06-ress/logs/rank-chance.txt
 dc5c381e7c89807a1256695789f25d130e11a8499a5e5dc8063ad27111161a55  ./study/2026-11-06-ress/logs/run_all.sh
 6b7786ee5555dd875f2be7068d0fca27c07601ffa62af9942dcc4baee91d5e9e  ./study/2026-11-06-ress/logs/run_gaps.sh
@@ -97,7 +97,7 @@ fafe9e456989e0a22eaa65e93a251d8e9c0c4875cfb222d0c3bb8e6553eb06cb  ./study/2026-1
 dbb5405127f72d63bfa02bc1ad816d891020a5915a00eca7a3f4c1fff40eec53  ./study/2026-11-06-ress/provenance/addendum-freeze-hashes.txt
 aece217645ac835d7ef08c3e4fdd00a86bbd2d0a9ccfc945645879958b2b2354  ./study/2026-11-06-ress/provenance/addendum-gaps-freeze-hashes.txt
 cbadecd7f5a5fdf838cc8c7fbfa05c9d6fc598d9a252c80e3935ceac92d3d8f7  ./study/2026-11-06-ress/provenance/addendum-intervals-freeze-hashes.txt
-09ef5e8ecbad4db56cef8a07f95b9aa8fb6796fd3596ddbc67d8780d22938a4d  ./study/2026-11-06-ress/provenance/deviations.md
+e2b22284933a60969cba9ef9d8171bcb3d31b89385f5f25b8983738d80261c15  ./study/2026-11-06-ress/provenance/deviations.md
 8073ebad45bc00bdf2f9a4467fb93c68398d517aef3555af4e2bdf27084ff1ac  ./study/2026-11-06-ress/provenance/event-study-config-timing.json
 9f20fb5ca2f50dbf996506de03f24f113d16b96aa75fd7d6d677d6ee1f439926  ./study/2026-11-06-ress/provenance/event-study-config.json
 d067dc7ebe2ab01b8ba05ae3509f4999faf40ae3d37ab6b54294ba76919de6e0  ./study/2026-11-06-ress/provenance/event-study-events.csv
@@ -106,7 +106,7 @@ b6408cab21e4b074874dbeccb47e43dc9dd7125a4d4673ab922017cabddc4d00  ./study/2026-1
 0f348db586b09878e33b7735c7aa92585fa90bc38fb154276ce5890f23269616  ./study/2026-11-06-ress/provenance/gaps-phases.json
 9e8da2658df7ea2dd41eb05f694b429c593230be3ee46b03b5d2d2c8c83d0122  ./study/2026-11-06-ress/provenance/initial-hashes.txt
 45b430bfad5f077cc7d04f08ef8f30e8fbaf403899da64c7865159d5daaf9f8d  ./study/2026-11-06-ress/provenance/journal-rule-comparison-2026-11-06.md
-31d6bb1921f8e1e3c7d28c6ee3e5620edd2abd58fc3c23c493a983966788991a  ./study/2026-11-06-ress/provenance/literature-extracts-2026-11-07.csv
+8661f0e16c71091ec437437a1ce47e677da351678a24ffa2e8328473f15454f3  ./study/2026-11-06-ress/provenance/literature-extracts-2026-11-07.csv
 941608073fef6d259ea2712e2c8c3f9d8b7d3a8fe093b99308f7e2772278b1ec  ./study/2026-11-06-ress/provenance/plan-freeze-hashes.txt
 f98235a91908d7e600a275e05099b1cec56caa07c65a180869312165d18a709c  ./study/2026-11-06-ress/provenance/registered-plan-addendum-alarm-defs.md
 9690c732ecd9b66af9e1f7cf32b79ce7ae1e985bbffcd1dfa68b631c2e685498  ./study/2026-11-06-ress/provenance/registered-plan-addendum-gaps.md
@@ -118,7 +118,7 @@ fc0e9d80d06a3a73d57517cb25adb3e164acf228bb32d17da26e93dd97c4a50e  ./study/2026-1
 0a68eea8ee8401763e1d9dfefe09ab2180bbdc9ba9981358d791dc3826f95fa8  ./study/2026-11-06-ress/provenance/study-frozen-draft.json
 9267e176da0e1235fa34d230a585691c2ebfee75e4738f0b8cb4d140883e4443  ./study/2026-11-06-ress/provenance/toribio2026-table1-intervals.csv
 9037dd07bdcf90664a90ddfb904304652a164c06bf10cd915e3ce43592f461e9  ./study/2026-11-06-ress/provenance/uci-events.csv
-80d08258d4eaa2c925827987e6de25e313ef32ef4e546e3aed85a09857e689b9  ./study/2026-11-06-ress/review/review-passes-ress.md
+c08c8356a135fdfdd0fe00aec5d1e310f5b6a3927414e07cda214ea8df2d6186  ./study/2026-11-06-ress/review/review-passes-ress.md
 4dcc6c2e17dd26d3fd8d783c96f2d72a5674d4c8bc9b4751ebb49c965f6b18e8  ./study/2026-11-06-ress/review/review-passes.md
 eb34b03b2e32775b43e9a319b73db83590ef70ae52681c3e2f6979be6afc1216  ./study/2026-11-06-ress/runs/bundled-default/run.json
 5751457865f04a65be6ddd94dcb2fca1b6f6d2509d3c42a3752e8cd61d6ff923  ./study/2026-11-06-ress/runs/bundled-default/test-predictions.csv
@@ -1177,7 +1177,7 @@ b785f1a333497502285b0f5a313b848b641c8846e0b12423b392118669c3af8f  ./study/2026-1
 07659d37c516a64186a1a77dc5a3b77a47cc53562ff35b8b2cd28a97f83e6c31  ./study/2026-11-06-ress/runs/seq-study/scores/E_false_alarm_after_jul16_h60_M6.csv.gz
 1f25d1f557bafe20148ccfa499ba80192bddef186cca68070ba344723f8a3b9b  ./study/2026-11-06-ress/runs/seq-study/scores/E_false_alarm_after_jul16_h720_M5.csv.gz
 6027798a66184ccfe1c6efc69c3fff330f6834c3a049466bb3ad2039d435d6ba  ./study/2026-11-06-ress/runs/seq-study/scores/E_false_alarm_after_jul16_h720_M6.csv.gz
-4db4ce1a7686619f30ccfd208ca4610bc484b8bcac0b2e42119923f8c3355e47  ./study/2026-11-06-ress/submission-ress/claim-ledger.csv
+2426fc625f5355730e43fb8cf3f55de7cdae601d7a46f6ad8003bca0c5fc31b9  ./study/2026-11-06-ress/submission-ress/claim-ledger.csv
 bb0af56efc2d9e57359dcf1fede56add614f3d2b43d86294d2ee960f5374176f  ./study/2026-11-06-ress/submission-ress/figure-data/fig1-M3.csv
 ffd2e078952b9898edeb68d8b60aa54ecf193d30f085eb772bb1b1f57c967714  ./study/2026-11-06-ress/submission-ress/figure-data/fig1-M5.csv
 4671b758c21993dd07c2faee0ef225c39a9b02d9cc64596b3008aec9d62c9403  ./study/2026-11-06-ress/submission-ress/figure-data/fig2-M5-apr18.csv
@@ -1219,7 +1219,7 @@ ea9ffaa86d172a32da5e5fa2f4a53fdda38879bbf785963a1f4eb110d5437105  ./study/2026-1
 84f6f9d50c8c435637517cd33c07f2340490ba536d262e454bb854d7545cd26e  ./study/2026-11-06-ress/tables/gaps-shift-metrics.csv
 c80697b0499dfc3208a8a4deb1650d11843c09ed6a9f949158b02838f4bfd045  ./study/2026-11-06-ress/tables/gaps-shift-plus60-alarm-timing.csv
 b86acd01c5ef42d73e7a5f0b2ad3e0b40f812e65996e5dd751a817df24d7a0c0  ./study/2026-11-06-ress/tables/gaps-shift-rules.csv
-d531c889314d059533c9fe840b69bc2e23b613a28c15503de126ba2f379da4dd  ./study/2026-11-06-ress/tables/onset-load-share.csv
+dd7b94c130a67f6d5c9264fcea3bf8ad66f1ae56efcef6e4d4b72b7717e1656f  ./study/2026-11-06-ress/tables/onset-load-share.csv
 887c8717773fb027d649633285f0bc9f07a6a02d5a6535637bb1987154ec635d  ./study/2026-11-06-ress/tables/primary-metrics.csv
 e2d12ba7c8a59b7b967577fe7649f88c8ecb10ae1d27902fd1e9c56d462d1b8f  ./study/2026-11-06-ress/tables/rule-outcomes.csv
 5a97598c985b26a0a2195089ef1b8a9db76fbb5ed588d5557d797a146d8b83f2  ./study/2026-11-06-ress/tables/seq-metrics.csv
