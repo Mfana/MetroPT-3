@@ -1,0 +1,18 @@
+claim_id,manuscript_location,claim_text,source,locator
+L1,Related work,about 36\% of which are warning windows,Guha and Datta 2026,"Table 6 TP 691 and recall 0.953 give about 725 of 2,000 windows; derived"
+L2,Related work,"from 0.89 to 0.70 at 30,000 windows",Guha and Datta 2026,Table 8 ASPIRE precision 0.889 and 0.704
+L3,Related work,median first-hit delays of at most 4.1 minutes,Teng and Gao 2026,Section 5.8
+L4,Related work,an F1 of 0.86 at 6 hours,Toribio et al. 2026,Table 6 XGBOD +6 h 0.8602
+L5,Related work,stay below 0.35 at that horizon,Toribio et al. 2026,Table 6 highest other detector +6 h 0.3493
+L6,Related work; Data,twelve,Toribio et al. 2026,Table 1 and Section 4.1: 16 intervals of which 4 company reports
+L7,Results,11 of the 26 runs away from reports fall on them,This study,logs/extra-intervals-check.txt: runs >= 30: away 26; 11 start within or just before an interval
+L8,Results,3 of the 7 of at least 4 hours,This study,logs/extra-intervals-check.txt: runs >= 240: away 7; 3
+L9,Related work,caught none of 240 positive records,Marmoucha et al. 2026,Section 4.1: LR RF LightGBM miss all 240 in the test block
+L10,Related work,XGBoost caught one,Marmoucha et al. 2026,Section 4.1: XGBoost recall 0.0042 and 239 false negatives of 240
+L11,Related work,17 to 42 minutes,Chakri et al. 2026,Section IV-D
+L12,Related work,within 30 minutes before it,Chakri et al. 2026,Section III-H
+L13,Related work,scores 99\% of the June failure rows above the threshold and none of the July rows,Kulkarni and Digalwar 2026,Section VI-D
+L14,Discussion,5.4 hours before that failure,Kulkarni and Digalwar 2026,Section VI-D and Table E1
+L15,Discussion,early flags of 1 to 2 hours,Alhammadi et al. 2025,Section III on Test Split 4
+L16,Discussion,against a median of 10\% in report-free windows,This study,logs/onset-load-share.txt reference windows median 0.103
+L17,Related work,54 simulated turbofan units,Basora et al. 2025,Section 3.2.1: N-CMAPSS D1 to D5; 33 development and 21 test units

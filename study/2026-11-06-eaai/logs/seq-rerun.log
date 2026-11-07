@@ -1,0 +1,12 @@
+tasks 10
+1 A_holdjul15 30 M5 done 02:21:48
+2 A_holdjul15 60 M5 done 02:21:48
+3 A_holdjul15 180 M5 done 02:22:50
+4 A_holdjul15 30 M6 done 02:27:10
+5 A_holdjul15 360 M5 done 02:28:10
+6 A_holdjul15 60 M6 done 02:28:12
+7 A_holdjul15 180 M6 done 02:29:10
+8 A_holdjul15 720 M5 done 02:29:12
+9 A_holdjul15 360 M6 done 02:33:04
+10 A_holdjul15 720 M6 done 02:33:37
+completed_with_gates study/2026-11-06-eaai/runs/seq-rerun-holdjul15/run.json

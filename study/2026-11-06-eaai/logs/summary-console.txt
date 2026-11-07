@@ -1,0 +1,198 @@
+rerun digests identical: True 150 status completed_with_gates
+not done: []
+grid 306960 present 252720 valid 245884
+{"30": {"scored": 234111, "positive": 120, "per_event": [30, 30, 30, 30]}, "60": {"scored": 232173, "positive": 240, "per_event": [60, 60, 60, 60]}, "180": {"scored": 226637, "positive": 720, "per_event": [180,
+
+A: fold h model | prev AP AUROC | BSS_unc BSS_platt slope_platt ece10 topgap | caught lead chance FA/day occ
+
+== A
+A_holdapr18              30 M1 prev 0.0003 AP 0.000 ROC 0.113 BSSu -0.000 BSSp 0.000 sl 0.00 ece 0.0009 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdapr18              30 M2 prev 0.0003 AP 0.000 ROC 0.007 BSSu -0.007 BSSp 0.000 sl 0.00 ece 0.0009 top 0.001 caught 0/1 lead None chance 0.005 FA/d 0.10 unsc 1
+A_holdapr18              30 M3 prev 0.0003 AP 0.000 ROC 0.532 BSSu -0.377 BSSp -0.000 sl -0.00 ece 0.0008 top 0.001 caught 0/1 lead None chance 0.029 FA/d 0.81 unsc 3
+A_holdapr18              30 M4 prev 0.0003 AP 0.001 ROC 0.741 BSSu -0.292 BSSp -0.000 sl 0.00 ece 0.0008 top 0.001 caught 0/1 lead None chance 0.007 FA/d 0.37 unsc 2
+A_holdapr18              60 M1 prev 0.0006 AP 0.000 ROC 0.061 BSSu -0.001 BSSp 0.000 sl 0.00 ece 0.0017 top 0.001 caught 0/1 lead None chance 0.004 FA/d 0.04 unsc 1
+A_holdapr18              60 M2 prev 0.0006 AP 0.000 ROC 0.005 BSSu -0.072 BSSp 0.000 sl 0.00 ece 0.0017 top 0.001 caught 0/1 lead None chance 0.002 FA/d 0.08 unsc 0
+A_holdapr18              60 M3 prev 0.0006 AP 0.000 ROC 0.233 BSSu -0.578 BSSp 0.000 sl 0.00 ece 0.0017 top 0.001 caught 0/1 lead None chance 0.036 FA/d 0.76 unsc 4
+A_holdapr18              60 M4 prev 0.0006 AP 0.001 ROC 0.582 BSSu -0.087 BSSp 0.000 sl 0.00 ece 0.0015 top 0.001 caught 0/1 lead None chance 0.002 FA/d 0.04 unsc 1
+A_holdapr18             180 M1 prev 0.0017 AP 0.001 ROC 0.052 BSSu -0.002 BSSp 0.000 sl 0.00 ece 0.0054 top 0.005 caught 0/1 lead None chance 0.044 FA/d 0.69 unsc 3
+A_holdapr18             180 M2 prev 0.0017 AP 0.001 ROC 0.015 BSSu -0.054 BSSp 0.000 sl 0.00 ece 0.0054 top 0.005 caught 0/1 lead None chance 0.002 FA/d 0.01 unsc 0
+A_holdapr18             180 M3 prev 0.0017 AP 0.001 ROC 0.065 BSSu -0.969 BSSp 0.000 sl 0.00 ece 0.0054 top 0.005 caught 0/1 lead None chance 0.114 FA/d 1.03 unsc 10
+A_holdapr18             180 M4 prev 0.0017 AP 0.001 ROC 0.428 BSSu -0.242 BSSp 0.000 sl 0.00 ece 0.0054 top 0.005 caught 0/1 lead None chance 0.04 FA/d 0.34 unsc 3
+A_holdapr18             360 M1 prev 0.0035 AP 0.002 ROC 0.035 BSSu -0.004 BSSp 0.000 sl 0.00 ece 0.0110 top 0.009 caught 0/1 lead None chance 0.061 FA/d 0.60 unsc 7
+A_holdapr18             360 M2 prev 0.0035 AP 0.002 ROC 0.162 BSSu -0.063 BSSp 0.000 sl 0.00 ece 0.0110 top 0.009 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdapr18             360 M3 prev 0.0035 AP 0.002 ROC 0.039 BSSu -0.374 BSSp 0.000 sl 0.00 ece 0.0110 top 0.009 caught 0/1 lead None chance 0.133 FA/d 0.81 unsc 8
+A_holdapr18             360 M4 prev 0.0035 AP 0.006 ROC 0.714 BSSu -0.393 BSSp 0.000 sl 0.00 ece 0.0110 top 0.009 caught 0/1 lead None chance 0.054 FA/d 0.25 unsc 4
+A_holdapr18             720 M1 prev 0.0071 AP 0.004 ROC 0.025 BSSu -0.008 BSSp 0.000 sl 0.00 ece 0.0220 top 0.019 caught 0/1 lead None chance 0.091 FA/d 0.56 unsc 8
+A_holdapr18             720 M2 prev 0.0071 AP 0.004 ROC 0.159 BSSu -0.067 BSSp 0.000 sl 0.00 ece 0.0220 top 0.019 caught 0/1 lead None chance 0.016 FA/d 0.01 unsc 1
+A_holdapr18             720 M3 prev 0.0071 AP 0.004 ROC 0.012 BSSu -3.363 BSSp 0.000 sl 0.00 ece 0.0220 top 0.019 caught 0/1 lead None chance 0.347 FA/d 2.95 unsc 17
+A_holdapr18             720 M4 prev 0.0071 AP 0.008 ROC 0.595 BSSu -0.301 BSSp 0.000 sl 0.00 ece 0.0220 top 0.019 caught 0/1 lead None chance 0.037 FA/d 0.10 unsc 0
+A_holdjul15              30 M1 prev 0.0004 AP 0.000 ROC 0.007 BSSu -0.000 BSSp 0.000 sl 0.00 ece 0.0009 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15              30 M2 prev 0.0004 AP 0.000 ROC 0.005 BSSu -0.001 BSSp 0.000 sl 0.00 ece 0.0009 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15              30 M3 prev 0.0004 AP 0.000 ROC 0.095 BSSu -0.041 BSSp 0.000 sl 0.00 ece 0.0009 top 0.001 caught 0/1 lead None chance 0.001 FA/d 0.08 unsc 0
+A_holdjul15              30 M4 prev 0.0004 AP 0.000 ROC 0.256 BSSu -0.165 BSSp -0.002 sl -3.66 ece 0.0009 top 0.002 caught 0/1 lead None chance 0.019 FA/d 0.69 unsc 2
+A_holdjul15              60 M1 prev 0.0008 AP 0.000 ROC 0.004 BSSu -0.001 BSSp 0.000 sl 0.00 ece 0.0018 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15              60 M2 prev 0.0008 AP 0.000 ROC 0.006 BSSu -0.002 BSSp 0.000 sl 0.00 ece 0.0018 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15              60 M3 prev 0.0008 AP 0.000 ROC 0.094 BSSu -0.085 BSSp 0.000 sl 0.00 ece 0.0018 top 0.001 caught 0/1 lead None chance 0.001 FA/d 0.02 unsc 0
+A_holdjul15              60 M4 prev 0.0008 AP 0.000 ROC 0.099 BSSu -0.279 BSSp -0.012 sl -6.71 ece 0.0020 top 0.006 caught 0/1 lead None chance 0.024 FA/d 0.89 unsc 1
+A_holdjul15             180 M1 prev 0.0026 AP 0.001 ROC 0.001 BSSu -0.004 BSSp 0.000 sl 0.00 ece 0.0054 top 0.004 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15             180 M2 prev 0.0026 AP 0.002 ROC 0.220 BSSu -0.010 BSSp 0.000 sl 0.00 ece 0.0054 top 0.004 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15             180 M3 prev 0.0026 AP 0.001 ROC 0.099 BSSu -0.091 BSSp 0.000 sl 0.00 ece 0.0054 top 0.004 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15             180 M4 prev 0.0026 AP 0.001 ROC 0.116 BSSu -0.096 BSSp 0.000 sl 0.00 ece 0.0054 top 0.004 caught 0/1 lead None chance 0.03 FA/d 0.32 unsc 2
+A_holdjul15             360 M1 prev 0.0053 AP 0.003 ROC 0.001 BSSu -0.009 BSSp 0.000 sl 0.00 ece 0.0111 top 0.007 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15             360 M2 prev 0.0053 AP 0.005 ROC 0.508 BSSu -0.024 BSSp 0.000 sl 0.00 ece 0.0111 top 0.007 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15             360 M3 prev 0.0053 AP 0.003 ROC 0.107 BSSu -0.147 BSSp -0.001 sl -45.07 ece 0.0099 top 0.008 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15             360 M4 prev 0.0053 AP 0.003 ROC 0.086 BSSu -0.275 BSSp -0.009 sl -7.62 ece 0.0114 top 0.013 caught 0/1 lead None chance 0.018 FA/d 0.10 unsc 0
+A_holdjul15             720 M1 prev 0.0106 AP 0.005 ROC 0.007 BSSu -0.017 BSSp 0.000 sl 0.00 ece 0.0221 top 0.014 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15             720 M2 prev 0.0106 AP 0.009 ROC 0.470 BSSu -0.123 BSSp 0.000 sl 0.00 ece 0.0221 top 0.014 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15             720 M3 prev 0.0106 AP 0.006 ROC 0.068 BSSu -0.423 BSSp 0.000 sl 0.00 ece 0.0221 top 0.014 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjul15             720 M4 prev 0.0106 AP 0.006 ROC 0.056 BSSu -0.522 BSSp 0.000 sl 0.00 ece 0.0221 top 0.014 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjun05              30 M1 prev 0.0012 AP 0.001 ROC 0.260 BSSu -0.001 BSSp 0.000 sl 0.00 ece 0.0015 top 0.000 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjun05              30 M2 prev 0.0012 AP 0.001 ROC 0.352 BSSu -0.114 BSSp 0.000 sl 0.00 ece 0.0015 top 0.000 caught 0/1 lead None chance 0.125 FA/d 3.32 unsc 1
+A_holdjun05              30 M3 prev 0.0012 AP 0.027 ROC 0.503 BSSu 0.003 BSSp 0.000 sl 0.00 ece 0.0015 top 0.000 caught 0/1 lead None chance 0.001 FA/d 0.05 unsc 0
+A_holdjun05              30 M4 prev 0.0012 AP 0.002 ROC 0.528 BSSu -0.037 BSSp 0.000 sl 0.92 ece 0.0011 top 0.003 caught 0/1 lead None chance 0.02 FA/d 0.49 unsc 1
+A_holdjun05              60 M1 prev 0.0023 AP 0.001 ROC 0.236 BSSu -0.002 BSSp 0.000 sl 0.00 ece 0.0031 top 0.001 caught 0/1 lead None chance 0.009 FA/d 0.11 unsc 1
+A_holdjun05              60 M2 prev 0.0023 AP 0.001 ROC 0.253 BSSu -0.630 BSSp 0.000 sl 0.00 ece 0.0031 top 0.001 caught 0/1 lead None chance 0.089 FA/d 2.52 unsc 0
+A_holdjun05              60 M3 prev 0.0023 AP 0.009 ROC 0.603 BSSu -0.002 BSSp 0.000 sl 0.00 ece 0.0031 top 0.001 caught 0/1 lead None chance 0.003 FA/d 0.05 unsc 0
+A_holdjun05              60 M4 prev 0.0023 AP 0.008 ROC 0.780 BSSu -0.018 BSSp 0.000 sl 0.00 ece 0.0031 top 0.001 caught 0/1 lead None chance 0.014 FA/d 0.33 unsc 1
+A_holdjun05             180 M1 prev 0.0071 AP 0.005 ROC 0.336 BSSu -0.008 BSSp 0.000 sl 0.00 ece 0.0093 top 0.003 caught 0/1 lead None chance 0.03 FA/d 0.33 unsc 3
+A_holdjun05             180 M2 prev 0.0071 AP 0.005 ROC 0.326 BSSu -3.198 BSSp 0.000 sl 0.00 ece 0.0093 top 0.003 caught 0/1 lead None chance 0.128 FA/d 3.49 unsc 0
+A_holdjun05             180 M3 prev 0.0071 AP 0.005 ROC 0.353 BSSu -0.013 BSSp 0.000 sl 0.00 ece 0.0093 top 0.003 caught 0/1 lead None chance 0.007 FA/d 0.11 unsc 0
+A_holdjun05             180 M4 prev 0.0071 AP 0.007 ROC 0.502 BSSu -0.151 BSSp 0.000 sl 0.00 ece 0.0093 top 0.003 caught 0/1 lead None chance 0.039 FA/d 0.44 unsc 0
+A_holdjun05             360 M1 prev 0.0142 AP 0.010 ROC 0.332 BSSu -0.037 BSSp 0.000 sl 0.00 ece 0.0187 top 0.006 caught 0/1 lead None chance 0.143 FA/d 3.47 unsc 2
+A_holdjun05             360 M2 prev 0.0142 AP 0.009 ROC 0.289 BSSu -3.633 BSSp 0.000 sl 0.00 ece 0.0187 top 0.006 caught 0/1 lead None chance 0.136 FA/d 3.42 unsc 0
+A_holdjun05             360 M3 prev 0.0142 AP 0.022 ROC 0.503 BSSu -0.004 BSSp 0.000 sl 0.00 ece 0.0187 top 0.006 caught 0/1 lead None chance 0.012 FA/d 0.06 unsc 0
+A_holdjun05             360 M4 prev 0.0142 AP 0.019 ROC 0.583 BSSu -0.010 BSSp 0.000 sl 0.00 ece 0.0187 top 0.006 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjun05             720 M1 prev 0.0281 AP 0.017 ROC 0.233 BSSu -0.214 BSSp 0.000 sl 0.00 ece 0.0371 top 0.011 caught 0/1 lead None chance 0.208 FA/d 3.51 unsc 2
+A_holdjun05             720 M2 prev 0.0281 AP 0.016 ROC 0.208 BSSu -2.061 BSSp 0.000 sl 0.00 ece 0.0371 top 0.011 caught 0/1 lead None chance 0.174 FA/d 3.67 unsc 1
+A_holdjun05             720 M3 prev 0.0281 AP 0.017 ROC 0.242 BSSu -0.015 BSSp 0.000 sl 0.00 ece 0.0371 top 0.011 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdjun05             720 M4 prev 0.0281 AP 0.020 ROC 0.344 BSSu -0.030 BSSp 0.000 sl 0.00 ece 0.0371 top 0.011 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29              30 M1 prev 0.0013 AP 0.001 ROC 0.463 BSSu -0.000 BSSp 0.000 sl 0.00 ece 0.0016 top 0.000 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29              30 M2 prev 0.0013 AP 0.009 ROC 0.622 BSSu -0.051 BSSp 0.000 sl 0.00 ece 0.0016 top 0.000 caught 0/1 lead None chance 0.001 FA/d 0.06 unsc 0
+A_holdmay29              30 M3 prev 0.0013 AP 0.002 ROC 0.511 BSSu -0.002 BSSp 0.000 sl 0.00 ece 0.0016 top 0.000 caught 0/1 lead None chance 0.0 FA/d 0.06 unsc 0
+A_holdmay29              30 M4 prev 0.0013 AP 0.007 ROC 0.798 BSSu -0.000 BSSp 0.000 sl 0.00 ece 0.0016 top 0.000 caught 0/1 lead None chance 0.003 FA/d 0.06 unsc 1
+A_holdmay29              60 M1 prev 0.0026 AP 0.002 ROC 0.417 BSSu -0.001 BSSp 0.000 sl 0.00 ece 0.0033 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29              60 M2 prev 0.0026 AP 0.005 ROC 0.454 BSSu -0.027 BSSp 0.000 sl 0.00 ece 0.0033 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29              60 M3 prev 0.0026 AP 0.003 ROC 0.582 BSSu -0.002 BSSp 0.000 sl 0.00 ece 0.0033 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29              60 M4 prev 0.0026 AP 0.022 ROC 0.853 BSSu 0.001 BSSp 0.000 sl 0.00 ece 0.0033 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             180 M1 prev 0.0080 AP 0.006 ROC 0.367 BSSu -0.003 BSSp 0.000 sl 0.00 ece 0.0096 top 0.003 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             180 M2 prev 0.0080 AP 0.006 ROC 0.358 BSSu -0.029 BSSp 0.000 sl 0.00 ece 0.0096 top 0.003 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             180 M3 prev 0.0080 AP 0.012 ROC 0.673 BSSu -0.117 BSSp 0.000 sl 0.00 ece 0.0096 top 0.003 caught 0/1 lead None chance 0.05 FA/d 0.80 unsc 0
+A_holdmay29             180 M4 prev 0.0080 AP 0.008 ROC 0.528 BSSu -0.005 BSSp 0.000 sl 0.00 ece 0.0096 top 0.003 caught 0/1 lead None chance 0.002 FA/d 0.06 unsc 0
+A_holdmay29             360 M1 prev 0.0166 AP 0.012 ROC 0.344 BSSu -0.005 BSSp 0.000 sl 0.00 ece 0.0199 top 0.006 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             360 M2 prev 0.0166 AP 0.012 ROC 0.370 BSSu -0.042 BSSp 0.000 sl 0.00 ece 0.0199 top 0.006 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             360 M3 prev 0.0166 AP 0.083 ROC 0.701 BSSu 0.007 BSSp 0.000 sl 0.00 ece 0.0199 top 0.006 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             360 M4 prev 0.0166 AP 0.032 ROC 0.645 BSSu -0.001 BSSp 0.000 sl 0.00 ece 0.0199 top 0.006 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             720 M1 prev 0.0325 AP 0.026 ROC 0.427 BSSu -0.014 BSSp 0.000 sl 0.00 ece 0.0392 top 0.011 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             720 M2 prev 0.0325 AP 0.021 ROC 0.297 BSSu -0.083 BSSp 0.000 sl 0.00 ece 0.0392 top 0.011 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             720 M3 prev 0.0325 AP 0.031 ROC 0.456 BSSu -0.033 BSSp 0.000 sl 0.00 ece 0.0392 top 0.011 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+A_holdmay29             720 M4 prev 0.0325 AP 0.032 ROC 0.493 BSSu -0.020 BSSp 0.000 sl 0.00 ece 0.0392 top 0.011 caught 0/1 lead None chance 0.017 FA/d 0.06 unsc 0
+
+== B
+B_hold_apr18             30 M1 prev 0.0003 AP 0.000 ROC 0.113 BSSu -0.000 BSSp 0.000 sl 0.00 ece 0.0009 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+B_hold_apr18             30 M3 prev 0.0003 AP 0.000 ROC 0.532 BSSu -0.377 BSSp -0.000 sl -0.00 ece 0.0008 top 0.001 caught 0/1 lead None chance 0.029 FA/d 0.81 unsc 3
+B_hold_apr18             60 M1 prev 0.0006 AP 0.000 ROC 0.061 BSSu -0.001 BSSp 0.000 sl 0.00 ece 0.0017 top 0.001 caught 0/1 lead None chance 0.004 FA/d 0.04 unsc 1
+B_hold_apr18             60 M3 prev 0.0006 AP 0.000 ROC 0.233 BSSu -0.578 BSSp 0.000 sl 0.00 ece 0.0017 top 0.001 caught 0/1 lead None chance 0.036 FA/d 0.76 unsc 4
+B_hold_apr18            180 M1 prev 0.0017 AP 0.001 ROC 0.052 BSSu -0.002 BSSp 0.000 sl 0.00 ece 0.0054 top 0.005 caught 0/1 lead None chance 0.044 FA/d 0.69 unsc 3
+B_hold_apr18            180 M3 prev 0.0017 AP 0.001 ROC 0.065 BSSu -0.969 BSSp 0.000 sl 0.00 ece 0.0054 top 0.005 caught 0/1 lead None chance 0.114 FA/d 1.03 unsc 10
+B_hold_apr18            360 M1 prev 0.0035 AP 0.002 ROC 0.035 BSSu -0.004 BSSp 0.000 sl 0.00 ece 0.0110 top 0.009 caught 0/1 lead None chance 0.061 FA/d 0.60 unsc 7
+B_hold_apr18            360 M3 prev 0.0035 AP 0.002 ROC 0.039 BSSu -0.374 BSSp 0.000 sl 0.00 ece 0.0110 top 0.009 caught 0/1 lead None chance 0.133 FA/d 0.81 unsc 8
+B_hold_apr18            720 M1 prev 0.0071 AP 0.004 ROC 0.025 BSSu -0.008 BSSp 0.000 sl 0.00 ece 0.0220 top 0.019 caught 0/1 lead None chance 0.091 FA/d 0.56 unsc 8
+B_hold_apr18            720 M3 prev 0.0071 AP 0.004 ROC 0.012 BSSu -3.363 BSSp 0.000 sl 0.00 ece 0.0220 top 0.019 caught 0/1 lead None chance 0.347 FA/d 2.95 unsc 17
+B_hold_jul15             30 M1 prev 0.0004 AP 0.000 ROC 0.007 BSSu -0.000 BSSp 0.000 sl 0.00 ece 0.0009 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+B_hold_jul15             30 M3 prev 0.0004 AP 0.000 ROC 0.095 BSSu -0.041 BSSp 0.000 sl 0.00 ece 0.0009 top 0.001 caught 0/1 lead None chance 0.001 FA/d 0.08 unsc 0
+B_hold_jul15             60 M1 prev 0.0008 AP 0.000 ROC 0.004 BSSu -0.001 BSSp 0.000 sl 0.00 ece 0.0018 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+B_hold_jul15             60 M3 prev 0.0008 AP 0.000 ROC 0.094 BSSu -0.085 BSSp 0.000 sl 0.00 ece 0.0018 top 0.001 caught 0/1 lead None chance 0.001 FA/d 0.02 unsc 0
+B_hold_jul15            180 M1 prev 0.0026 AP 0.001 ROC 0.001 BSSu -0.004 BSSp 0.000 sl 0.00 ece 0.0054 top 0.004 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+B_hold_jul15            180 M3 prev 0.0026 AP 0.001 ROC 0.099 BSSu -0.091 BSSp 0.000 sl 0.00 ece 0.0054 top 0.004 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+B_hold_jul15            360 M1 prev 0.0053 AP 0.003 ROC 0.001 BSSu -0.009 BSSp 0.000 sl 0.00 ece 0.0111 top 0.007 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+B_hold_jul15            360 M3 prev 0.0053 AP 0.003 ROC 0.107 BSSu -0.147 BSSp -0.001 sl -45.07 ece 0.0099 top 0.008 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+B_hold_jul15            720 M1 prev 0.0106 AP 0.005 ROC 0.007 BSSu -0.017 BSSp 0.000 sl 0.00 ece 0.0221 top 0.014 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+B_hold_jul15            720 M3 prev 0.0106 AP 0.006 ROC 0.068 BSSu -0.423 BSSp 0.000 sl 0.00 ece 0.0221 top 0.014 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+B_hold_may29_jun05       30 M1 prev 0.0012 AP 0.001 ROC 0.365 BSSu -0.001 BSSp 0.000 sl 0.00 ece 0.0014 top 0.000 caught 0/2 lead None;None chance 0.0;0.0 FA/d 0.00 unsc 0
+B_hold_may29_jun05       30 M3 prev 0.0012 AP 0.001 ROC 0.422 BSSu -0.016 BSSp 0.000 sl 0.00 ece 0.0014 top 0.000 caught 0/2 lead None;None chance 0.017;0.017 FA/d 0.77 unsc 0
+B_hold_may29_jun05       60 M1 prev 0.0025 AP 0.002 ROC 0.324 BSSu -0.003 BSSp 0.000 sl 0.00 ece 0.0029 top 0.001 caught 0/2 lead None;None chance 0.0;0.0 FA/d 0.00 unsc 0
+B_hold_may29_jun05       60 M3 prev 0.0025 AP 0.002 ROC 0.389 BSSu -0.021 BSSp 0.000 sl 0.00 ece 0.0029 top 0.001 caught 0/2 lead None;None chance 0.0;0.0 FA/d 0.00 unsc 0
+B_hold_may29_jun05      180 M1 prev 0.0075 AP 0.005 ROC 0.312 BSSu -0.014 BSSp 0.000 sl 0.00 ece 0.0087 top 0.002 caught 0/2 lead None;None chance 0.0;0.0 FA/d 0.00 unsc 0
+B_hold_may29_jun05      180 M3 prev 0.0075 AP 0.006 ROC 0.404 BSSu -0.075 BSSp -0.004 sl -2.24 ece 0.0083 top 0.015 caught 0/2 lead None;None chance 0.089;0.105 FA/d 1.95 unsc 0
+B_hold_may29_jun05      360 M1 prev 0.0153 AP 0.010 ROC 0.304 BSSu -0.113 BSSp 0.000 sl 0.00 ece 0.0178 top 0.004 caught 0/2 lead None;None chance 0.0;0.0 FA/d 0.00 unsc 0
+B_hold_may29_jun05      360 M3 prev 0.0153 AP 0.013 ROC 0.455 BSSu -0.013 BSSp 0.000 sl 0.00 ece 0.0178 top 0.004 caught 0/2 lead None;None chance 0.009;0.005 FA/d 0.03 unsc 0
+B_hold_may29_jun05      720 M1 prev 0.0302 AP 0.020 ROC 0.303 BSSu -0.565 BSSp 0.000 sl 0.00 ece 0.0353 top 0.008 caught 0/2 lead None;None chance 0.153;0.19 FA/d 2.22 unsc 4
+B_hold_may29_jun05      720 M3 prev 0.0302 AP 0.022 ROC 0.370 BSSu -1.339 BSSp -0.007 sl -17.04 ece 0.0335 top 0.037 caught 0/2 lead None;None chance 0.038;0.059 FA/d 1.23 unsc 0
+
+== C
+C_forward_jun05          30 M1 prev 0.0012 AP 0.002 ROC 0.635 BSSu -0.000 BSSp 0.001 sl 0.00 ece 0.0019 top 0.002 caught 0/1 lead None chance 0.004 FA/d 0.11 unsc 0
+C_forward_jun05          30 M2 prev 0.0012 AP 0.001 ROC 0.379 BSSu -0.021 BSSp 0.001 sl 0.00 ece 0.0022 top 0.001 caught 0/1 lead None chance 0.004 FA/d 0.11 unsc 0
+C_forward_jun05          30 M3 prev 0.0012 AP 0.002 ROC 0.629 BSSu -0.013 BSSp 0.001 sl 0.00 ece 0.0022 top 0.001 caught 0/1 lead None chance 0.005 FA/d 0.16 unsc 0
+C_forward_jun05          60 M1 prev 0.0023 AP 0.003 ROC 0.630 BSSu -0.001 BSSp 0.001 sl 0.00 ece 0.0033 top 0.003 caught 0/1 lead None chance 0.001 FA/d 0.05 unsc 0
+C_forward_jun05          60 M2 prev 0.0023 AP 0.002 ROC 0.440 BSSu -0.041 BSSp 0.001 sl 0.00 ece 0.0044 top 0.003 caught 0/1 lead None chance 0.002 FA/d 0.11 unsc 0
+C_forward_jun05          60 M3 prev 0.0023 AP 0.004 ROC 0.666 BSSu -0.011 BSSp 0.001 sl 0.00 ece 0.0044 top 0.003 caught 0/1 lead None chance 0.004 FA/d 0.16 unsc 0
+C_forward_jun05         180 M1 prev 0.0071 AP 0.009 ROC 0.625 BSSu -0.019 BSSp 0.004 sl 0.00 ece 0.0085 top 0.009 caught 0/1 lead None chance 0.009 FA/d 0.06 unsc 0
+C_forward_jun05         180 M2 prev 0.0071 AP 0.004 ROC 0.269 BSSu -0.157 BSSp 0.004 sl 0.00 ece 0.0135 top 0.008 caught 0/1 lead None chance 0.022 FA/d 0.11 unsc 1
+C_forward_jun05         180 M3 prev 0.0071 AP 0.011 ROC 0.691 BSSu -0.252 BSSp 0.004 sl 0.00 ece 0.0135 top 0.008 caught 0/1 lead None chance 0.019 FA/d 0.17 unsc 0
+C_forward_jun05         360 M1 prev 0.0142 AP 0.020 ROC 0.680 BSSu -0.120 BSSp 0.008 sl 0.00 ece 0.0275 top 0.017 caught 0/1 lead None chance 0.016 FA/d 0.06 unsc 0
+C_forward_jun05         360 M2 prev 0.0142 AP 0.013 ROC 0.488 BSSu -0.276 BSSp 0.008 sl 0.00 ece 0.0275 top 0.017 caught 0/1 lead None chance 0.031 FA/d 0.11 unsc 1
+C_forward_jun05         360 M3 prev 0.0142 AP 0.020 ROC 0.647 BSSu -0.489 BSSp 0.008 sl 0.00 ece 0.0275 top 0.017 caught 0/1 lead None chance 0.018 FA/d 0.11 unsc 0
+C_forward_jun05         720 M1 prev 0.0281 AP 0.073 ROC 0.795 BSSu -0.405 BSSp 0.015 sl 0.00 ece 0.0541 top 0.033 caught 0/1 lead None chance 0.017 FA/d 0.05 unsc 0
+C_forward_jun05         720 M2 prev 0.0281 AP 0.035 ROC 0.624 BSSu -0.819 BSSp 0.015 sl 0.00 ece 0.0541 top 0.033 caught 0/1 lead None chance 0.017 FA/d 0.05 unsc 0
+C_forward_jun05         720 M3 prev 0.0281 AP 0.066 ROC 0.801 BSSu -0.012 BSSp 0.015 sl 0.00 ece 0.0541 top 0.033 caught 0/1 lead None chance 0.02 FA/d 0.11 unsc 0
+
+== D
+D_forward_jul15          30 M1 prev 0.0004 AP 0.000 ROC 0.011 BSSu -0.000 BSSp -0.002 sl -10.11 ece 0.0014 top 0.001 caught 0/1 lead None chance 0.002 FA/d 0.02 unsc 0
+D_forward_jul15          30 M2 prev 0.0004 AP 0.000 ROC 0.005 BSSu -0.014 BSSp -0.002 sl 0.00 ece 0.0014 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.02 unsc 0
+D_forward_jul15          30 M3 prev 0.0004 AP 0.002 ROC 0.914 BSSu -0.000 BSSp -0.002 sl 0.00 ece 0.0014 top 0.001 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+D_forward_jul15          60 M1 prev 0.0008 AP 0.000 ROC 0.008 BSSu -0.001 BSSp -0.004 sl -14.42 ece 0.0027 top 0.003 caught 0/1 lead None chance 0.0 FA/d 0.02 unsc 0
+D_forward_jul15          60 M2 prev 0.0008 AP 0.000 ROC 0.002 BSSu -0.061 BSSp -0.003 sl 0.00 ece 0.0028 top 0.002 caught 0/1 lead None chance 0.002 FA/d 0.02 unsc 0
+D_forward_jul15          60 M3 prev 0.0008 AP 0.002 ROC 0.723 BSSu -0.003 BSSp -0.003 sl 0.00 ece 0.0028 top 0.002 caught 0/1 lead None chance 0.0 FA/d 0.00 unsc 0
+D_forward_jul15         180 M1 prev 0.0026 AP 0.001 ROC 0.003 BSSu -0.012 BSSp -0.012 sl -37.20 ece 0.0085 top 0.008 caught 0/1 lead None chance 0.002 FA/d 0.02 unsc 0
+D_forward_jul15         180 M2 prev 0.0026 AP 0.003 ROC 0.498 BSSu -0.044 BSSp -0.009 sl 0.00 ece 0.0086 top 0.008 caught 0/1 lead None chance 0.005 FA/d 0.02 unsc 0
+D_forward_jul15         180 M3 prev 0.0026 AP 0.005 ROC 0.733 BSSu -0.048 BSSp -0.009 sl 0.00 ece 0.0086 top 0.008 caught 0/1 lead None chance 0.003 FA/d 0.02 unsc 0
+D_forward_jul15         360 M1 prev 0.0053 AP 0.003 ROC 0.001 BSSu -0.070 BSSp -0.022 sl -107.04 ece 0.0175 top 0.016 caught 0/1 lead None chance 0.003 FA/d 0.02 unsc 0
+D_forward_jul15         360 M2 prev 0.0053 AP 0.003 ROC 0.062 BSSu -0.048 BSSp -0.019 sl 0.00 ece 0.0175 top 0.015 caught 0/1 lead None chance 0.004 FA/d 0.02 unsc 0
+D_forward_jul15         360 M3 prev 0.0053 AP 0.072 ROC 0.967 BSSu -0.160 BSSp -0.019 sl 0.00 ece 0.0175 top 0.015 caught 0/1 lead None chance 0.005 FA/d 0.06 unsc 0
+D_forward_jul15         720 M1 prev 0.0106 AP 0.005 ROC 0.000 BSSu -0.242 BSSp -0.043 sl -173.19 ece 0.0347 top 0.031 caught 0/1 lead None chance 0.005 FA/d 0.02 unsc 0
+D_forward_jul15         720 M2 prev 0.0106 AP 0.005 ROC 0.007 BSSu -0.207 BSSp -0.035 sl 0.00 ece 0.0347 top 0.030 caught 0/1 lead None chance 0.011 FA/d 0.02 unsc 0
+D_forward_jul15         720 M3 prev 0.0106 AP 0.010 ROC 0.459 BSSu -0.142 BSSp -0.035 sl 0.00 ece 0.0347 top 0.030 caught 0/1 lead None chance 0.016 FA/d 0.16 unsc 0
+
+== E
+E_false_alarm_after_ju   30 M1 prev 0.0000 AP   -   ROC   -   BSSu 0.179 BSSp 0.000 sl   -   ece 0.0006 top 0.001 caught 0/0 lead  chance  FA/d 0.00 unsc 0
+E_false_alarm_after_ju   30 M3 prev 0.0000 AP   -   ROC   -   BSSu -67.739 BSSp 0.000 sl   -   ece 0.0006 top 0.001 caught 0/0 lead  chance  FA/d 0.10 unsc 0
+E_false_alarm_after_ju   60 M1 prev 0.0000 AP   -   ROC   -   BSSu 0.303 BSSp -0.000 sl   -   ece 0.0012 top 0.001 caught 0/0 lead  chance  FA/d 0.00 unsc 0
+E_false_alarm_after_ju   60 M3 prev 0.0000 AP   -   ROC   -   BSSu -52.059 BSSp -0.000 sl   -   ece 0.0012 top 0.001 caught 0/0 lead  chance  FA/d 0.03 unsc 0
+E_false_alarm_after_ju  180 M1 prev 0.0000 AP   -   ROC   -   BSSu 0.308 BSSp 0.000 sl   -   ece 0.0035 top 0.004 caught 0/0 lead  chance  FA/d 0.00 unsc 0
+E_false_alarm_after_ju  180 M3 prev 0.0000 AP   -   ROC   -   BSSu -17.157 BSSp 0.000 sl   -   ece 0.0035 top 0.004 caught 0/0 lead  chance  FA/d 0.00 unsc 0
+E_false_alarm_after_ju  360 M1 prev 0.0000 AP   -   ROC   -   BSSu 0.229 BSSp -0.000 sl   -   ece 0.0073 top 0.007 caught 0/0 lead  chance  FA/d 0.00 unsc 0
+E_false_alarm_after_ju  360 M3 prev 0.0000 AP   -   ROC   -   BSSu -13.968 BSSp -0.036 sl   -   ece 0.0074 top 0.008 caught 0/0 lead  chance  FA/d 0.00 unsc 0
+E_false_alarm_after_ju  720 M1 prev 0.0000 AP   -   ROC   -   BSSu 0.090 BSSp -0.000 sl   -   ece 0.0144 top 0.014 caught 0/0 lead  chance  FA/d 0.00 unsc 0
+E_false_alarm_after_ju  720 M3 prev 0.0000 AP   -   ROC   -   BSSu -19.631 BSSp -0.000 sl   -   ece 0.0144 top 0.014 caught 0/0 lead  chance  FA/d 0.00 unsc 0
+across_seeds spearman n 200 median 0.952 min 0.746 p10 0.875 max 1.0
+across_seeds top_k_jaccard n 200 median 0.667 min 0.429 p10 0.667 max 1.0
+across_seeds sign_agreement n 200 median 0.917 min 0.583 p10 0.75 max 1.0
+across_seeds cosine n 200 median 0.983 min 0.804 p10 0.913 max 0.999
+across_horizons spearman n 40 median 0.769 min 0.23 p10 0.501 max 0.935
+across_horizons top_k_jaccard n 40 median 0.667 min 0.429 p10 0.429 max 1.0
+across_horizons sign_agreement n 40 median 0.667 min 0.5 p10 0.583 max 0.917
+across_horizons cosine n 40 median 0.802 min 0.362 p10 0.564 max 0.973
+across_failures spearman n 30 median 0.638 min 0.261 p10 0.516 max 0.959
+across_failures top_k_jaccard n 30 median 0.429 min 0.25 p10 0.429 max 1.0
+across_failures sign_agreement n 30 median 0.5 min 0.167 p10 0.333 max 0.75
+across_failures cosine n 30 median 0.701 min 0.414 p10 0.505 max 0.943
+A_holdapr18 30 ['DV_pressure', 'Operating_state', 'Motor_current', 'Pressure_switch', 'Oil_temperature']
+A_holdapr18 60 ['Operating_state', 'Motor_current', 'DV_pressure', 'Oil_level', 'Pressure_switch']
+A_holdapr18 180 ['Oil_temperature', 'Oil_level', 'Operating_state', 'Motor_current', 'DV_pressure']
+A_holdapr18 360 ['Oil_level', 'Operating_state', 'Motor_current', 'Oil_temperature', 'DV_pressure']
+A_holdapr18 720 ['Oil_level', 'Oil_temperature', 'DV_pressure', 'Motor_current', 'H1']
+A_holdjul15 30 ['DV_pressure', 'Motor_current', 'Oil_temperature', 'Operating_state', 'Towers']
+A_holdjul15 60 ['Oil_temperature', 'Motor_current', 'Operating_state', 'DV_pressure', 'TP3+Reservoirs']
+A_holdjul15 180 ['Motor_current', 'Operating_state', 'Oil_temperature', 'H1', 'TP3+Reservoirs']
+A_holdjul15 360 ['Motor_current', 'Oil_temperature', 'Operating_state', 'TP2', 'H1']
+A_holdjul15 720 ['Oil_temperature', 'Operating_state', 'Motor_current', 'Towers', 'TP2']
+A_holdjun05 30 ['DV_pressure', 'Oil_temperature', 'Operating_state', 'TP3+Reservoirs', 'Motor_current']
+A_holdjun05 60 ['DV_pressure', 'Oil_temperature', 'TP3+Reservoirs', 'Motor_current', 'Operating_state']
+A_holdjun05 180 ['DV_pressure', 'Oil_temperature', 'Pressure_switch', 'TP3+Reservoirs', 'Motor_current']
+A_holdjun05 360 ['Operating_state', 'DV_pressure', 'Pressure_switch', 'Oil_temperature', 'Motor_current']
+A_holdjun05 720 ['Operating_state', 'DV_pressure', 'Oil_temperature', 'Oil_level', 'Motor_current']
+A_holdmay29 30 ['Pressure_switch', 'DV_pressure', 'H1', 'Operating_state', 'Oil_temperature']
+A_holdmay29 60 ['DV_pressure', 'Operating_state', 'Pressure_switch', 'Oil_temperature', 'TP3+Reservoirs']
+A_holdmay29 180 ['Oil_temperature', 'DV_pressure', 'Operating_state', 'Pressure_switch', 'H1']
+A_holdmay29 360 ['Oil_temperature', 'Operating_state', 'DV_pressure', 'TP2', 'H1']
+A_holdmay29 720 ['Oil_temperature', 'Operating_state', 'DV_pressure', 'Oil_level', 'Motor_current']

@@ -1,0 +1,59 @@
+rule code reproduces frozen table: yes
+heldin digests identical 40 of 40
+heldin M5 30 min train 0.997 AP 0.273 min within failure 0.977 heldout 0.327 verdict >=.90
+heldin M5 1 h train 0.983 AP 0.214 min within failure 0.904 heldout 0.564 verdict >=.90
+heldin M5 3 h train 0.97 AP 0.369 min within failure 0.884 heldout 0.63 verdict >=.90
+heldin M5 6 h train 0.979 AP 0.412 min within failure 0.802 heldout 0.329 verdict >=.90
+heldin M5 12 h train 0.961 AP 0.548 min within failure 0.736 heldout 0.357 verdict >=.90
+heldin M6 30 min train 1.0 AP 0.631 min within failure 0.998 heldout 0.377 verdict >=.90
+heldin M6 1 h train 0.999 AP 0.68 min within failure 0.998 heldout 0.477 verdict >=.90
+heldin M6 3 h train 0.998 AP 0.689 min within failure 0.989 heldout 0.482 verdict >=.90
+heldin M6 6 h train 0.992 AP 0.602 min within failure 0.906 heldout 0.403 verdict >=.90
+heldin M6 12 h train 0.991 AP 0.748 min within failure 0.922 heldout 0.404 verdict >=.90
+seed rerun digests identical 10 of 10
+seed rules: defensible 0 of 50 ; rules met distribution {0: 6, 1: 44, 2: 0, 3: 0, 4: 0, 5: 0}
+max per rule: {'pass_base': 0, 'pass_state': 0, 'pass_slope': 0, 'pass_warning': 0, 'pass_burden': 44} max caught_valid 1
+seed 791 tests 90 A caught 0 of 40 all-fold caught 0 of 100 bss>0 7 slope in range 0 b==0 23
+seed 1791 tests 70 A caught 1 of 40 all-fold caught 1 of 70 bss>0 3 slope in range 0 b==0 30
+seed 2791 tests 70 A caught 0 of 40 all-fold caught 0 of 70 bss>0 5 slope in range 0 b==0 28
+seed 3791 tests 70 A caught 1 of 40 all-fold caught 1 of 70 bss>0 3 slope in range 0 b==0 26
+seed 4791 tests 70 A caught 1 of 40 all-fold caught 1 of 70 bss>0 3 slope in range 0 b==0 30
+ALL caught cells (any seed, same folds): [(1791, 'A_holdmay29', 360, 'M6', '10', 0.011, 0.0, 0.896), (3791, 'A_holdjun05', 360, 'M5', '157', 0.161, 4.08, 0.53), (4791, 'A_holdjun05', 30, 'M6', '6', 0.15, 4.3, 0.633)]
+extra-seed tests 280 caught 3
+frozen same-fold tests 70
+AUROC range across seeds per cell: median 0.174 max 0.652
+M5 apr18 ['30 min: 0.10-0.73 med 0.22', '1 h: 0.03-0.52 med 0.28', '3 h: 0.05-0.70 med 0.20', '6 h: 0.04-0.44 med 0.34', '12 h: 0.05-0.31 med 0.12']
+M5 may29 ['30 min: 0.47-0.70 med 0.63', '1 h: 0.50-0.63 med 0.53', '3 h: 0.15-0.53 med 0.44', '6 h: 0.75-0.86 med 0.86', '12 h: 0.57-0.81 med 0.76']
+M5 jun05 ['30 min: 0.48-0.65 med 0.58', '1 h: 0.39-0.65 med 0.50', '3 h: 0.40-0.67 med 0.50', '6 h: 0.45-0.70 med 0.50', '12 h: 0.36-0.65 med 0.43']
+M5 jul15 ['30 min: 0.18-0.49 med 0.33', '1 h: 0.30-0.72 med 0.33', '3 h: 0.56-0.86 med 0.74', '6 h: 0.05-0.38 med 0.12', '12 h: 0.29-0.44 med 0.31']
+M6 apr18 ['30 min: 0.13-0.19 med 0.13', '1 h: 0.13-0.19 med 0.13', '3 h: 0.07-0.18 med 0.13', '6 h: 0.13-0.14 med 0.13', '12 h: 0.13-0.16 med 0.13']
+M6 may29 ['30 min: 0.85-0.92 med 0.88', '1 h: 0.88-0.94 med 0.91', '3 h: 0.91-0.95 med 0.93', '6 h: 0.89-0.92 med 0.90', '12 h: 0.76-0.80 med 0.77']
+M6 jun05 ['30 min: 0.54-0.65 med 0.63', '1 h: 0.67-0.70 med 0.68', '3 h: 0.65-0.75 med 0.67', '6 h: 0.50-0.55 med 0.52', '12 h: 0.36-0.54 med 0.45']
+M6 jul15 ['30 min: 0.01-0.29 med 0.28', '1 h: 0.00-0.28 med 0.01', '3 h: 0.03-0.30 med 0.30', '6 h: 0.30-0.30 med 0.30', '12 h: 0.31-0.32 med 0.32']
+median of per-horizon medians by seed M5 [(791, [0.33, 0.56, 0.63, 0.33, 0.36]), (1791, [0.64, 0.59, 0.31, 0.45, 0.33]), (2791, [0.47, 0.35, 0.51, 0.4, 0.5]), (3791, [0.54, 0.51, 0.46, 0.45, 0.34]), (4791, [0.53, 0.45, 0.5, 0.37, 0.45])]
+May29+Jun5 by seed M5 [(791, [0.61, 0.55, 0.47, 0.41, 0.41]), (1791, [0.58, 0.49, 0.46, 0.42, 0.42]), (2791, [0.61, 0.53, 0.43, 0.42, 0.42]), (3791, [0.58, 0.5, 0.42, 0.42, 0.41]), (4791, [0.58, 0.56, 0.48, 0.45, 0.4])]
+median of per-horizon medians by seed M6 [(791, [0.38, 0.48, 0.48, 0.4, 0.4]), (1791, [0.46, 0.44, 0.36, 0.41, 0.38]), (2791, [0.47, 0.4, 0.52, 0.4, 0.37]), (3791, [0.41, 0.41, 0.53, 0.41, 0.43]), (4791, [0.46, 0.48, 0.48, 0.42, 0.34])]
+May29+Jun5 by seed M6 [(791, [0.18, 0.23, 0.31, 0.34, 0.31]), (1791, [0.16, 0.23, 0.29, 0.34, 0.28]), (2791, [0.17, 0.23, 0.35, 0.33, 0.26]), (3791, [0.17, 0.2, 0.31, 0.34, 0.29]), (4791, [0.18, 0.24, 0.31, 0.33, 0.33])]
+chance: cells 160 auroc>.5 & share<.05 3 by failure {'apr18': np.int64(0), 'may29': np.int64(2), 'jun05': np.int64(0), 'jul15': np.int64(1)} cells: [(1791, 'may29', 180, 'M6', np.float64(0.95), 0.034), (2791, 'jul15', 180, 'M5', np.float64(0.86), 0.01), (3791, 'may29', 360, 'M6', np.float64(0.92), 0.047)]
+low tail share>.95 11 p95 median 0.91
+shift -60 tests 145 caught 0 cells: []
+  M1 med AUROC [0.17, 0.19, 0.21, 0.16, 0.12] caught A 0 bss>0 0 b==0 20 slope ok 0
+  M2 med AUROC [0.09, 0.29, 0.29, 0.29, 0.21] caught A 0 bss>0 0 b==0 20 slope ok 0
+  M3 med AUROC [0.33, 0.32, 0.54, 0.18, 0.11] caught A 0 bss>0 0 b==0 17 slope ok 0
+  M4 med AUROC [0.14, 0.47, 0.49, 0.44, 0.37] caught A 0 bss>0 0 b==0 19 slope ok 0
+  M5 med AUROC [0.44, 0.58, 0.57, 0.35, 0.34] caught A 0 bss>0 0 b==0 17 slope ok 0
+  M6 med AUROC [0.38, 0.43, 0.52, 0.35, 0.31] caught A 0 bss>0 7 b==0 5 slope ok 0
+  may29 M5 [0.26, 0.45, 0.53, 0.7, 0.78]
+  may29 M6 [0.93, 0.93, 0.98, 0.87, 0.74]
+  burden/ rules [('M3', '30 min', 1, 0.21, 0.23), ('M3', '1 h', 1, 0.23, 0.18), ('M3', '3 h', 1, 0.5, 0.05), ('M3', '6 h', 1, 0.0, 0.0), ('M3', '12 h', 1, 0.0, 0.0), ('M5', '30 min', 1, 0.33, 0.0), ('M5', '1 h', 1, 0.63, 0.0), ('M5', '3 h', 1, 0.0, 0.0), ('M5', '6 h', 1, 0.03, 0.0), ('M5', '12 h', 1, 0.05, 0.0), ('M6', '30 min', 1, 0.5, 0.79), ('M6', '1 h', 1, 0.54, 0.85), ('M6', '3 h', 1, 0.63, 0.88), ('M6', '6 h', 0, 1.01, 0.0), ('M6', '12 h', 1, 0.61, 0.0)]
+shift 60 tests 145 caught 32 cells: [('A_holdapr18', 60, 'M2', '11', 0.004, 0.16, 0.628), ('A_holdapr18', 60, 'M3', '22', 0.019, 0.23, 0.934), ('A_holdapr18', 60, 'M4', '17', 0.0, 0.0, 0.982), ('A_holdapr18', 180, 'M2', '18', 0.019, 0.38, 0.287), ('A_holdapr18', 360, 'M2', '19', 0.022, 0.07, 0.268), ('A_holdapr18', 360, 'M4', '6', 0.061, 0.29, 0.624), ('A_holdapr18', 720, 'M2', '8', 0.057, 0.14, 0.206), ('A_holdapr18', 720, 'M3', '9', 0.027, 0.05, 0.061), ('A_holdapr18', 720, 'M4', '13', 0.08, 0.22, 0.678), ('A_holdjun05', 30, 'M1', '17', 0.008, 0.16, 0.997), ('A_holdjun05', 30, 'M2', '30', 0.003, 0.11, 0.996), ('A_holdjun05', 30, 'M3', '24', 0.008, 0.05, 1.0), ('A_holdjun05', 60, 'M1', '19', 0.017, 0.16, 0.945), ('A_holdjun05', 60, 'M2', '41', 0.011, 0.11, 0.957), ('A_holdjun05', 60, 'M3', '41', 0.013, 0.11, 0.97), ('A_holdjun05', 60, 'M4', '20', 0.002, 0.0, 0.986), ('A_holdjun05', 180, 'M1', '22', 0.025, 0.28, 0.493), ('A_holdjun05', 180, 'M2', '38', 0.128, 3.37, 0.474), ('A_holdjun05', 360, 'M1', '22', 0.036, 0.33, 0.453), ('A_holdjun05', 360, 'M3', '18', 0.033, 0.16, 0.615), ('A_holdjun05', 720, 'M1', '20', 0.216, 3.5, 0.298), ('A_holdmay29', 30, 'M1', '20', 0.015, 0.3, 0.994), ('A_holdmay29', 60, 'M1', '20', 0.017, 0.24, 0.966), ('A_holdmay29', 60, 'M2', '28', 0.011, 0.12, 0.994), ('A_holdmay29', 60, 'M3', '43', 0.016, 0.24, 0.991), ('A_holdmay29', 180, 'M1', '21', 0.04, 0.25, 0.582), ('A_holdmay29', 360, 'M1', '19', 0.065, 0.19, 0.413), ('A_holdmay29', 30, 'M6', '30', 0.069, 1.96, 0.921), ('A_holdmay29', 60, 'M6', '60', 0.069, 1.98, 0.92), ('A_holdmay29', 180, 'M6', '34', 0.085, 1.78, 0.884), ('A_holdmay29', 360, 'M6', '55', 0.101, 1.72, 0.861), ('A_holdmay29', 720, 'M6', '61', 0.135, 1.68, 0.731)]
+  M1 med AUROC [1.0, 0.96, 0.49, 0.28, 0.19] caught A 9 bss>0 9 b==0 9 slope ok 0
+  M2 med AUROC [1.0, 0.85, 0.42, 0.43, 0.31] caught A 8 bss>0 7 b==0 9 slope ok 2
+  M3 med AUROC [0.99, 0.97, 0.41, 0.38, 0.18] caught A 6 bss>0 6 b==0 7 slope ok 3
+  M4 med AUROC [0.98, 0.98, 0.55, 0.6, 0.45] caught A 4 bss>0 9 b==0 8 slope ok 1
+  M5 med AUROC [0.95, 0.87, 0.53, 0.41, 0.3] caught A 0 bss>0 4 b==0 8 slope ok 0
+  M6 med AUROC [0.88, 0.68, 0.52, 0.48, 0.42] caught A 5 bss>0 5 b==0 6 slope ok 0
+  may29 M5 [0.95, 0.95, 0.58, 0.55, 0.57]
+  may29 M6 [0.92, 0.92, 0.88, 0.86, 0.73]
+  burden/ rules [('M3', '30 min', 1, 0.09, 0.0), ('M3', '1 h', 2, 0.17, 0.03), ('M3', '3 h', 1, 0.03, 0.0), ('M3', '6 h', 1, 0.03, 0.05), ('M3', '12 h', 1, 0.0, 0.0), ('M5', '30 min', 1, 0.0, 0.0), ('M5', '1 h', 1, 0.0, 0.0), ('M5', '3 h', 1, 0.0, 0.0), ('M5', '6 h', 1, 0.0, 0.0), ('M5', '12 h', 1, 0.0, 0.0), ('M6', '30 min', 1, 0.0, 0.0), ('M6', '1 h', 1, 0.0, 0.0), ('M6', '3 h', 1, 0.05, 0.0), ('M6', '6 h', 1, 0.05, 0.0), ('M6', '12 h', 1, 0.01, 0.0)]
+shift defensible 0 of 30 max rule counts {'pass_base': 0, 'pass_state': 0, 'pass_slope': 0, 'pass_warning': 1, 'pass_burden': 29}

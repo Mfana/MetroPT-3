@@ -1,0 +1,18 @@
+{
+  "status": "blocked",
+  "issues": [
+    "Submission includes unresolved placeholders",
+    "Review gate pending: journal_current",
+    "Review gate pending: novelty",
+    "Review gate pending: dataset_and_labels",
+    "Review gate pending: leakage_and_reproducibility",
+    "Review gate pending: claim_traceability",
+    "Review gate pending: references",
+    "Review gate pending: figure_quality",
+    "Review gate pending: anonymity",
+    "Review gate pending: reviewer_response",
+    "Review gate pending: author_signoff"
+  ],
+  "upload_bytes": 357890,
+  "note": "Inspect the cited review records and portal requirements before submission."
+}

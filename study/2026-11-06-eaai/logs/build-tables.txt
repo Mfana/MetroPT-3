@@ -1,0 +1,32 @@
+{'horizon': '30 min', 'platt_bss_positive_of_4': 0, 'm3_beats_m1_of_4': 0, 'm3_beats_m1_forward': True, 'platt_nonzero_slope_of_4': 1, 'caught_of_4': 0, 'fa_median': 0.06802180561099806, 'fa_after_jul16': 0.10254766864284569, 'horizon_jaccard_median': 0.6666666666666666, 'failure_jaccard_median': 0.6666666666666666, 'seed_jaccard_p10': 0.6666666666666666, 'pass_base': False, 'pass_state': False, 'pass_slope': False, 'pass_warning': False, 'pass_burden': True, 'pass_explain': True, 'defensible': False}
+{'horizon': '1 h', 'platt_bss_positive_of_4': 0, 'm3_beats_m1_of_4': 0, 'm3_beats_m1_forward': True, 'platt_nonzero_slope_of_4': 0, 'caught_of_4': 0, 'fa_median': 0.0370414391521268, 'fa_after_jul16': 0.025884383088869714, 'horizon_jaccard_median': 0.6666666666666666, 'failure_jaccard_median': 0.5476190476190476, 'seed_jaccard_p10': 0.6666666666666666, 'pass_base': False, 'pass_state': False, 'pass_slope': False, 'pass_warning': False, 'pass_burden': True, 'pass_explain': False, 'defensible': False}
+{'horizon': '3 h', 'platt_bss_positive_of_4': 0, 'm3_beats_m1_of_4': 0, 'm3_beats_m1_forward': True, 'platt_nonzero_slope_of_4': 0, 'caught_of_4': 0, 'fa_median': 0.4560632781908014, 'fa_after_jul16': 0.0, 'horizon_jaccard_median': 0.6666666666666666, 'failure_jaccard_median': 0.42857142857142855, 'seed_jaccard_p10': 0.6666666666666666, 'pass_base': False, 'pass_state': False, 'pass_slope': False, 'pass_warning': False, 'pass_burden': True, 'pass_explain': False, 'defensible': False}
+{'horizon': '6 h', 'platt_bss_positive_of_4': 0, 'm3_beats_m1_of_4': 0, 'm3_beats_m1_forward': True, 'platt_nonzero_slope_of_4': 1, 'caught_of_4': 0, 'fa_median': 0.027546101461473717, 'fa_after_jul16': 0.0, 'horizon_jaccard_median': 0.6666666666666666, 'failure_jaccard_median': 0.42857142857142855, 'seed_jaccard_p10': 0.6666666666666666, 'pass_base': False, 'pass_state': False, 'pass_slope': False, 'pass_warning': False, 'pass_burden': True, 'pass_explain': False, 'defensible': False}
+{'horizon': '12 h', 'platt_bss_positive_of_4': 0, 'm3_beats_m1_of_4': 0, 'm3_beats_m1_forward': True, 'platt_nonzero_slope_of_4': 0, 'caught_of_4': 0, 'fa_median': 0.0, 'fa_after_jul16': 0.0, 'horizon_jaccard_median': 0.42857142857142855, 'failure_jaccard_median': 0.5476190476190476, 'seed_jaccard_p10': 0.6666666666666666, 'pass_base': False, 'pass_state': False, 'pass_slope': False, 'pass_warning': False, 'pass_burden': True, 'pass_explain': False, 'defensible': False}
+across_seeds spearman 0.952 0.746 1.0
+across_seeds top_k_jaccard 0.667 0.429 1.0
+across_seeds sign_agreement 0.917 0.583 1.0
+across_seeds cosine 0.983 0.804 0.999
+across_horizons spearman 0.769 0.23 0.935
+across_horizons top_k_jaccard 0.667 0.429 1.0
+across_horizons sign_agreement 0.667 0.5 0.917
+across_horizons cosine 0.802 0.362 0.973
+across_failures spearman 0.638 0.261 0.959
+across_failures top_k_jaccard 0.429 0.25 1.0
+across_failures sign_agreement 0.5 0.167 0.75
+across_failures cosine 0.701 0.414 0.943
+random {'30': (0.99, 0.336), '60': (0.997, 0.591), '180': (0.989, 0.589), '360': (0.982, 0.564), '720': (0.974, 0.683)}
+30 M3 med AUROC 0.507 M1 0.187 M4 0.635 M2 0.179
+60 M3 med AUROC 0.409 M1 0.148 M4 0.681 M2 0.13
+180 M3 med AUROC 0.226 M1 0.194 M4 0.466 M2 0.273
+360 M3 med AUROC 0.305 M1 0.184 M4 0.614 M2 0.329
+720 M3 med AUROC 0.155 M1 0.129 M4 0.418 M2 0.253
+A cells 80 caught total 0 Platt b=0: 72 of 80
+All folds caught: 0 cells with failures 140 failure-tests 150
+uncal BSS>0 A: 3 M3 uncal range -3.363248163118966 0.00671717081302714
+max AUROC cell M3 A (0.7007650531995387, 'A_holdmay29', '360') best M4 (0.853232736831463, 'A_holdmay29', '60')
+forward M3 D [('30', '0.915', '50'), ('60', '0.484', '47'), ('180', '0.490', '27'), ('360', '0.967', '44'), ('720', '0.348', '31')]
+forward M3 C [('30', '0.409', '25'), ('60', '0.398', '30'), ('180', '0.408', '18'), ('360', '0.386', '30'), ('720', '0.455', '19')]
+E M3 FA/day [('30', '0.102', '4'), ('60', '0.025', '1'), ('180', '0.0', '0'), ('360', '0.0', '0'), ('720', '0.0', '0')]
+oracle q 0.95 M3 caught 6 / 20 chance of caught [('jun05', '30', '0.099'), ('jun05', '60', '0.097'), ('jun05', '360', '0.446'), ('jun05', '720', '0.482'), ('may29', '180', '0.175'), ('may29', '360', '0.173')] FA med 2.8224427381535038
+oracle q 0.99 M3 caught 5 / 20 chance of caught [('jun05', '30', '0.022'), ('jun05', '60', '0.019'), ('jun05', '360', '0.14'), ('jun05', '720', '0.28'), ('may29', '360', '0.119')] FA med 0.7776505205133419

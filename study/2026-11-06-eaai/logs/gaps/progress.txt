@@ -1,0 +1,11 @@
+04:13:24 start event-minus60
+04:15:02 start event-plus60
+04:16:47 start heldin
+04:35:11 start seed1791
+05:39:17 start seed2791
+06:55:12 start seed3791
+09:43:07 start seed4791
+12:27:12 start seed1791-rerun
+12:57:56 start shift-minus60
+15:15:28 start shift-plus60
+16:50:46 all finished

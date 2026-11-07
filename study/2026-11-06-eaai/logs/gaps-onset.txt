@@ -1,0 +1,70 @@
+caught under +60: 32 cells; alarm minutes after reported start: min -1 median 39.5 max 54 ; before reported start: 1
+by failure {'apr18': 9, 'may29': 11, 'jun05': 12, 'jul15': 0} by model {'M1': 9, 'M2': 8, 'M3': 6, 'M4': 4, 'M5': 0, 'M6': 5} horizon {30: 5, 60: 11, 180: 5, 360: 6, 720: 5}
+before-start cells [{'shift': 60, 'fold': 'A_holdmay29', 'kind': 'A', 'h': 720, 'model': 'M6', 'lead_from_moved_onset': 61, 'minutes_after_reported_start': -1, 'chance': '0.135', 'fa_day': '1.6823157803643287', 'auroc': '0.7313396432354233'}]
+M folds with kinds {'A'} total caught 32 E FA max 0.8774813036654049
+names ['TP2', 'TP3', 'H1', 'DV_pressure', 'Reservoirs', 'Motor_current', 'Oil_temperature', 'COMP', 'DV_eletric', 'Towers', 'MPG', 'LPS', 'Pressure_switch', 'Oil_level', 'Caudal_impulses']
+apr18 present share -180..0 1.0 0..+60 0.93
+  apr18 3-day ref mean: {'COMP': 0.89, 'TP2': 0.63, 'TP3': 8.87, 'Reservoirs': 8.87, 'Oil_temperature': 55.16, 'Motor_current': 1.18, 'MPG': 0.89, 'H1': 8.19, 'DV_pressure': -0.01}
+   -60 15 {'COMP': 0.79, 'TP2': -0.02, 'TP3': 8.25, 'Reservoirs': 8.25, 'Oil_temperature': 49.45, 'Motor_current': 0.04, 'MPG': 0.79, 'H1': 8.24, 'DV_pressure': -0.02}
+   -45 15 {'COMP': 0.78, 'TP2': -0.02, 'TP3': 8.25, 'Reservoirs': 8.25, 'Oil_temperature': 49.45, 'Motor_current': 0.04, 'MPG': 0.78, 'H1': 8.24, 'DV_pressure': -0.02}
+   -30 15 {'COMP': 0.76, 'TP2': -0.02, 'TP3': 8.25, 'Reservoirs': 8.25, 'Oil_temperature': 49.45, 'Motor_current': 0.04, 'MPG': 0.76, 'H1': 8.24, 'DV_pressure': -0.02}
+   -15 15 {'COMP': 0.78, 'TP2': -0.02, 'TP3': 8.25, 'Reservoirs': 8.25, 'Oil_temperature': 49.45, 'Motor_current': 0.04, 'MPG': 0.78, 'H1': 8.24, 'DV_pressure': -0.02}
+   0 15 {'COMP': 0.77, 'TP2': -0.02, 'TP3': 8.25, 'Reservoirs': 8.25, 'Oil_temperature': 49.45, 'Motor_current': 0.04, 'MPG': 0.77, 'H1': 8.24, 'DV_pressure': -0.02}
+   15 11 {'COMP': 0.31, 'TP2': 5.34, 'TP3': 8.37, 'Reservoirs': 8.37, 'Oil_temperature': 63.52, 'Motor_current': 3.62, 'MPG': 0.31, 'H1': 2.99, 'DV_pressure': 1.17}
+   30 15 {'COMP': 0.0, 'TP2': 8.69, 'TP3': 8.75, 'Reservoirs': 8.75, 'Oil_temperature': 73.28, 'Motor_current': 5.72, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.94}
+   45 15 {'COMP': 0.0, 'TP2': 8.38, 'TP3': 8.72, 'Reservoirs': 8.72, 'Oil_temperature': 73.79, 'Motor_current': 5.62, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.85}
+   60 15 {'COMP': 0.0, 'TP2': 8.56, 'TP3': 8.76, 'Reservoirs': 8.76, 'Oil_temperature': 74.07, 'Motor_current': 5.66, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.9}
+   75 15 {'COMP': 0.0, 'TP2': 8.68, 'TP3': 8.76, 'Reservoirs': 8.76, 'Oil_temperature': 74.26, 'Motor_current': 5.69, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.94}
+   90 15 {'COMP': 0.0, 'TP2': 8.4, 'TP3': 8.75, 'Reservoirs': 8.76, 'Oil_temperature': 74.32, 'Motor_current': 5.61, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.86}
+   105 15 {'COMP': 0.0, 'TP2': 8.58, 'TP3': 8.75, 'Reservoirs': 8.75, 'Oil_temperature': 74.29, 'Motor_current': 5.64, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.91}
+may29 present share -180..0 1.0 0..+60 1.0
+  may29 3-day ref mean: {'COMP': 0.83, 'TP2': 0.72, 'TP3': 8.67, 'Reservoirs': 8.67, 'Oil_temperature': 66.12, 'Motor_current': 1.33, 'MPG': 0.83, 'H1': 7.93, 'DV_pressure': -0.01}
+   -60 15 {'COMP': 1.0, 'TP2': -0.01, 'TP3': 8.93, 'Reservoirs': 8.93, 'Oil_temperature': 62.31, 'Motor_current': 0.83, 'MPG': 1.0, 'H1': 8.92, 'DV_pressure': -0.02}
+   -45 15 {'COMP': 0.72, 'TP2': 2.21, 'TP3': 9.2, 'Reservoirs': 9.19, 'Oil_temperature': 65.16, 'Motor_current': 3.3, 'MPG': 0.72, 'H1': 6.75, 'DV_pressure': 0.15}
+   -30 15 {'COMP': 0.99, 'TP2': 0.05, 'TP3': 8.64, 'Reservoirs': 8.64, 'Oil_temperature': 60.81, 'Motor_current': 0.1, 'MPG': 0.99, 'H1': 8.54, 'DV_pressure': -0.02}
+   -15 15 {'COMP': 0.0, 'TP2': 8.32, 'TP3': 8.56, 'Reservoirs': 8.56, 'Oil_temperature': 70.45, 'Motor_current': 5.69, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.93}
+   0 15 {'COMP': 0.0, 'TP2': 8.37, 'TP3': 8.55, 'Reservoirs': 8.55, 'Oil_temperature': 74.17, 'Motor_current': 5.65, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 2.0}
+   15 15 {'COMP': 0.0, 'TP2': 8.11, 'TP3': 8.32, 'Reservoirs': 8.32, 'Oil_temperature': 74.95, 'Motor_current': 5.58, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.92}
+   30 15 {'COMP': 0.0, 'TP2': 8.26, 'TP3': 8.35, 'Reservoirs': 8.35, 'Oil_temperature': 75.31, 'Motor_current': 5.59, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.96}
+   45 15 {'COMP': 0.0, 'TP2': 8.17, 'TP3': 8.38, 'Reservoirs': 8.38, 'Oil_temperature': 75.45, 'Motor_current': 5.56, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.93}
+   60 15 {'COMP': 0.0, 'TP2': 8.3, 'TP3': 8.41, 'Reservoirs': 8.41, 'Oil_temperature': 75.64, 'Motor_current': 5.58, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.98}
+   75 15 {'COMP': 0.0, 'TP2': 8.15, 'TP3': 8.41, 'Reservoirs': 8.41, 'Oil_temperature': 75.58, 'Motor_current': 5.55, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.93}
+   90 15 {'COMP': 0.0, 'TP2': 8.35, 'TP3': 8.41, 'Reservoirs': 8.41, 'Oil_temperature': 75.58, 'Motor_current': 5.59, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.99}
+   105 15 {'COMP': 0.0, 'TP2': 8.13, 'TP3': 8.41, 'Reservoirs': 8.41, 'Oil_temperature': 75.53, 'Motor_current': 5.55, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 1.92}
+jun05 present share -180..0 1.0 0..+60 1.0
+  jun05 3-day ref mean: {'COMP': 0.86, 'TP2': 1.07, 'TP3': 8.97, 'Reservoirs': 8.97, 'Oil_temperature': 64.01, 'Motor_current': 1.82, 'MPG': 0.86, 'H1': 7.76, 'DV_pressure': 0.02}
+   -60 15 {'COMP': 0.86, 'TP2': 1.27, 'TP3': 8.94, 'Reservoirs': 8.94, 'Oil_temperature': 63.46, 'Motor_current': 2.14, 'MPG': 0.86, 'H1': 7.61, 'DV_pressure': -0.02}
+   -45 15 {'COMP': 1.0, 'TP2': -0.01, 'TP3': 8.86, 'Reservoirs': 8.86, 'Oil_temperature': 62.68, 'Motor_current': 0.5, 'MPG': 1.0, 'H1': 8.84, 'DV_pressure': -0.02}
+   -30 15 {'COMP': 0.87, 'TP2': 1.22, 'TP3': 9.37, 'Reservoirs': 9.37, 'Oil_temperature': 65.96, 'Motor_current': 2.52, 'MPG': 0.87, 'H1': 8.14, 'DV_pressure': -0.02}
+   -15 15 {'COMP': 0.23, 'TP2': 6.4, 'TP3': 8.74, 'Reservoirs': 8.74, 'Oil_temperature': 69.23, 'Motor_current': 4.35, 'MPG': 0.23, 'H1': 1.98, 'DV_pressure': 1.46}
+   0 15 {'COMP': 0.0, 'TP2': 8.01, 'TP3': 8.26, 'Reservoirs': 8.26, 'Oil_temperature': 75.02, 'Motor_current': 5.55, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 2.13}
+   15 15 {'COMP': 0.0, 'TP2': 7.99, 'TP3': 8.18, 'Reservoirs': 8.18, 'Oil_temperature': 76.22, 'Motor_current': 5.52, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 2.13}
+   30 15 {'COMP': 0.0, 'TP2': 8.0, 'TP3': 8.13, 'Reservoirs': 8.14, 'Oil_temperature': 76.26, 'Motor_current': 5.52, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 2.13}
+   45 15 {'COMP': 0.0, 'TP2': 7.76, 'TP3': 7.97, 'Reservoirs': 7.97, 'Oil_temperature': 76.28, 'Motor_current': 5.47, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 2.05}
+   60 15 {'COMP': 0.0, 'TP2': 7.91, 'TP3': 7.92, 'Reservoirs': 7.92, 'Oil_temperature': 76.31, 'Motor_current': 5.49, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 2.1}
+   75 15 {'COMP': 0.0, 'TP2': 7.83, 'TP3': 8.11, 'Reservoirs': 8.11, 'Oil_temperature': 76.44, 'Motor_current': 5.48, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 2.08}
+   90 15 {'COMP': 0.0, 'TP2': 7.95, 'TP3': 8.1, 'Reservoirs': 8.11, 'Oil_temperature': 76.98, 'Motor_current': 5.5, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 2.12}
+   105 15 {'COMP': 0.0, 'TP2': 7.94, 'TP3': 8.1, 'Reservoirs': 8.1, 'Oil_temperature': 76.23, 'Motor_current': 5.49, 'MPG': 0.0, 'H1': -0.01, 'DV_pressure': 2.12}
+jul15 present share -180..0 1.0 0..+60 1.0
+  jul15 3-day ref mean: {'COMP': 0.77, 'TP2': 1.88, 'TP3': 9.01, 'Reservoirs': 9.01, 'Oil_temperature': 69.06, 'Motor_current': 2.94, 'MPG': 0.77, 'H1': 7.0, 'DV_pressure': -0.01}
+   -60 15 {'COMP': 0.39, 'TP2': 5.75, 'TP3': 9.35, 'Reservoirs': 9.35, 'Oil_temperature': 78.91, 'Motor_current': 4.97, 'MPG': 0.39, 'H1': 3.55, 'DV_pressure': -0.0}
+   -45 15 {'COMP': 0.18, 'TP2': 7.76, 'TP3': 9.3, 'Reservoirs': 9.3, 'Oil_temperature': 78.71, 'Motor_current': 5.45, 'MPG': 0.18, 'H1': 1.63, 'DV_pressure': -0.01}
+   -30 15 {'COMP': 0.32, 'TP2': 6.61, 'TP3': 9.35, 'Reservoirs': 9.35, 'Oil_temperature': 79.31, 'Motor_current': 5.17, 'MPG': 0.32, 'H1': 2.94, 'DV_pressure': -0.01}
+   -15 15 {'COMP': 0.24, 'TP2': 7.11, 'TP3': 9.2, 'Reservoirs': 9.2, 'Oil_temperature': 79.03, 'Motor_current': 5.27, 'MPG': 0.24, 'H1': 2.18, 'DV_pressure': -0.01}
+   0 15 {'COMP': 0.0, 'TP2': 10.07, 'TP3': 9.93, 'Reservoirs': 9.93, 'Oil_temperature': 84.87, 'Motor_current': 5.96, 'MPG': 0.0, 'H1': -0.0, 'DV_pressure': -0.01}
+   15 15 {'COMP': 0.0, 'TP2': 10.2, 'TP3': 9.9, 'Reservoirs': 9.89, 'Oil_temperature': 87.22, 'Motor_current': 5.97, 'MPG': 0.0, 'H1': -0.0, 'DV_pressure': -0.01}
+   30 15 {'COMP': 0.0, 'TP2': 9.52, 'TP3': 9.35, 'Reservoirs': 9.34, 'Oil_temperature': 87.57, 'Motor_current': 5.78, 'MPG': 0.0, 'H1': -0.0, 'DV_pressure': -0.01}
+   45 15 {'COMP': 0.0, 'TP2': 9.78, 'TP3': 9.44, 'Reservoirs': 9.44, 'Oil_temperature': 86.58, 'Motor_current': 5.87, 'MPG': 0.0, 'H1': -0.0, 'DV_pressure': -0.01}
+   60 15 {'COMP': 0.0, 'TP2': 9.39, 'TP3': 9.19, 'Reservoirs': 9.19, 'Oil_temperature': 88.28, 'Motor_current': 5.75, 'MPG': 0.0, 'H1': -0.0, 'DV_pressure': -0.01}
+   75 15 {'COMP': 0.0, 'TP2': 9.22, 'TP3': 8.85, 'Reservoirs': 8.85, 'Oil_temperature': 88.0, 'Motor_current': 5.74, 'MPG': 0.0, 'H1': -0.0, 'DV_pressure': -0.01}
+   90 15 {'COMP': 0.0, 'TP2': 8.8, 'TP3': 8.57, 'Reservoirs': 8.56, 'Oil_temperature': 86.33, 'Motor_current': 5.6, 'MPG': 0.0, 'H1': -0.0, 'DV_pressure': -0.01}
+   105 15 {'COMP': 0.0, 'TP2': 8.58, 'TP3': 8.24, 'Reservoirs': 8.24, 'Oil_temperature': 84.92, 'Motor_current': 5.58, 'MPG': 0.0, 'H1': -0.0, 'DV_pressure': -0.01}
+sustained run >=30 min starting within -120..+60 of apr18 :(start rel. to reported, length) [(23, 1533)]
+sustained run >=30 min starting within -120..+60 of may29 :(start rel. to reported, length) [(-15, 402)]
+sustained run >=30 min starting within -120..+60 of jun05 :(start rel. to reported, length) [(-11, 1807)]
+sustained run >=30 min starting within -120..+60 of jul15 :(start rel. to reported, length) [(-5, 178)]
+runs >= 30 min away from reports: 26 of total 33 longest away 3723
+runs >= 60 min away from reports: 11 of total 18 longest away 3723
+runs >= 120 min away from reports: 7 of total 13 longest away 3723
+runs >= 240 min away from reports: 7 of total 12 longest away 3723
+days covered 175.5

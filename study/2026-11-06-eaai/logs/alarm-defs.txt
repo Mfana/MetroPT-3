@@ -1,0 +1,37 @@
+cells 860 mismatches 2 [('minus60', 'D_forward_jul15', 30, 'M3', 'fa', 2, 1), ('minus60', 'D_forward_jul15', 180, 'M3', 'fa', 1, 0)]
+== by set
+registered cells 250 tests 250 active 0 valid 0 new 0 new valid 0 decision share 0.967
+seed1791 cells 70 tests 70 active 1 valid 1 new 1 new valid 1 decision share 0.968
+seed2791 cells 70 tests 70 active 0 valid 0 new 0 new valid 0 decision share 0.968
+seed3791 cells 70 tests 70 active 1 valid 1 new 1 new valid 1 decision share 0.968
+seed4791 cells 70 tests 70 active 1 valid 1 new 1 new valid 1 decision share 0.968
+minus60 cells 165 tests 145 active 0 valid 0 new 0 new valid 0 decision share 0.967
+plus60 cells 165 tests 145 active 32 valid 32 new 29 new valid 29 decision share 0.967
+seeds together: active 3 new 3 of 280
+caught cells: [('seed1791', 'A_holdmay29', 360, 'M6', 1, 1), ('seed3791', 'A_holdjun05', 360, 'M5', 1, 1), ('seed4791', 'A_holdjun05', 30, 'M6', 1, 1)]
+== rules
+registered combos 20 warn active 0 warn new 0 burden monitored 19 burden decision 19
+  flips: []
+  max active_valid 0 max new_valid 0 []
+seed1791 combos 10 warn active 0 warn new 0 burden monitored 9 burden decision 9
+  flips: []
+  max active_valid 1 max new_valid 1 []
+seed2791 combos 10 warn active 0 warn new 0 burden monitored 9 burden decision 9
+  flips: []
+  max active_valid 0 max new_valid 0 []
+seed3791 combos 10 warn active 0 warn new 0 burden monitored 7 burden decision 7
+  flips: []
+  max active_valid 1 max new_valid 1 []
+seed4791 combos 10 warn active 0 warn new 0 burden monitored 10 burden decision 10
+  flips: []
+  max active_valid 1 max new_valid 1 []
+minus60 combos 20 warn active 0 warn new 0 burden monitored 19 burden decision 19
+  flips: []
+  max active_valid 0 max new_valid 0 []
+plus60 combos 20 warn active 1 warn new 1 burden monitored 20 burden decision 20
+  flips: []
+  max active_valid 3 max new_valid 3 [('M1', 30, 2, 2), ('M1', 60, 2, 2), ('M1', 180, 2, 2), ('M1', 360, 2, 2), ('M3', 60, 3, 3)]
+further intervals: caught 11 as new alerts 11 in analysis A 4
+registered analysis A decision share 0.967
+forward tests 50 caught 0 new 0 max FA/day C,D monitored 0.83
+../../.venv/bin/python -B -W ignore extensions/alarm_defs.py  27.85s user 1.88s system 91% cpu 32.661 total

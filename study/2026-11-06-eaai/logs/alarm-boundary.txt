@@ -1,0 +1,2 @@
+tests {'registered': 250, 'seed1791': 70, 'seed2791': 70, 'seed3791': 70, 'seed4791': 70, 'minus60': 145, 'plus60': 145}
+catches added by including the exact 5-minute minute: 3 [{'set': 'seed1791', 'fold': 'A_holdjun05', 'h': 30, 'model': 'M6', 'failure': 'jun05'}, {'set': 'seed2791', 'fold': 'A_holdjun05', 'h': 30, 'model': 'M6', 'failure': 'jun05'}, {'set': 'seed4791', 'fold': 'A_holdjun05', 'h': 60, 'model': 'M6', 'failure': 'jun05'}]

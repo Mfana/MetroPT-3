@@ -1,0 +1,12 @@
+{
+  "heldin": {"mode": "heldin", "overrides": {}, "folds": ["A_holdapr18", "A_holdmay29", "A_holdjun05", "A_holdjul15"]},
+  "seed1791": {"mode": "full", "overrides": {"seed": 1791, "torch_threads": 1}, "folds": ["A_holdapr18", "A_holdmay29", "A_holdjun05", "A_holdjul15", "B_hold_may29_jun05", "D_forward_jul15", "E_false_alarm_after_jul16"]},
+  "seed2791": {"mode": "full", "overrides": {"seed": 2791, "torch_threads": 1}, "folds": ["A_holdapr18", "A_holdmay29", "A_holdjun05", "A_holdjul15", "B_hold_may29_jun05", "D_forward_jul15", "E_false_alarm_after_jul16"]},
+  "seed3791": {"mode": "full", "overrides": {"seed": 3791, "torch_threads": 1}, "folds": ["A_holdapr18", "A_holdmay29", "A_holdjun05", "A_holdjul15", "B_hold_may29_jun05", "D_forward_jul15", "E_false_alarm_after_jul16"]},
+  "seed4791": {"mode": "full", "overrides": {"seed": 4791, "torch_threads": 1}, "folds": ["A_holdapr18", "A_holdmay29", "A_holdjun05", "A_holdjul15", "B_hold_may29_jun05", "D_forward_jul15", "E_false_alarm_after_jul16"]},
+  "seed1791-rerun": {"mode": "full", "overrides": {"seed": 1791, "torch_threads": 1}, "folds": ["A_holdjul15"]},
+  "shift-minus60": {"mode": "full", "overrides": {"torch_threads": 1}, "folds": ["A_holdapr18", "A_holdmay29", "A_holdjun05", "A_holdjul15", "D_forward_jul15", "E_false_alarm_after_jul16"]},
+  "shift-plus60": {"mode": "full", "overrides": {"torch_threads": 1}, "folds": ["A_holdapr18", "A_holdmay29", "A_holdjun05", "A_holdjul15", "D_forward_jul15", "E_false_alarm_after_jul16"]},
+  "larger": {"mode": "full", "overrides": {"hidden": 64, "train_steps": 2000, "torch_threads": 1}, "folds": ["A_holdapr18", "A_holdmay29", "A_holdjun05", "A_holdjul15"]},
+  "larger-heldin": {"mode": "heldin", "overrides": {"hidden": 64, "train_steps": 2000, "torch_threads": 1}, "folds": ["A_holdapr18", "A_holdmay29", "A_holdjun05", "A_holdjul15"]}
+}

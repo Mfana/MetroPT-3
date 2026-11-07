@@ -1,0 +1,108 @@
+header: ['', 'timestamp', 'TP2', 'TP3', 'H1', 'DV_pressure', 'Reservoirs', 'Oil_temperature', 'Motor_current', 'COMP', 'DV_eletric', 'Towers', 'MPG', 'LPS', 'Pressure_switch', 'Oil_level', 'Caudal_impulses']
+
+rows=1516948 unparsable=0 first=2020-02-01 00:00:00 last=2020-09-01 03:59:50
+monotonic: True non-increasing steps: 0
+top step sizes (s): [(10, 1337521), (9, 128277), (12, 38321), (13, 7988), (11, 4471), (21, 10)]
+gaps >1h: 160; total 868.5 h
+     48.0 h  from 2020-04-25 01:10:51 to 2020-04-27 01:12:49
+     36.2 h  from 2020-06-27 10:53:07 to 2020-06-28 23:07:43
+     28.1 h  from 2020-02-28 23:57:08 to 2020-03-01 04:00:09
+     24.7 h  from 2020-08-04 07:42:28 to 2020-08-05 08:23:01
+     24.6 h  from 2020-05-24 00:39:23 to 2020-05-25 01:14:14
+     23.9 h  from 2020-07-07 15:24:51 to 2020-07-08 15:20:51
+     23.7 h  from 2020-08-22 19:11:44 to 2020-08-23 18:51:01
+     22.3 h  from 2020-05-10 00:31:17 to 2020-05-10 22:48:58
+
+rows per month:
+  2020-02 214850
+  2020-03 230448
+  2020-04 198734
+  2020-05 212800
+  2020-06 216514
+  2020-07 222638
+  2020-08 220434
+  2020-09 530
+
+60/20/20 by row:
+  dev   rows 0-910167 n=910168  2020-02-01 00:00:00 -> 2020-06-08 17:58:17
+  val   rows 910168-1213557 n=303390  2020-06-08 17:58:27 -> 2020-07-20 15:58:34
+  test  rows 1213558-1516947 n=303390  2020-07-20 15:58:44 -> 2020-09-01 03:59:50
+
+failures by position:
+  #1 2020-04-18 00:00:00 -> 2020-04-18 23:59:00: rows 562564-571220 n=8657, frac 0.3709-0.3766, partition(s) ['dev']
+  #2 2020-05-29 23:30:00 -> 2020-05-30 06:00:00: rows 840740-843099 n=2360, frac 0.5542-0.5558, partition(s) ['dev']
+  #3 2020-06-05 10:00:00 -> 2020-06-07 14:30:00: rows 890810-908124 n=17315, frac 0.5872-0.5987, partition(s) ['dev']
+  #4 2020-07-15 14:30:00 -> 2020-07-15 19:00:00: rows 1171093-1172714 n=1622, frac 0.7720-0.7731, partition(s) ['val']
+
+rows after end of last failure: 344233 (22.69%); test starts at frac 0.8000
+
+positive rows per horizon, window = [start-h, start), excluding failure rows
+h     total  prev_all   dev    val   test | prev_val  per-event rows
+0.5      694  0.046%    513    181      0 |  0.060%  [149, 182, 182, 181]  paper-implied prev 29.2%; precision at real prev 1.5%
+1       1387  0.091%   1024    363      0 |  0.120%  [298, 363, 363, 363]  paper-implied prev 29.9%; precision at real prev 2.3%
+3       4164  0.274%   3075   1089      0 |  0.359%  [895, 1090, 1090, 1089]  paper-implied prev 34.5%; precision at real prev 4.0%
+6       8327  0.549%   6148   2179      0 |  0.718%  [1790, 2179, 2179, 2179]  paper-implied prev 37.3%; precision at real prev 4.7%
+12     16654  1.098%  12297   4357      0 |  1.436%  [3581, 4358, 4358, 4357]  paper-implied prev 38.9%; precision at real prev 5.5%
+failure rows total: 29954 (1.97%); in test: 0
+
+state means, all rows (pre-failure = 6 h before start):
+  normal (n=1478667)
+    TP2              mean   1.228 sd  3.130
+    TP3              mean   8.999 sd  0.634
+    Reservoirs       mean   9.000 sd  0.633
+    Oil_temperature  mean  62.375 sd  6.277
+    Motor_current    mean   1.978 sd  2.269
+  pre-failure (n=8327)
+    TP2              mean   1.867 sd  3.755
+    TP3              mean   8.882 sd  0.626
+    Reservoirs       mean   8.882 sd  0.626
+    Oil_temperature  mean  63.923 sd  9.453
+    Motor_current    mean   2.281 sd  2.398
+  failure (n=29954)
+    TP2              mean   8.115 sd  0.982
+    TP3              mean   8.288 sd  0.495
+    Reservoirs       mean   8.290 sd  0.495
+    Oil_temperature  mean  75.598 sd  2.932
+    Motor_current    mean   5.532 sd  0.367
+state means, COMP==1 (intake valve signal active: compressor off or offloaded):
+  normal (n=1263243)
+    TP2              mean  -0.003 sd  0.260
+    TP3              mean   9.015 sd  0.571
+    Reservoirs       mean   9.016 sd  0.570
+    Oil_temperature  mean  61.969 sd  5.949
+    Motor_current    mean   1.357 sd  1.787
+  pre-failure (n=6244)
+    TP2              mean  -0.005 sd  0.240
+    TP3              mean   8.837 sd  0.597
+    Reservoirs       mean   8.838 sd  0.597
+    Oil_temperature  mean  62.559 sd  8.775
+    Motor_current    mean   1.437 sd  1.785
+  failure (n=133)
+    TP2              mean  -0.012 sd  0.007
+    TP3              mean   8.857 sd  0.715
+    Reservoirs       mean   8.859 sd  0.716
+    Oil_temperature  mean  61.642 sd 13.133
+    Motor_current    mean   1.707 sd  1.813
+state means, COMP==0 (compressor taking in air, under load):
+  normal (n=215424)
+    TP2              mean   8.450 sd  2.413
+    TP3              mean   8.909 sd  0.916
+    Reservoirs       mean   8.908 sd  0.915
+    Oil_temperature  mean  64.751 sd  7.502
+    Motor_current    mean   5.619 sd  1.057
+  pre-failure (n=2083)
+    TP2              mean   7.476 sd  3.774
+    TP3              mean   9.014 sd  0.690
+    Reservoirs       mean   9.013 sd  0.689
+    Oil_temperature  mean  68.013 sd 10.204
+    Motor_current    mean   4.809 sd  2.219
+  failure (n=29821)
+    TP2              mean   8.152 sd  0.821
+    TP3              mean   8.286 sd  0.493
+    Reservoirs       mean   8.287 sd  0.493
+    Oil_temperature  mean  75.661 sd  2.644
+    Motor_current    mean   5.549 sd  0.234
+
+TP2 quantiles: {0: -0.032, 0.1: -0.016, 0.25: -0.014, 0.5: -0.012, 0.75: -0.01, 0.9: 8.576, 0.99: 10.352, 1: 10.676}
+TP2 < 1 bar: 84.3%; TP2 >= 7 bar: 14.3%
+COMP share: {1: '83.7%', 0: '16.3%'}

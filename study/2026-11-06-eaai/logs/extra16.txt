@@ -1,0 +1,4 @@
+cells 250
+gate mismatches 0 []
+written 250 695 240
+../../.venv/bin/python -B -W ignore extensions/extra16.py  16.18s user 0.59s system 94% cpu 17.661 total

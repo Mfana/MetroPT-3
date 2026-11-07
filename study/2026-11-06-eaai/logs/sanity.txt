@@ -1,0 +1,20 @@
+1) training-set AUROC, hold out jul15, trained on blocks 1-3
+  h=30 M1 train 0.607 heldout 0.007
+  h=30 M3 train 1.000 heldout 0.087
+  h=360 M1 train 0.567 heldout 0.001
+  h=360 M3 train 0.987 heldout 0.101
+2) one feature, no model: AUROC of 60-minute load share (1-COMP mean), per failure, within its block
+  apr18 h=30 load AUROC 0.939 oil AUROC 0.013 mean load pre 0.21 other 0.12
+  apr18 h=360 load AUROC 0.934 oil AUROC 0.013 mean load pre 0.20 other 0.11
+  apr18 h=720 load AUROC 0.942 oil AUROC 0.011 mean load pre 0.21 other 0.11
+  may29 h=30 load AUROC 0.533 oil AUROC 0.326 mean load pre 0.16 other 0.21
+  may29 h=360 load AUROC 0.361 oil AUROC 0.442 mean load pre 0.11 other 0.20
+  may29 h=720 load AUROC 0.400 oil AUROC 0.623 mean load pre 0.12 other 0.20
+  jun05 h=30 load AUROC 0.292 oil AUROC 0.302 mean load pre 0.12 other 0.26
+  jun05 h=360 load AUROC 0.334 oil AUROC 0.248 mean load pre 0.12 other 0.26
+  jun05 h=720 load AUROC 0.229 oil AUROC 0.152 mean load pre 0.11 other 0.27
+  jul15 h=30 load AUROC 0.998 oil AUROC 1.000 mean load pre 0.68 other 0.13
+  jul15 h=360 load AUROC 0.996 oil AUROC 0.997 mean load pre 0.47 other 0.13
+  jul15 h=720 load AUROC 0.996 oil AUROC 0.993 mean load pre 0.42 other 0.13
+3) independent recomputation of primary metrics with scipy.rankdata
+  max abs AUROC difference vs primary-metrics.csv: 0 over 140 cells

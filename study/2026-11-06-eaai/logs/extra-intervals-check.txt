@@ -1,0 +1,21 @@
+first type <class 'int'> 26341920 onset type <class 'int'> 26452800
+extra interval minutes present 2999 of 252720 share 1.187%
+4/12 11:50 - 4/12 23:30 len 700 present 700 loaded share 1.00 runs>=30 (start rel, len): [(1, 705)] days to next report 5.5
+4/29 03:20 - 4/29 04:00 len 40 present 40 loaded share 0.88 runs>=30 (start rel, len): [(5, 38)] days to next report 30.8
+4/29 22:00 - 4/29 22:20 len 20 present 20 loaded share 0.60 runs>=30 (start rel, len): [] days to next report 30.1
+5/13 14:00 - 5/13 23:59 len 599 present 599 loaded share 1.00 runs>=30 (start rel, len): [(-16, 673)] days to next report 16.4
+5/18 05:00 - 5/18 05:30 len 30 present 30 loaded share 0.77 runs>=30 (start rel, len): [(-7, 30)] days to next report 11.8
+5/19 10:10 - 5/19 11:00 len 50 present 50 loaded share 0.84 runs>=30 (start rel, len): [(-4, 46)] days to next report 10.6
+5/19 22:10 - 5/20 20:00 len 1310 present 1299 loaded share 0.98 runs>=30 (start rel, len): [(10, 1289)] days to next report 10.1
+5/23 09:50 - 5/23 10:10 len 20 present 20 loaded share 1.00 runs>=30 (start rel, len): [(-8, 31)] days to next report 6.6
+6/01 15:00 - 6/01 15:40 len 40 present 40 loaded share 0.97 runs>=30 (start rel, len): [(-10, 49)] days to next report 3.8
+6/03 10:00 - 6/03 11:00 len 60 present 60 loaded share 0.90 runs>=30 (start rel, len): [(6, 64)] days to next report 2.0
+7/08 17:30 - 7/08 19:00 len 90 present 90 loaded share 0.77 runs>=30 (start rel, len): [(14, 35)] days to next report 6.9
+7/17 04:30 - 7/17 05:30 len 60 present 51 loaded share 0.85 runs>=30 (start rel, len): [(6, 45)] days to next report nan
+runs >= 30 : away 26 start within -120..end of an extra interval 11 overlap one 11
+runs >= 60 : away 11 start within -120..end of an extra interval 4 overlap one 4
+runs >= 120 : away 7 start within -120..end of an extra interval 3 overlap one 3
+runs >= 240 : away 7 start within -120..end of an extra interval 3 overlap one 3
+away runs >=240: [(np.str_('2020-03-12T00:16'), 694), (np.str_('2020-03-27T07:12'), 266), (np.str_('2020-03-28T23:05'), 1245), (np.str_('2020-04-12T11:51'), 705), (np.str_('2020-05-13T13:44'), 673), (np.str_('2020-05-19T22:20'), 1289), (np.str_('2020-06-22T15:06'), 3723)]
+L 30 observed 11 of 26 rotated median 0.0 p95 2.0 share rotated >= obs 0.001
+L 240 observed 3 of 7 rotated median 0.0 p95 1.0 share rotated >= obs 0.002

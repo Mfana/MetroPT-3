@@ -1,0 +1,16 @@
+4d3613ca91df0c097b5a5fe61343d5b51b6504280f7ab56b318fd32c80a0e1f7  study/2026-11-06-eaai/provenance/registered-plan.md
+9f20fb5ca2f50dbf996506de03f24f113d16b96aa75fd7d6d677d6ee1f439926  study/2026-11-06-eaai/provenance/event-study-config.json
+d067dc7ebe2ab01b8ba05ae3509f4999faf40ae3d37ab6b54294ba76919de6e0  study/2026-11-06-eaai/provenance/event-study-events.csv
+9037dd07bdcf90664a90ddfb904304652a164c06bf10cd915e3ce43592f461e9  study/2026-11-06-eaai/provenance/uci-events.csv
+0a68eea8ee8401763e1d9dfefe09ab2180bbdc9ba9981358d791dc3826f95fa8  study/2026-11-06-eaai/provenance/study-frozen-draft.json
+563dcc0a52046cbfa2c651a8aa307965486b9023a9f32eab783ea6b4d5502bb0  study/2026-11-06-eaai/extensions/event_study.py
+22c8858887c28c34b996e73fcf9fbe4da113dc0d909e21fc878329b3d6664603  study/2026-11-06-eaai/extensions/test_event_study.py
+2a78ab629e66e4df9aaa1efbe61d0886af7c44d82db9f850b70dc1fc14fecb23  .claude/skills/metropt-eaai/scripts/analysis.py
+3f300e0152b5a054b5e642c2e40b6fb905a6d91b720bd7e89b8fe77099fdfd18  .claude/skills/metropt-eaai/scripts/audit.py
+8dcc59cb252ff0227562b1923bb8a848d076139d105498519a758ca74a5af58c  .claude/skills/metropt-eaai/scripts/export_tables.py
+4c344312a78e6d66207a5814d31687719b09c88f37b55ac3d2333fbd5739c631  .claude/skills/metropt-eaai/scripts/novelty.py
+5c1867d3ab3d144e57d36483672aa237ba5f1e36a1b318a967a4a32c724cc4d0  .claude/skills/metropt-eaai/scripts/run.py
+af95d693f235e1d1e318ddb96d3c1271a4fa09b92da7f8df6feb37343a4a5d83  .claude/skills/metropt-eaai/scripts/source.py
+7c9eb63ec103599c74a99be7bee994f9ff3d4f0bdfea9ce532d37b07badac3c1  .claude/skills/metropt-eaai/scripts/windows.py
+db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24  data/raw/MetroPT3(AirCompressor).csv
+2026-11-06T20:51:13Z

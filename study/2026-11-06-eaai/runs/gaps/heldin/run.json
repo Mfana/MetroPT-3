@@ -1,0 +1,1282 @@
+{
+ "status": "completed_with_gates",
+ "phase": "heldin",
+ "mode": "heldin",
+ "synthetic": false,
+ "python": "3.13.4",
+ "torch": "2.15.0",
+ "numpy": "2.2.6",
+ "arguments": [
+  "--phase",
+  "heldin",
+  "--phases",
+  "study/2026-11-06-eaai/provenance/gaps-phases.json",
+  "--csv",
+  "data/raw/MetroPT3(AirCompressor).csv",
+  "--config",
+  "study/2026-11-06-eaai/provenance/seq-config.json",
+  "--base-config",
+  "study/2026-11-06-eaai/provenance/event-study-config.json",
+  "--events",
+  "study/2026-11-06-eaai/provenance/event-study-events.csv",
+  "--out",
+  "study/2026-11-06-eaai/runs/gaps/heldin",
+  "--workers",
+  "3"
+ ],
+ "input": {
+  "sha256": "db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24",
+  "raw_rows": 1516948
+ },
+ "config": {
+  "hidden": 32,
+  "dropout": 0.1,
+  "kernel": 3,
+  "dilations": [
+   1,
+   2,
+   4,
+   8,
+   16
+  ],
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 256,
+  "positive_share": 0.25,
+  "train_steps": 500,
+  "score_batch": 2048,
+  "seed": 791,
+  "torch_threads": 2,
+  "random_split_model": "M5",
+  "models_by_fold": {
+   "A": [
+    "M5",
+    "M6"
+   ],
+   "B": [
+    "M5",
+    "M6"
+   ],
+   "C": [
+    "M5",
+    "M6"
+   ],
+   "D": [
+    "M5",
+    "M6"
+   ],
+   "E": [
+    "M5",
+    "M6"
+   ]
+  }
+ },
+ "config_sha256": "40a7f7d2285c5914488729d6d8d1e4fdd394f2166ebbed29b22e9dbcc50186e9",
+ "phases_sha256": "0f348db586b09878e33b7735c7aa92585fa90bc38fb154276ce5890f23269616",
+ "base_config_sha256": "9f20fb5ca2f50dbf996506de03f24f113d16b96aa75fd7d6d677d6ee1f439926",
+ "events_sha256": "d067dc7ebe2ab01b8ba05ae3509f4999faf40ae3d37ab6b54294ba76919de6e0",
+ "script_sha256": "16d45da9545180964ae9e1d4ba4ca7ef4724fb9654f3881d440ea916e68be12e",
+ "seq_study_sha256": "e83b7f9ae2ae1afad343d6930f42b0b54dd344edb5d82afd5ac94ec6f629bb4d",
+ "results": [
+  {
+   "fold": "A_holdapr18",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 121956,
+   "train_positives": 90,
+   "heldin_ap": 0.6181776352566623,
+   "heldin_auroc": 0.9995133087890707,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.6628372095991523,
+     "auroc": 0.9983543687931083,
+     "positives": 30
+    },
+    "jun05": {
+     "ap": 0.7620978788959549,
+     "auroc": 0.9997251821316533,
+     "positives": 30
+    },
+    "jul15": {
+     "ap": 0.8261139631653971,
+     "auroc": 0.9999071252756504,
+     "positives": 30
+    }
+   },
+   "heldout_ap": 0.00015773029188513967,
+   "heldout_auroc": 0.10036502298691515,
+   "prediction_digest": "5c7d51dae6cf7f7a943c4d8f749d46df616ba205a2ca5cf221ace5aa5365f25b"
+  },
+  {
+   "fold": "A_holdapr18",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 121956,
+   "train_positives": 90,
+   "heldin_ap": 0.7976338097702711,
+   "heldin_auroc": 0.9998872167426153,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.9638487669185666,
+     "auroc": 0.9999527775392805,
+     "positives": 30
+    },
+    "jun05": {
+     "ap": 0.5406609927130637,
+     "auroc": 0.9995151797982941,
+     "positives": 30
+    },
+    "jul15": {
+     "ap": 0.9887284370520374,
+     "auroc": 0.9999954248904261,
+     "positives": 30
+    }
+   },
+   "heldout_ap": 0.00016372869177529243,
+   "heldout_auroc": 0.1285182280855513,
+   "prediction_digest": "09121349eeac0e8b0344d6d3ffea3c11347a01716d9ff33e7426eeb03e66e214"
+  },
+  {
+   "fold": "A_holdapr18",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 120986,
+   "train_positives": 180,
+   "heldin_ap": 0.2948959875406771,
+   "heldin_auroc": 0.9831559598769009,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.12005459572353784,
+     "auroc": 0.973901959934717,
+     "positives": 60
+    },
+    "jun05": {
+     "ap": 0.04614515368996852,
+     "auroc": 0.9649940005738582,
+     "positives": 60
+    },
+    "jul15": {
+     "ap": 0.8439292507525046,
+     "auroc": 0.9937639429672019,
+     "positives": 60
+    }
+   },
+   "heldout_ap": 0.0005688404019400307,
+   "heldout_auroc": 0.5186992929321134,
+   "prediction_digest": "81908edeccc73b9d2320532b6772d3673bf54d508fe81d4d6c0ef1e037982721"
+  },
+  {
+   "fold": "A_holdapr18",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 120986,
+   "train_positives": 180,
+   "heldin_ap": 0.7274270869316273,
+   "heldin_auroc": 0.9995125793972706,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.7363738907924906,
+     "auroc": 0.9989543163337522,
+     "positives": 60
+    },
+    "jun05": {
+     "ap": 0.7041302308434688,
+     "auroc": 0.9994561389780108,
+     "positives": 60
+    },
+    "jul15": {
+     "ap": 0.9611577894295898,
+     "auroc": 0.9999704397548347,
+     "positives": 60
+    }
+   },
+   "heldout_ap": 0.0003259538587812886,
+   "heldout_auroc": 0.13072766872364783,
+   "prediction_digest": "bb482fac1dd271eef9ca04df66f7910e961d2776f05db695313dc11937ec5af0"
+  },
+  {
+   "fold": "A_holdapr18",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 118285,
+   "train_positives": 540,
+   "heldin_ap": 0.39478744131072374,
+   "heldin_auroc": 0.9736390080258185,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.17839714282119676,
+     "auroc": 0.9229057805963705,
+     "positives": 180
+    },
+    "jun05": {
+     "ap": 0.20608061123056667,
+     "auroc": 0.9764219353414983,
+     "positives": 180
+    },
+    "jul15": {
+     "ap": 0.8478844033928116,
+     "auroc": 0.9991250944014591,
+     "positives": 180
+    }
+   },
+   "heldout_ap": 0.0027601588549384733,
+   "heldout_auroc": 0.7012981597215586,
+   "prediction_digest": "b5babce02e59558d9684566e020d8c2c431089118fdb0a386ec7cc0396b7e421"
+  },
+  {
+   "fold": "A_holdapr18",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 118285,
+   "train_positives": 540,
+   "heldin_ap": 0.8316920189367353,
+   "heldin_auroc": 0.9988032675760392,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.8480010117489454,
+     "auroc": 0.9984393531131059,
+     "positives": 180
+    },
+    "jun05": {
+     "ap": 0.5544248660706684,
+     "auroc": 0.9956608187134502,
+     "positives": 180
+    },
+    "jul15": {
+     "ap": 0.9724641388360955,
+     "auroc": 0.9998362124788833,
+     "positives": 180
+    }
+   },
+   "heldout_ap": 0.0010427063835080667,
+   "heldout_auroc": 0.18137275512999382,
+   "prediction_digest": "eb22ceb36d15a2c293d6e918b6af5e0e0dc972edee5962b00795ac757890472b"
+  },
+  {
+   "fold": "A_holdapr18",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 115495,
+   "train_positives": 1080,
+   "heldin_ap": 0.5069358207049893,
+   "heldin_auroc": 0.9856673561644501,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.25733994121326137,
+     "auroc": 0.972574059289177,
+     "positives": 360
+    },
+    "jun05": {
+     "ap": 0.28872018471113653,
+     "auroc": 0.9722788731020292,
+     "positives": 360
+    },
+    "jul15": {
+     "ap": 0.8648017221051925,
+     "auroc": 0.9993841353327,
+     "positives": 360
+    }
+   },
+   "heldout_ap": 0.0020301374717432872,
+   "heldout_auroc": 0.15715136149555015,
+   "prediction_digest": "aa0a95b7cee2d93057f06e290ab430b59957d9513b1e86be452838d7e9abb429"
+  },
+  {
+   "fold": "A_holdapr18",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 115495,
+   "train_positives": 1080,
+   "heldin_ap": 0.6170140530387104,
+   "heldin_auroc": 0.9908079263111383,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.5706509662227109,
+     "auroc": 0.9870113808919989,
+     "positives": 360
+    },
+    "jun05": {
+     "ap": 0.2390984922177927,
+     "auroc": 0.9697666116787286,
+     "positives": 360
+    },
+    "jul15": {
+     "ap": 0.9518794201104686,
+     "auroc": 0.9997705658233675,
+     "positives": 360
+    }
+   },
+   "heldout_ap": 0.0020455977632834474,
+   "heldout_auroc": 0.1321461241304877,
+   "prediction_digest": "1a3f38401704720d114e3def74072b40fce242c9d6a30b27cab9043b5c87bd66"
+  },
+  {
+   "fold": "A_holdapr18",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 115629,
+   "train_positives": 2160,
+   "heldin_ap": 0.44457170208215485,
+   "heldin_auroc": 0.9397376828815702,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.1966776344235352,
+     "auroc": 0.9244862116377409,
+     "positives": 720
+    },
+    "jun05": {
+     "ap": 0.1648365319437114,
+     "auroc": 0.9160565579846042,
+     "positives": 720
+    },
+    "jul15": {
+     "ap": 0.912711406983414,
+     "auroc": 0.998746381486444,
+     "positives": 720
+    }
+   },
+   "heldout_ap": 0.0039151041235653185,
+   "heldout_auroc": 0.11715389668764263,
+   "prediction_digest": "8b24fe57448c0ef9325c989bdee5d3cb39c88fb7d6bda48a9e912a839632c298"
+  },
+  {
+   "fold": "A_holdapr18",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 115629,
+   "train_positives": 2160,
+   "heldin_ap": 0.6894066968934563,
+   "heldin_auroc": 0.9873739050280661,
+   "heldin_by_failure": {
+    "may29": {
+     "ap": 0.49087538075153714,
+     "auroc": 0.9712027524839806,
+     "positives": 720
+    },
+    "jun05": {
+     "ap": 0.4097247205200142,
+     "auroc": 0.96114069281466,
+     "positives": 720
+    },
+    "jul15": {
+     "ap": 0.9743405675131152,
+     "auroc": 0.9997315476485865,
+     "positives": 720
+    }
+   },
+   "heldout_ap": 0.00408234849807992,
+   "heldout_auroc": 0.1349494754912776,
+   "prediction_digest": "b130936c4e5dbbc3abc0ae873347fc07ff3d56123f5357721c6426977ab51b08"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 157493,
+   "train_positives": 90,
+   "heldin_ap": 0.15299590943174773,
+   "heldin_auroc": 0.9960789960942436,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.08092645199775977,
+     "auroc": 0.9979491673970201,
+     "positives": 30
+    },
+    "may29": {
+     "ap": 0.2898533413640579,
+     "auroc": 0.9978105950030051,
+     "positives": 30
+    },
+    "jun05": {
+     "ap": 0.3266493670834981,
+     "auroc": 0.9947343859376215,
+     "positives": 30
+    }
+   },
+   "heldout_ap": 0.00025387648142535677,
+   "heldout_auroc": 0.18255716599412555,
+   "prediction_digest": "53211f60a822549b95cfe5e2c67b21ef0b4e994c39729007a04d3b33ade813c3"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 157493,
+   "train_positives": 90,
+   "heldin_ap": 0.6595284066488754,
+   "heldin_auroc": 0.9997666287597229,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.4077866883305977,
+     "auroc": 0.9997392253640236,
+     "positives": 30
+    },
+    "may29": {
+     "ap": 0.9477557465353098,
+     "auroc": 0.9999341747517243,
+     "positives": 30
+    },
+    "jun05": {
+     "ap": 0.5934165301332053,
+     "auroc": 0.9994736978559021,
+     "positives": 30
+    }
+   },
+   "heldout_ap": 0.00021425089842434398,
+   "heldout_auroc": 0.0073988672028695085,
+   "prediction_digest": "83d8630487353c94196d63b148132679356577bff092c144edee43594373df51"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 156256,
+   "train_positives": 180,
+   "heldin_ap": 0.05392522356646301,
+   "heldin_auroc": 0.9782291604375076,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.10580452732650159,
+     "auroc": 0.9969272486403137,
+     "positives": 60
+    },
+    "may29": {
+     "ap": 0.09316188243055806,
+     "auroc": 0.9748999812239121,
+     "positives": 60
+    },
+    "jun05": {
+     "ap": 0.018279682294786583,
+     "auroc": 0.9042530714453401,
+     "positives": 60
+    }
+   },
+   "heldout_ap": 0.0005504691524390765,
+   "heldout_auroc": 0.29807673654893374,
+   "prediction_digest": "87c78379517fe7a6ad7b6b03da2ee89522e24e1b646051c05750b6acf6cd1557"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 156256,
+   "train_positives": 180,
+   "heldin_ap": 0.44427400744124673,
+   "heldin_auroc": 0.9981946473370523,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.11864503539127667,
+     "auroc": 0.9979484482667684,
+     "positives": 60
+    },
+    "may29": {
+     "ap": 0.8656443837273486,
+     "auroc": 0.9995537068330517,
+     "positives": 60
+    },
+    "jun05": {
+     "ap": 0.5036812967113289,
+     "auroc": 0.9981030075384094,
+     "positives": 60
+    }
+   },
+   "heldout_ap": 0.0005882662828594156,
+   "heldout_auroc": 0.2829843838767338,
+   "prediction_digest": "ac84da87162a9b080a7718f92b2a059a85615ec9fdc68546b6465caf7e1a4a9f"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 152752,
+   "train_positives": 540,
+   "heldin_ap": 0.10245132779971547,
+   "heldin_auroc": 0.9400551533387643,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.16577043397546976,
+     "auroc": 0.9191293344545738,
+     "positives": 180
+    },
+    "may29": {
+     "ap": 0.15151769157486675,
+     "auroc": 0.9646832308616061,
+     "positives": 180
+    },
+    "jun05": {
+     "ap": 0.032327358142592,
+     "auroc": 0.903458016109456,
+     "positives": 180
+    }
+   },
+   "heldout_ap": 0.0060144530546294315,
+   "heldout_auroc": 0.7898517837719736,
+   "prediction_digest": "c4ab7f05b679b83eeac83a1b368175b5074acf288b9b88a4fe849a910bf2b8e4"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 152752,
+   "train_positives": 540,
+   "heldin_ap": 0.4948399111350298,
+   "heldin_auroc": 0.9963359461608614,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.182025690966597,
+     "auroc": 0.9963420059587137,
+     "positives": 180
+    },
+    "may29": {
+     "ap": 0.8797474365222956,
+     "auroc": 0.9989857035813,
+     "positives": 180
+    },
+    "jun05": {
+     "ap": 0.36267492930723005,
+     "auroc": 0.9891166280481077,
+     "positives": 180
+    }
+   },
+   "heldout_ap": 0.0018344773770576559,
+   "heldout_auroc": 0.3011425545153583,
+   "prediction_digest": "c533c9c3501eba82ec0e3b99b726d915965d9c17b1b42e400571d6802f376775"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 148731,
+   "train_positives": 1080,
+   "heldin_ap": 0.21880447963419175,
+   "heldin_auroc": 0.9729242687398236,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.41485749301788044,
+     "auroc": 0.9975559602859656,
+     "positives": 360
+    },
+    "may29": {
+     "ap": 0.2666606753318955,
+     "auroc": 0.9629705510939954,
+     "positives": 360
+    },
+    "jun05": {
+     "ap": 0.06236397079483823,
+     "auroc": 0.8783766585071662,
+     "positives": 360
+    }
+   },
+   "heldout_ap": 0.0030215463325376423,
+   "heldout_auroc": 0.1293475368678113,
+   "prediction_digest": "57b0b08a7fad2bfcb602555247ff5b1225867ccfa6493457c3f5ea5fe1778fcd"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 148731,
+   "train_positives": 1080,
+   "heldin_ap": 0.33371013141788136,
+   "heldin_auroc": 0.9825311194290239,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.4785765475098097,
+     "auroc": 0.9978444678069315,
+     "positives": 360
+    },
+    "may29": {
+     "ap": 0.511835375267168,
+     "auroc": 0.9794199450001826,
+     "positives": 360
+    },
+    "jun05": {
+     "ap": 0.11736725921361629,
+     "auroc": 0.9064150746771676,
+     "positives": 360
+    }
+   },
+   "heldout_ap": 0.0037643126129089477,
+   "heldout_auroc": 0.3019722279356311,
+   "prediction_digest": "ea19dc691a5e1afa11a7581e2723997125286e70b278a17f79b2684ffa7c9a92"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 149686,
+   "train_positives": 2160,
+   "heldin_ap": 0.3884051908733133,
+   "heldin_auroc": 0.957297219674021,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.8887316403977962,
+     "auroc": 0.9995502819296126,
+     "positives": 720
+    },
+    "may29": {
+     "ap": 0.24103528246202266,
+     "auroc": 0.9435448932472047,
+     "positives": 720
+    },
+    "jun05": {
+     "ap": 0.0493113023823379,
+     "auroc": 0.7363300157173731,
+     "positives": 720
+    }
+   },
+   "heldout_ap": 0.006919920228002592,
+   "heldout_auroc": 0.28878025077332803,
+   "prediction_digest": "67e4e93314c585349b96318bfa8228b5e862f404fba075e09f8c84cd006b053b"
+  },
+  {
+   "fold": "A_holdjul15",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 149686,
+   "train_positives": 2160,
+   "heldin_ap": 0.5352535366426306,
+   "heldin_auroc": 0.9826714977046105,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.8428747057098231,
+     "auroc": 0.9993678399373026,
+     "positives": 720
+    },
+    "may29": {
+     "ap": 0.5229432447406648,
+     "auroc": 0.9777057228837523,
+     "positives": 720
+    },
+    "jun05": {
+     "ap": 0.2231164883135627,
+     "auroc": 0.9221938126239083,
+     "positives": 720
+    }
+   },
+   "heldout_ap": 0.007804082202696719,
+   "heldout_auroc": 0.32217873802788943,
+   "prediction_digest": "6448d103350eea2b6e5ffa30b685e747c9177e3788abd14c95c255806c01963d"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 204637,
+   "train_positives": 90,
+   "heldin_ap": 0.3935568411482828,
+   "heldin_auroc": 0.9983006893824456,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.026975236504217126,
+     "auroc": 0.9953195873118379,
+     "positives": 30
+    },
+    "may29": {
+     "ap": 0.4240466470516282,
+     "auroc": 0.9989840016027017,
+     "positives": 30
+    },
+    "jul15": {
+     "ap": 0.856128383377682,
+     "auroc": 0.9999359484659658,
+     "positives": 30
+    }
+   },
+   "heldout_ap": 0.0011635885613425704,
+   "heldout_auroc": 0.4782453138368204,
+   "prediction_digest": "209de95599326772b4eb4e43ddd6d4de1f5821d3c4409b096a693f7856c861c0"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 204637,
+   "train_positives": 90,
+   "heldin_ap": 0.554605014140408,
+   "heldin_auroc": 0.9994471794855081,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.1016360043508226,
+     "auroc": 0.9984433476328859,
+     "positives": 30
+    },
+    "may29": {
+     "ap": 0.9872404164519478,
+     "auroc": 0.9999842591797602,
+     "positives": 30
+    },
+    "jul15": {
+     "ap": 0.6822445124613576,
+     "auroc": 0.9998961450126731,
+     "positives": 30
+    }
+   },
+   "heldout_ap": 0.04398147340494754,
+   "heldout_auroc": 0.6247582380544969,
+   "prediction_digest": "2e28ffe097330b64515e3cc0dfc189d0ce376b5683ccd80639635d03b9cf6c22"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 202867,
+   "train_positives": 180,
+   "heldin_ap": 0.1321551580574848,
+   "heldin_auroc": 0.9827826347466235,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.10385779360856168,
+     "auroc": 0.9972002717821276,
+     "positives": 60
+    },
+    "may29": {
+     "ap": 0.2898858642318688,
+     "auroc": 0.9407159466759103,
+     "positives": 60
+    },
+    "jul15": {
+     "ap": 0.17520520576550067,
+     "auroc": 0.9978333264051509,
+     "positives": 60
+    }
+   },
+   "heldout_ap": 0.003492545726394504,
+   "heldout_auroc": 0.6083284424968046,
+   "prediction_digest": "90456fc4732cba14d4063de05230e23b20468ce71e086ddb7d7615cf73c1b92c"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 202867,
+   "train_positives": 180,
+   "heldin_ap": 0.7050612664745015,
+   "heldin_auroc": 0.9994925125384898,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.23647518680759227,
+     "auroc": 0.9982183688728798,
+     "positives": 60
+    },
+    "may29": {
+     "ap": 0.9467571163008685,
+     "auroc": 0.9998541242399295,
+     "positives": 60
+    },
+    "jul15": {
+     "ap": 0.9854129369514546,
+     "auroc": 0.9999891458474783,
+     "positives": 60
+    }
+   },
+   "heldout_ap": 0.003282381933822762,
+   "heldout_auroc": 0.6711427602577145,
+   "prediction_digest": "afc83ecb25583042f8887c438886a76f280f9114ecfa5eb8cb16362ad9a1ba6e"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 197756,
+   "train_positives": 540,
+   "heldin_ap": 0.34304849239359103,
+   "heldin_auroc": 0.9658705523479426,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.2353298573325075,
+     "auroc": 0.9968365834442894,
+     "positives": 180
+    },
+    "may29": {
+     "ap": 0.5336712263654438,
+     "auroc": 0.8843965085178073,
+     "positives": 180
+    },
+    "jul15": {
+     "ap": 0.9676568187354289,
+     "auroc": 0.9999140293630099,
+     "positives": 180
+    }
+   },
+   "heldout_ap": 0.009745640085004592,
+   "heldout_auroc": 0.5595444113428225,
+   "prediction_digest": "7a49243f9d91bff2c9719622b3fbc1c1493a2ded05250f05749c1416dc58ddf7"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 197756,
+   "train_positives": 540,
+   "heldin_ap": 0.7614439168550491,
+   "heldin_auroc": 0.9990235466583735,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.31040512724404423,
+     "auroc": 0.9976556942241249,
+     "positives": 180
+    },
+    "may29": {
+     "ap": 0.9857968392554639,
+     "auroc": 0.999888347996963,
+     "positives": 180
+    },
+    "jul15": {
+     "ap": 0.9607101448906324,
+     "auroc": 0.9998671650747057,
+     "positives": 180
+    }
+   },
+   "heldout_ap": 0.009561135932530503,
+   "heldout_auroc": 0.6632911839346795,
+   "prediction_digest": "09d82ee2d13f4a462d7a25fa24274611d697d2d644160a1dba1b68fcf21001d2"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 191741,
+   "train_positives": 1080,
+   "heldin_ap": 0.4051027873609436,
+   "heldin_auroc": 0.9859739542569933,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.42318950541674116,
+     "auroc": 0.9976335336145606,
+     "positives": 360
+    },
+    "may29": {
+     "ap": 0.3183371907361908,
+     "auroc": 0.9467142305504678,
+     "positives": 360
+    },
+    "jul15": {
+     "ap": 0.5490841678040056,
+     "auroc": 0.9970615121924146,
+     "positives": 360
+    }
+   },
+   "heldout_ap": 0.016063289251871293,
+   "heldout_auroc": 0.4999473401802185,
+   "prediction_digest": "93e2bd5b00d7d059078eb9fd321e19427523d0dbf461f30fb5499f352ba91ef7"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 191741,
+   "train_positives": 1080,
+   "heldin_ap": 0.6536451704551541,
+   "heldin_auroc": 0.9968950271832088,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.5478317537739547,
+     "auroc": 0.9982068742747209,
+     "positives": 360
+    },
+    "may29": {
+     "ap": 0.8153587248882433,
+     "auroc": 0.9952278265679383,
+     "positives": 360
+    },
+    "jul15": {
+     "ap": 0.9165992793389468,
+     "auroc": 0.999542355948638,
+     "positives": 360
+    }
+   },
+   "heldout_ap": 0.01329874103446291,
+   "heldout_auroc": 0.5047030207889882,
+   "prediction_digest": "a8f4f6d7be2d593cc4090d5d69309a62f214f2fbf03c7e9c7662c66ff4d3f681"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 191972,
+   "train_positives": 2160,
+   "heldin_ap": 0.6508060346133644,
+   "heldin_auroc": 0.9766853859686505,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.886439412225597,
+     "auroc": 0.9995422965765611,
+     "positives": 720
+    },
+    "may29": {
+     "ap": 0.23102091465959976,
+     "auroc": 0.9433193244610476,
+     "positives": 720
+    },
+    "jul15": {
+     "ap": 0.8987066629648222,
+     "auroc": 0.988424830033249,
+     "positives": 720
+    }
+   },
+   "heldout_ap": 0.022378546328027816,
+   "heldout_auroc": 0.42564270437050133,
+   "prediction_digest": "df3b29dc95f546ab6a7ac44ad060423bcd433de4334546cfd6a9ddead0d41139"
+  },
+  {
+   "fold": "A_holdjun05",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 191972,
+   "train_positives": 2160,
+   "heldin_ap": 0.813943032835332,
+   "heldin_auroc": 0.9964497193031545,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.8604559540343324,
+     "auroc": 0.9994315238139144,
+     "positives": 720
+    },
+    "may29": {
+     "ap": 0.6589555699977604,
+     "auroc": 0.9823075077178509,
+     "positives": 720
+    },
+    "jul15": {
+     "ap": 0.9433975494999426,
+     "auroc": 0.9995066622003871,
+     "positives": 720
+    }
+   },
+   "heldout_ap": 0.025314680168764623,
+   "heldout_auroc": 0.4866458980781939,
+   "prediction_digest": "fd69c1b93c058b8cce0dabc345410760eeb0b2c422b81562e3fa27d598527e27"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 207057,
+   "train_positives": 90,
+   "heldin_ap": 0.0675746566812303,
+   "heldin_auroc": 0.99380835270035,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.056475282758494054,
+     "auroc": 0.9968067407783262,
+     "positives": 30
+    },
+    "jun05": {
+     "ap": 0.4322338574103852,
+     "auroc": 0.9770449301288533,
+     "positives": 30
+    },
+    "jul15": {
+     "ap": 0.5674969644043537,
+     "auroc": 0.9996985002790817,
+     "positives": 30
+    }
+   },
+   "heldout_ap": 0.0018101703424954168,
+   "heldout_auroc": 0.47209438768209266,
+   "prediction_digest": "07b6804aca6e3143f769d1a996aed8e29306301bc9c7dbf18058d85815704334"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 207057,
+   "train_positives": 90,
+   "heldin_ap": 0.6026876254928756,
+   "heldin_auroc": 0.999555806803339,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.10659041766431748,
+     "auroc": 0.9986669126804741,
+     "positives": 30
+    },
+    "jun05": {
+     "ap": 0.8679344495270616,
+     "auroc": 0.9998807394156232,
+     "positives": 30
+    },
+    "jul15": {
+     "ap": 0.9625823197753218,
+     "auroc": 0.9999849021384062,
+     "positives": 30
+    }
+   },
+   "heldout_ap": 0.006949364840670245,
+   "heldout_auroc": 0.9063321026873873,
+   "prediction_digest": "76040b40593a32aba2ba50418cb469710cb38e33574d5ca519c582cc4475f25c"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 205346,
+   "train_positives": 180,
+   "heldin_ap": 0.3446140140670594,
+   "heldin_auroc": 0.9970034021231589,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.10649067007983966,
+     "auroc": 0.9969471048688093,
+     "positives": 60
+    },
+    "jun05": {
+     "ap": 0.7123345826713768,
+     "auroc": 0.9990687847249393,
+     "positives": 60
+    },
+    "jul15": {
+     "ap": 0.8255628598798241,
+     "auroc": 0.9998351092574373,
+     "positives": 60
+    }
+   },
+   "heldout_ap": 0.003602119991174179,
+   "heldout_auroc": 0.6271827202218467,
+   "prediction_digest": "5e32db024c9879ee3d215b4affef52705cad39e48e6defdc48ada21dc01a34a8"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 205346,
+   "train_positives": 180,
+   "heldin_ap": 0.654946492700393,
+   "heldin_auroc": 0.9994590288406028,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.18056780923035273,
+     "auroc": 0.9984138286221329,
+     "positives": 60
+    },
+    "jun05": {
+     "ap": 0.7555331003508805,
+     "auroc": 0.9996093851892428,
+     "positives": 60
+    },
+    "jul15": {
+     "ap": 0.9981576850644647,
+     "auroc": 0.9999983834240925,
+     "positives": 60
+    }
+   },
+   "heldout_ap": 0.07760924345765798,
+   "heldout_auroc": 0.9218091482877652,
+   "prediction_digest": "45b1d5acdc95259f6d41f9e28860fb99d17b18d6ceb648179e6ea1bfe9a4d644"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 200540,
+   "train_positives": 540,
+   "heldin_ap": 0.42223935377411065,
+   "heldin_auroc": 0.9923270648148148,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.2477600140419144,
+     "auroc": 0.9969991951701717,
+     "positives": 180
+    },
+    "jun05": {
+     "ap": 0.054531041962224094,
+     "auroc": 0.9423760344256868,
+     "positives": 180
+    },
+    "jul15": {
+     "ap": 0.8606211288052174,
+     "auroc": 0.9996158236636158,
+     "positives": 180
+    }
+   },
+   "heldout_ap": 0.006958881967121026,
+   "heldout_auroc": 0.46494313191311987,
+   "prediction_digest": "c64ba27d1614e23bc2cdb27f633acb84e081b64cee3488b2e22e37c3291ecaa2"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 200540,
+   "train_positives": 540,
+   "heldin_ap": 0.6157159509470619,
+   "heldin_auroc": 0.9980908796296296,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.2540289886137841,
+     "auroc": 0.9969985581017059,
+     "positives": 180
+    },
+    "jun05": {
+     "ap": 0.8156797775951887,
+     "auroc": 0.9984327485380117,
+     "positives": 180
+    },
+    "jul15": {
+     "ap": 0.9730662454074249,
+     "auroc": 0.999913633549764,
+     "positives": 180
+    }
+   },
+   "heldout_ap": 0.05119690982447751,
+   "heldout_auroc": 0.9319835846743979,
+   "prediction_digest": "2f1073274a66cfc96401505692541bc341f940b8b619f1e17585377a66cc65c7"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 195504,
+   "train_positives": 1080,
+   "heldin_ap": 0.419853959005596,
+   "heldin_auroc": 0.9551919792328641,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.41061916306527657,
+     "auroc": 0.9975729337360895,
+     "positives": 360
+    },
+    "jun05": {
+     "ap": 0.03335195963263897,
+     "auroc": 0.801783394086136,
+     "positives": 360
+    },
+    "jul15": {
+     "ap": 0.7848379901088246,
+     "auroc": 0.9394937756491248,
+     "positives": 360
+    }
+   },
+   "heldout_ap": 0.12117293707748443,
+   "heldout_auroc": 0.8427598141277519,
+   "prediction_digest": "99795afee3c0399efa950ccacd099fc8dad6869f97245c348028875f52584dcf"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 195504,
+   "train_positives": 1080,
+   "heldin_ap": 0.5862950023100162,
+   "heldin_auroc": 0.9932556599284343,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.43939096378542325,
+     "auroc": 0.9976902808763236,
+     "positives": 360
+    },
+    "jun05": {
+     "ap": 0.4248141401035217,
+     "auroc": 0.9654462892010784,
+     "positives": 360
+    },
+    "jul15": {
+     "ap": 0.898548430216774,
+     "auroc": 0.9994446974668377,
+     "positives": 360
+    }
+   },
+   "heldout_ap": 0.16034001168721226,
+   "heldout_auroc": 0.8994425658928078,
+   "prediction_digest": "778ad292c913c6a0c79e2825b38d03d140c96affdb8755b9dcf6c148b9560207"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "train_windows": 195441,
+   "train_positives": 2160,
+   "heldin_ap": 0.658665392791621,
+   "heldin_auroc": 0.9640272177602864,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.8764248046835739,
+     "auroc": 0.9994642953186622,
+     "positives": 720
+    },
+    "jun05": {
+     "ap": 0.21479751220096205,
+     "auroc": 0.875459688510243,
+     "positives": 720
+    },
+    "jul15": {
+     "ap": 0.888054960881729,
+     "auroc": 0.95805390137793,
+     "positives": 720
+    }
+   },
+   "heldout_ap": 0.1398955986647954,
+   "heldout_auroc": 0.8118577645471762,
+   "prediction_digest": "d78d2aec2dc655eeacada30e5251f900ae7ac257a97a5134551ad26a0b9013de"
+  },
+  {
+   "fold": "A_holdmay29",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "train_windows": 195441,
+   "train_positives": 2160,
+   "heldin_ap": 0.806687895777729,
+   "heldin_auroc": 0.9945588791563693,
+   "heldin_by_failure": {
+    "apr18": {
+     "ap": 0.907247234365465,
+     "auroc": 0.9995605448919536,
+     "positives": 720
+    },
+    "jun05": {
+     "ap": 0.48489600032326485,
+     "auroc": 0.9706476383753951,
+     "positives": 720
+    },
+    "jul15": {
+     "ap": 0.9803915162284045,
+     "auroc": 0.999802677286487,
+     "positives": 720
+    }
+   },
+   "heldout_ap": 0.20590519308034522,
+   "heldout_auroc": 0.7713466677043609,
+   "prediction_digest": "4ef86b65cacd8a9eee0213e25e4aff86b836bdc161c9d6f13ebddee0150175e7"
+  }
+ ]
+}

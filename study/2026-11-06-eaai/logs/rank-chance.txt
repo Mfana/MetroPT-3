@@ -1,0 +1,19 @@
+max difference from frozen tables 4.087887239823118e-07
+100
+A_holdapr18 180 M5 0.701 share 0.131 p95 0.898 med 0.469
+A_holdjul15 180 M5 0.79 share 0.076 p95 0.89 med 0.471
+A_holdmay29 180 M6 0.932 share 0.051 p95 0.933 med 0.558
+A_holdmay29 30 M6 0.906 share 0.091 p95 0.958 med 0.527
+A_holdmay29 360 M5 0.843 share 0.073 p95 0.87 med 0.526
+A_holdmay29 360 M6 0.899 share 0.052 p95 0.903 med 0.514
+A_holdmay29 60 M6 0.922 share 0.087 p95 0.957 med 0.523
+A_holdmay29 720 M5 0.812 share 0.04 p95 0.802 med 0.546
+A_holdmay29 720 M6 0.771 share 0.09 p95 0.898 med 0.568
+M1 A cells 20 share<.05: 0 median share 0.963
+M3 A cells 20 share<.05: 0 median share 0.746
+M5 A cells 20 share<.05: 1 median share 0.474
+M6 A cells 20 share<.05: 0 median share 0.618
+all seq above .7 in A with share<.05: [('may29', 720, 'M5')]
+B may29_jun05 best [(np.float64(0.609), 30, 'M5', 0.274), (np.float64(0.546), 60, 'M5', 0.4), (np.float64(0.475), 180, 'M5', 0.466), (np.float64(0.447), 360, 'M3', 0.532), (np.float64(0.42), 30, 'M3', 0.607), (np.float64(0.408), 360, 'M5', 0.665)]
+cells with auroc>.5 and share<.05 by failure {'apr18': np.int64(0), 'may29': np.int64(1), 'jun05': np.int64(0), 'jul15': np.int64(0)} of 80
+below-chance mirror: auroc<.5 and share>.95 19

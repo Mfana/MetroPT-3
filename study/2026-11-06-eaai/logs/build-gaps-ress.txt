@@ -1,0 +1,6 @@
+\begin{tabular}{lrrrrrr}\toprule Analysis & Failure tests & Caught & Horizons meeting rules & \multicolumn{3}{c}{Median AUROC by horizon, analysis A}\\\cmidrule(lr){5-7} & & & & M3 & M5 & M6\\\midrule
+Registered & 250 & 0 & 0 of 15 & 0.15--0.51 & 0.33--0.63 & 0.38--0.48\\
+Four further seeds (M5, M6) & 280 & 3 & 0 of 40 & -- & 0.31--0.64 & 0.34--0.53\\
+Onsets 60 min earlier & 145 & 0 & 0 of 15 & 0.11--0.54 & 0.34--0.58 & 0.31--0.52\\
+Onsets 60 min later & 145 & 32 & 0 of 15 & 0.18--0.99 & 0.30--0.95 & 0.42--0.88\\
+\bottomrule\end{tabular}

@@ -1,0 +1,9 @@
+{
+  "status": "zip_prefix_verified",
+  "url": "https://archive.ics.uci.edu/static/public/791/metropt+3+dataset.zip",
+  "http_status": 200,
+  "bytes_read": 4096,
+  "verified_byte_ranges": false,
+  "column_names": null,
+  "note": "A prefix does not establish time-indexed access or full delivery."
+}

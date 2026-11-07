@@ -1,0 +1,23 @@
+frozen M3 oracle reproduced; max FA/day difference 0
+M1 0.9 caught 0 of 20 chance<.5: 0 FA/day median 3.73
+M1 0.95 caught 0 of 20 chance<.5: 0 FA/day median 1.99
+M1 0.98 caught 0 of 20 chance<.5: 0 FA/day median 0.85
+M1 0.99 caught 0 of 20 chance<.5: 0 FA/day median 0.34
+M3 0.9 caught 8 of 20 chance<.5: 6 FA/day median 5.04
+M3 0.95 caught 6 of 20 chance<.5: 6 FA/day median 2.82
+M3 0.98 caught 6 of 20 chance<.5: 6 FA/day median 1.31
+M3 0.99 caught 5 of 20 chance<.5: 5 FA/day median 0.78
+M4 0.9 caught 9 of 20 chance<.5: 7 FA/day median 4.87
+M4 0.95 caught 7 of 20 chance<.5: 7 FA/day median 2.51
+M4 0.98 caught 4 of 20 chance<.5: 4 FA/day median 1.16
+M4 0.99 caught 3 of 20 chance<.5: 3 FA/day median 0.66
+M5 0.9 caught 7 of 20 chance<.5: 6 FA/day median 4.55
+M5 0.95 caught 5 of 20 chance<.5: 5 FA/day median 2.78
+M5 0.98 caught 3 of 20 chance<.5: 3 FA/day median 1.19
+M5 0.99 caught 3 of 20 chance<.5: 3 FA/day median 0.76
+M6 0.9 caught 6 of 20 chance<.5: 4 FA/day median 3.54
+M6 0.95 caught 5 of 20 chance<.5: 5 FA/day median 2.09
+M6 0.98 caught 3 of 20 chance<.5: 3 FA/day median 0.95
+M6 0.99 caught 3 of 20 chance<.5: 3 FA/day median 0.56
+M5/M6 caught, chance<.5, q>=.95: [('may29', 30, 'M6', 0.95, 9, 0.061, 1.73), ('may29', 60, 'M6', 0.95, 11, 0.091, 2.12), ('may29', 60, 'M6', 0.98, 9, 0.047, 0.87), ('may29', 60, 'M6', 0.99, 9, 0.033, 0.68), ('may29', 180, 'M6', 0.95, 180, 0.113, 1.79), ('may29', 360, 'M5', 0.95, 237, 0.245, 2.66), ('may29', 360, 'M5', 0.98, 233, 0.132, 1.13), ('may29', 360, 'M5', 0.99, 136, 0.109, 0.73), ('may29', 360, 'M6', 0.95, 241, 0.224, 2.06), ('may29', 360, 'M6', 0.98, 237, 0.143, 1.13), ('may29', 360, 'M6', 0.99, 235, 0.117, 0.8), ('may29', 720, 'M5', 0.95, 240, 0.237, 2.21), ('may29', 720, 'M5', 0.98, 216, 0.221, 1.63), ('may29', 720, 'M5', 0.99, 192, 0.199, 1.17), ('may29', 720, 'M6', 0.95, 237, 0.228, 1.95), ('may29', 720, 'M6', 0.98, 221, 0.174, 1.04), ('may29', 720, 'M6', 0.99, 192, 0.126, 0.65), ('jun05', 60, 'M5', 0.95, 6, 0.229, 3.99), ('jun05', 180, 'M5', 0.95, 180, 0.249, 2.56), ('jun05', 180, 'M5', 0.98, 7, 0.183, 1.19), ('jun05', 180, 'M5', 0.99, 6, 0.167, 0.85), ('jun05', 360, 'M5', 0.95, 200, 0.272, 2.89)]
+{('M5', 'apr18'): 0, ('M6', 'apr18'): 0, ('M5', 'may29'): 2, ('M6', 'may29'): 5, ('M5', 'jun05'): 3, ('M6', 'jun05'): 0, ('M5', 'jul15'): 0, ('M6', 'jul15'): 0}

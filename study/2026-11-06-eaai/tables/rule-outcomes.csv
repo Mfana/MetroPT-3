@@ -1,0 +1,6 @@
+horizon,platt_bss_positive_of_4,m3_beats_m1_of_4,m3_beats_m1_forward,platt_nonzero_slope_of_4,caught_of_4,fa_median,fa_after_jul16,horizon_jaccard_median,failure_jaccard_median,seed_jaccard_p10,pass_base,pass_state,pass_slope,pass_warning,pass_burden,pass_explain,defensible
+30 min,0,0,True,1,0,0.06802180561099806,0.10254766864284569,0.6666666666666666,0.6666666666666666,0.6666666666666666,False,False,False,False,True,True,False
+1 h,0,0,True,0,0,0.0370414391521268,0.025884383088869714,0.6666666666666666,0.5476190476190476,0.6666666666666666,False,False,False,False,True,False,False
+3 h,0,0,True,0,0,0.4560632781908014,0.0,0.6666666666666666,0.42857142857142855,0.6666666666666666,False,False,False,False,True,False,False
+6 h,0,0,True,1,0,0.027546101461473717,0.0,0.6666666666666666,0.42857142857142855,0.6666666666666666,False,False,False,False,True,False,False
+12 h,0,0,True,0,0,0.0,0.0,0.42857142857142855,0.5476190476190476,0.6666666666666666,False,False,False,False,True,False,False

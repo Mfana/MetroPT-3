@@ -1,0 +1,13 @@
+reference windows 219405 median 0.103 p95 0.278
+{'failure': 'apr18', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.008, 'reference_share_at_or_above': 0.9852}
+{'failure': 'apr18', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.013}
+{'failure': 'apr18', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.019}
+{'failure': 'may29', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.133, 'reference_share_at_or_above': 0.2096}
+{'failure': 'may29', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.102}
+{'failure': 'may29', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.114}
+{'failure': 'jun05', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.142, 'reference_share_at_or_above': 0.1703}
+{'failure': 'jun05', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.111}
+{'failure': 'jun05', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.095}
+{'failure': 'jul15', 'window_start': -360, 'window_end': 0, 'present': 360, 'load_share': 0.483, 'reference_share_at_or_above': 0.0387}
+{'failure': 'jul15', 'window_start': -240, 'window_end': -15, 'present': 225, 'load_share': 0.516}
+{'failure': 'jul15', 'window_start': -120, 'window_end': -15, 'present': 105, 'load_share': 0.6}

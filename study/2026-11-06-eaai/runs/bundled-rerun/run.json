@@ -1,0 +1,3414 @@
+{
+  "status": "completed_with_gates",
+  "synthetic": false,
+  "python": "3.13.4",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "command_arguments": [
+    "--existing-csv",
+    "data/raw/MetroPT3(AirCompressor).csv",
+    "--config",
+    "study/2026-11-06-eaai/provenance/study-frozen-draft.json",
+    "--events",
+    "study/2026-11-06-eaai/provenance/uci-events.csv",
+    "--out",
+    "study/2026-11-06-eaai/runs/bundled-rerun"
+  ],
+  "input": {
+    "source": "data/raw/MetroPT3(AirCompressor).csv",
+    "bytes_read": 218300507,
+    "sha256": "db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24",
+    "raw_persisted_by_runner": false,
+    "access": "existing_file"
+  },
+  "config": {
+    "timestamp": "timestamp",
+    "features": [
+      "TP2",
+      "TP3",
+      "H1",
+      "DV_pressure",
+      "Reservoirs",
+      "Motor_current",
+      "Oil_temperature",
+      "COMP",
+      "DV_eletric",
+      "Towers",
+      "MPG",
+      "LPS",
+      "Pressure_switch",
+      "Oil_level",
+      "Caudal_impulses"
+    ],
+    "bin_minutes": 15,
+    "history_bins": 4,
+    "min_samples_per_bin": 20,
+    "horizon_minutes": [
+      60,
+      360,
+      1440
+    ],
+    "boundaries": [
+      "2020-02-01",
+      "2020-04-01",
+      "2020-05-15",
+      "2020-06-15",
+      "2020-09-01"
+    ],
+    "recovery_minutes": 2880,
+    "cooldown_minutes": 360,
+    "min_action_lead_minutes": 30,
+    "alarm_quantile": 0.995,
+    "stress_thresholds": [
+      0.99,
+      0.995,
+      0.999
+    ],
+    "cost_scenarios": [
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        50
+      ]
+    ],
+    "minimum_positive_episodes_for_calibration": 5,
+    "minimum_positive_episodes_for_interval": 10,
+    "min_train_windows": 100,
+    "bootstrap_replicates": 300,
+    "bootstrap_block_hours": 168,
+    "shap_top_k": 5,
+    "regime_feature": "Motor_current",
+    "min_regime_windows": 50,
+    "seed": 791,
+    "max_bytes": 350000000
+  },
+  "events_sha256": "9037dd07bdcf90664a90ddfb904304652a164c06bf10cd915e3ce43592f461e9",
+  "config_sha256": "0a68eea8ee8401763e1d9dfefe09ab2180bbdc9ba9981358d791dc3826f95fa8",
+  "script_sha256": {
+    "analysis.py": "2a78ab629e66e4df9aaa1efbe61d0886af7c44d82db9f850b70dc1fc14fecb23",
+    "audit.py": "3f300e0152b5a054b5e642c2e40b6fb905a6d91b720bd7e89b8fe77099fdfd18",
+    "export_tables.py": "8dcc59cb252ff0227562b1923bb8a848d076139d105498519a758ca74a5af58c",
+    "novelty.py": "4c344312a78e6d66207a5814d31687719b09c88f37b55ac3d2333fbd5739c631",
+    "run.py": "5c1867d3ab3d144e57d36483672aa237ba5f1e36a1b318a967a4a32c724cc4d0",
+    "source.py": "af95d693f235e1d1e318ddb96d3c1271a4fa09b92da7f8df6feb37343a4a5d83",
+    "windows.py": "7c9eb63ec103599c74a99be7bee994f9ff3d4f0bdfea9ce532d37b07badac3c1"
+  },
+  "coverage": {
+    "raw_rows": 1516948,
+    "first_timestamp": "2020-02-01 00:00:00",
+    "last_timestamp": "2020-09-01 03:59:50",
+    "underfilled_bins": 93,
+    "terminal_bin_dropped": 1,
+    "gap_breaks": 203,
+    "censored_or_embargoed": 9866,
+    "outside_or_embargo": 7,
+    "failure_or_recovery": 976
+  },
+  "counts": {
+    "train": {
+      "60": {
+        "windows": 2043,
+        "positive_windows": 0,
+        "positive_episodes": []
+      },
+      "360": {
+        "windows": 2043,
+        "positive_windows": 0,
+        "positive_episodes": []
+      },
+      "1440": {
+        "windows": 2043,
+        "positive_windows": 0,
+        "positive_episodes": []
+      }
+    },
+    "calibration": {
+      "60": {
+        "windows": 444,
+        "positive_windows": 4,
+        "positive_episodes": [
+          "apr18"
+        ]
+      },
+      "360": {
+        "windows": 444,
+        "positive_windows": 24,
+        "positive_episodes": [
+          "apr18"
+        ]
+      },
+      "1440": {
+        "windows": 444,
+        "positive_windows": 74,
+        "positive_episodes": [
+          "apr18"
+        ]
+      }
+    },
+    "policy": {
+      "60": {
+        "windows": 715,
+        "positive_windows": 8,
+        "positive_episodes": [
+          "jun05",
+          "may29"
+        ]
+      },
+      "360": {
+        "windows": 715,
+        "positive_windows": 48,
+        "positive_episodes": [
+          "jun05",
+          "may29"
+        ]
+      },
+      "1440": {
+        "windows": 715,
+        "positive_windows": 169,
+        "positive_episodes": [
+          "jun05",
+          "may29"
+        ]
+      }
+    },
+    "test": {
+      "60": {
+        "windows": 2404,
+        "positive_windows": 4,
+        "positive_episodes": [
+          "jul15"
+        ]
+      },
+      "360": {
+        "windows": 2404,
+        "positive_windows": 24,
+        "positive_episodes": [
+          "jul15"
+        ]
+      },
+      "1440": {
+        "windows": 2404,
+        "positive_windows": 64,
+        "positive_episodes": [
+          "jul15"
+        ]
+      }
+    }
+  },
+  "training_reference_windows": 2043,
+  "regime": {
+    "feature": "Motor_current",
+    "edges": [
+      1.2525982142857144,
+      1.5281394230769216
+    ],
+    "train_counts": {
+      "0": 674,
+      "1": 695,
+      "2": 674
+    },
+    "fallback_regimes": []
+  },
+  "models": {
+    "pressure_baseline": {
+      "horizons": {
+        "60": {
+          "status": "descriptive_single_asset",
+          "test_prevalence_by_window": 0.0016638935108153079,
+          "window_average_precision": 0.009553204676996508,
+          "marginal_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 440
+          },
+          "interval_hazard_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 440
+          },
+          "calibration_evaluation_status": "withheld_sparse_or_single_class_test",
+          "marginal_reliability": null,
+          "ordered_reliability": null,
+          "shared_hazard_status": "withheld_by_interval_gates",
+          "shared_reliability": null,
+          "ap_interval": {
+            "status": "withheld",
+            "reason": "Insufficient distinct test episodes"
+          },
+          "policy": {
+            "threshold": 6.446953590606248,
+            "eligible_episodes": [
+              "jul15"
+            ],
+            "alarms": [
+              {
+                "epoch_seconds": 1592841600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592863200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592884800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592906400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592928000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592949600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592971200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592992800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593014400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593036000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593057600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593388800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594123200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594231200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594427400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594824300,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594963800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595979900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596618900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1597454100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              }
+            ],
+            "first_actionable_lead_minutes": {},
+            "missed_eligible_episodes": [
+              "jul15"
+            ],
+            "false_or_late_alarms": 14,
+            "unscorable_alarms": 6,
+            "monitored_anchor_days": 25.041666666666668,
+            "false_or_late_per_anchor_day": 0.5590682196339434,
+            "scenario_costs": [
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 10,
+                "total": 30
+              },
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 50,
+                "total": 70
+              }
+            ]
+          },
+          "threshold_stress": {}
+        },
+        "360": {
+          "status": "descriptive_single_asset",
+          "test_prevalence_by_window": 0.009983361064891847,
+          "window_average_precision": 0.0419703079938367,
+          "marginal_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 420
+          },
+          "interval_hazard_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 420
+          },
+          "calibration_evaluation_status": "withheld_sparse_or_single_class_test",
+          "marginal_reliability": null,
+          "ordered_reliability": null,
+          "shared_hazard_status": "withheld_by_interval_gates",
+          "shared_reliability": null,
+          "ap_interval": {
+            "status": "withheld",
+            "reason": "Insufficient distinct test episodes"
+          },
+          "policy": {
+            "threshold": 6.446953590606248,
+            "eligible_episodes": [
+              "jul15"
+            ],
+            "alarms": [
+              {
+                "epoch_seconds": 1592841600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592863200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592884800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592906400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592928000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592949600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592971200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592992800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593014400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593036000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593057600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593388800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594123200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594231200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594427400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594824300,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594963800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595979900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596618900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1597454100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              }
+            ],
+            "first_actionable_lead_minutes": {},
+            "missed_eligible_episodes": [
+              "jul15"
+            ],
+            "false_or_late_alarms": 14,
+            "unscorable_alarms": 6,
+            "monitored_anchor_days": 25.041666666666668,
+            "false_or_late_per_anchor_day": 0.5590682196339434,
+            "scenario_costs": [
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 10,
+                "total": 30
+              },
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 50,
+                "total": 70
+              }
+            ]
+          },
+          "threshold_stress": {}
+        },
+        "1440": {
+          "status": "descriptive_single_asset",
+          "test_prevalence_by_window": 0.026622296173044926,
+          "window_average_precision": 0.09167499691974373,
+          "marginal_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 370
+          },
+          "interval_hazard_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 370
+          },
+          "calibration_evaluation_status": "withheld_sparse_or_single_class_test",
+          "marginal_reliability": null,
+          "ordered_reliability": null,
+          "shared_hazard_status": "withheld_by_interval_gates",
+          "shared_reliability": null,
+          "ap_interval": {
+            "status": "withheld",
+            "reason": "Insufficient distinct test episodes"
+          },
+          "policy": {
+            "threshold": 6.446953590606248,
+            "eligible_episodes": [
+              "jul15"
+            ],
+            "alarms": [
+              {
+                "epoch_seconds": 1592841600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592863200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592884800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592906400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592928000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592949600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592971200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592992800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593014400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593036000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593057600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593388800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594123200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594231200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594427400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594824300,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594963800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595979900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596618900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1597454100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              }
+            ],
+            "first_actionable_lead_minutes": {},
+            "missed_eligible_episodes": [
+              "jul15"
+            ],
+            "false_or_late_alarms": 14,
+            "unscorable_alarms": 6,
+            "monitored_anchor_days": 25.041666666666668,
+            "false_or_late_per_anchor_day": 0.5590682196339434,
+            "scenario_costs": [
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 10,
+                "total": 30
+              },
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 50,
+                "total": 70
+              }
+            ]
+          },
+          "threshold_stress": {}
+        }
+      },
+      "shap": {
+        "target": "raw additive anomaly score",
+        "max_additivity_residual": 8.881784197001252e-16,
+        "top_k": 5,
+        "mean_background_top_k_jaccard": 1.0,
+        "episode_mean_abs_shap": {
+          "jul15": {
+            "mean_TP2": 3.3144528328297205,
+            "mean_TP3": 0.1692205193864981,
+            "mean_H1": 0.0,
+            "mean_DV_pressure": 0.0,
+            "mean_Reservoirs": 0.0,
+            "mean_Motor_current": 0.0,
+            "mean_Oil_temperature": 0.0,
+            "mean_COMP": 0.0,
+            "mean_DV_eletric": 0.0,
+            "mean_Towers": 0.0,
+            "mean_MPG": 0.0,
+            "mean_LPS": 0.0,
+            "mean_Pressure_switch": 0.0,
+            "mean_Oil_level": 0.0,
+            "mean_Caudal_impulses": 0.0,
+            "delta_TP2": 0.0,
+            "delta_TP3": 0.0,
+            "delta_H1": 0.0,
+            "delta_DV_pressure": 0.0,
+            "delta_Reservoirs": 0.0,
+            "delta_Motor_current": 0.0,
+            "delta_Oil_temperature": 0.0,
+            "delta_COMP": 0.0,
+            "delta_DV_eletric": 0.0,
+            "delta_Towers": 0.0,
+            "delta_MPG": 0.0,
+            "delta_LPS": 0.0,
+            "delta_Pressure_switch": 0.0,
+            "delta_Oil_level": 0.0,
+            "delta_Caudal_impulses": 0.0
+          }
+        },
+        "episode_top_k_pairs": [],
+        "episode_stability_status": "insufficient_episodes"
+      }
+    },
+    "global_ablation": {
+      "horizons": {
+        "60": {
+          "status": "descriptive_single_asset",
+          "test_prevalence_by_window": 0.0016638935108153079,
+          "window_average_precision": 0.008532357216029015,
+          "marginal_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 440
+          },
+          "interval_hazard_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 440
+          },
+          "calibration_evaluation_status": "withheld_sparse_or_single_class_test",
+          "marginal_reliability": null,
+          "ordered_reliability": null,
+          "shared_hazard_status": "withheld_by_interval_gates",
+          "shared_reliability": null,
+          "ap_interval": {
+            "status": "withheld",
+            "reason": "Insufficient distinct test episodes"
+          },
+          "policy": {
+            "threshold": 4.374250571000654,
+            "eligible_episodes": [
+              "jul15"
+            ],
+            "alarms": [
+              {
+                "epoch_seconds": 1592839800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593063000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593388800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594123200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594231200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594427400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594693800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594839600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594964700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595824200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595979900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596160800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596450600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596618900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1597454100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1598211900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              }
+            ],
+            "first_actionable_lead_minutes": {},
+            "missed_eligible_episodes": [
+              "jul15"
+            ],
+            "false_or_late_alarms": 6,
+            "unscorable_alarms": 10,
+            "monitored_anchor_days": 25.041666666666668,
+            "false_or_late_per_anchor_day": 0.2396006655574043,
+            "scenario_costs": [
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 10,
+                "total": 26
+              },
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 50,
+                "total": 66
+              }
+            ]
+          },
+          "threshold_stress": {}
+        },
+        "360": {
+          "status": "descriptive_single_asset",
+          "test_prevalence_by_window": 0.009983361064891847,
+          "window_average_precision": 0.03758834369539,
+          "marginal_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 420
+          },
+          "interval_hazard_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 420
+          },
+          "calibration_evaluation_status": "withheld_sparse_or_single_class_test",
+          "marginal_reliability": null,
+          "ordered_reliability": null,
+          "shared_hazard_status": "withheld_by_interval_gates",
+          "shared_reliability": null,
+          "ap_interval": {
+            "status": "withheld",
+            "reason": "Insufficient distinct test episodes"
+          },
+          "policy": {
+            "threshold": 4.374250571000654,
+            "eligible_episodes": [
+              "jul15"
+            ],
+            "alarms": [
+              {
+                "epoch_seconds": 1592839800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593063000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593388800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594123200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594231200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594427400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594693800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594839600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594964700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595824200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595979900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596160800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596450600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596618900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1597454100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1598211900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              }
+            ],
+            "first_actionable_lead_minutes": {},
+            "missed_eligible_episodes": [
+              "jul15"
+            ],
+            "false_or_late_alarms": 6,
+            "unscorable_alarms": 10,
+            "monitored_anchor_days": 25.041666666666668,
+            "false_or_late_per_anchor_day": 0.2396006655574043,
+            "scenario_costs": [
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 10,
+                "total": 26
+              },
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 50,
+                "total": 66
+              }
+            ]
+          },
+          "threshold_stress": {}
+        },
+        "1440": {
+          "status": "descriptive_single_asset",
+          "test_prevalence_by_window": 0.026622296173044926,
+          "window_average_precision": 0.07779920081262037,
+          "marginal_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 370
+          },
+          "interval_hazard_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 370
+          },
+          "calibration_evaluation_status": "withheld_sparse_or_single_class_test",
+          "marginal_reliability": null,
+          "ordered_reliability": null,
+          "shared_hazard_status": "withheld_by_interval_gates",
+          "shared_reliability": null,
+          "ap_interval": {
+            "status": "withheld",
+            "reason": "Insufficient distinct test episodes"
+          },
+          "policy": {
+            "threshold": 4.374250571000654,
+            "eligible_episodes": [
+              "jul15"
+            ],
+            "alarms": [
+              {
+                "epoch_seconds": 1592839800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593063000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593388800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594123200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594231200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594427400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594693800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594839600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594964700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595824200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595979900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596160800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596450600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596618900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1597454100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1598211900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              }
+            ],
+            "first_actionable_lead_minutes": {},
+            "missed_eligible_episodes": [
+              "jul15"
+            ],
+            "false_or_late_alarms": 6,
+            "unscorable_alarms": 10,
+            "monitored_anchor_days": 25.041666666666668,
+            "false_or_late_per_anchor_day": 0.2396006655574043,
+            "scenario_costs": [
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 10,
+                "total": 26
+              },
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 50,
+                "total": 66
+              }
+            ]
+          },
+          "threshold_stress": {}
+        }
+      },
+      "shap": {
+        "target": "raw additive anomaly score",
+        "max_additivity_residual": 8.881784197001252e-16,
+        "top_k": 5,
+        "mean_background_top_k_jaccard": 0.3572534532393101,
+        "episode_mean_abs_shap": {
+          "jul15": {
+            "mean_TP2": 0.220963522188648,
+            "mean_TP3": 0.011281367959099873,
+            "mean_H1": 0.2393801366391404,
+            "mean_DV_pressure": 0.05710156598062037,
+            "mean_Reservoirs": 0.011278368617894,
+            "mean_Motor_current": 0.17212416585519422,
+            "mean_Oil_temperature": 0.08891480620659434,
+            "mean_COMP": 0.22024789308183632,
+            "mean_DV_eletric": 0.2202457198336626,
+            "mean_Towers": 0.22549423856229703,
+            "mean_MPG": 0.22024571983366262,
+            "mean_LPS": 0.000978952520802741,
+            "mean_Pressure_switch": 0.045374508724733614,
+            "mean_Oil_level": 0.0008157937673356176,
+            "mean_Caudal_impulses": 0.018734051231848587,
+            "delta_TP2": 0.010263570659910584,
+            "delta_TP3": 0.018661190512182166,
+            "delta_H1": 0.01417157869403942,
+            "delta_DV_pressure": 0.028626041819191553,
+            "delta_Reservoirs": 0.018614201783619565,
+            "delta_Motor_current": 0.020117669707363936,
+            "delta_Oil_temperature": 0.01778538730665642,
+            "delta_COMP": 0.010400259206740108,
+            "delta_DV_eletric": 0.010400671890758393,
+            "delta_Towers": 0.012077034059821657,
+            "delta_MPG": 0.010400259206740108,
+            "delta_LPS": 0.000978952520802741,
+            "delta_Pressure_switch": 0.027898044260139362,
+            "delta_Oil_level": 0.0004894762604013705,
+            "delta_Caudal_impulses": 0.0
+          }
+        },
+        "episode_top_k_pairs": [],
+        "episode_stability_status": "insufficient_episodes"
+      }
+    },
+    "regime_candidate": {
+      "horizons": {
+        "60": {
+          "status": "descriptive_single_asset",
+          "test_prevalence_by_window": 0.0016638935108153079,
+          "window_average_precision": 0.007538233665509042,
+          "marginal_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 440
+          },
+          "interval_hazard_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 440
+          },
+          "calibration_evaluation_status": "withheld_sparse_or_single_class_test",
+          "marginal_reliability": null,
+          "ordered_reliability": null,
+          "shared_hazard_status": "withheld_by_interval_gates",
+          "shared_reliability": null,
+          "ap_interval": {
+            "status": "withheld",
+            "reason": "Insufficient distinct test episodes"
+          },
+          "policy": {
+            "threshold": 4.2074702133565225,
+            "eligible_episodes": [
+              "jul15"
+            ],
+            "alarms": [
+              {
+                "epoch_seconds": 1592839800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592862300,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592885700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592917200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592945100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592966700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592999100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593022500,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593062100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593388800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594123200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594231200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594427400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594531800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594693800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594839600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594964700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595403000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1595824200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595979900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596159900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596449700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596618900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1597454100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1597631400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1598211900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              }
+            ],
+            "first_actionable_lead_minutes": {},
+            "missed_eligible_episodes": [
+              "jul15"
+            ],
+            "false_or_late_alarms": 14,
+            "unscorable_alarms": 12,
+            "monitored_anchor_days": 25.041666666666668,
+            "false_or_late_per_anchor_day": 0.5590682196339434,
+            "scenario_costs": [
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 10,
+                "total": 36
+              },
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 50,
+                "total": 76
+              }
+            ]
+          },
+          "threshold_stress": {
+            "0.99": {
+              "threshold": 4.2022563702359905,
+              "eligible_episodes": [
+                "jul15"
+              ],
+              "alarms": [
+                {
+                  "epoch_seconds": 1592839800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592862300,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592885700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592917200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592945100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592966700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592999100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593022500,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593062100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593388800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594123200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594231200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594427400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594531800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594693800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594839600,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594964700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595403000,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1595824200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595979900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596159900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596449700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596618900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1597454100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1597631400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1598211900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                }
+              ],
+              "first_actionable_lead_minutes": {},
+              "missed_eligible_episodes": [
+                "jul15"
+              ],
+              "false_or_late_alarms": 14,
+              "unscorable_alarms": 12,
+              "monitored_anchor_days": 25.041666666666668,
+              "false_or_late_per_anchor_day": 0.5590682196339434,
+              "scenario_costs": [
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 10,
+                  "total": 36
+                },
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 50,
+                  "total": 76
+                }
+              ]
+            },
+            "0.995": {
+              "threshold": 4.2074702133565225,
+              "eligible_episodes": [
+                "jul15"
+              ],
+              "alarms": [
+                {
+                  "epoch_seconds": 1592839800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592862300,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592885700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592917200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592945100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592966700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592999100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593022500,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593062100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593388800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594123200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594231200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594427400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594531800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594693800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594839600,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594964700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595403000,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1595824200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595979900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596159900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596449700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596618900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1597454100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1597631400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1598211900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                }
+              ],
+              "first_actionable_lead_minutes": {},
+              "missed_eligible_episodes": [
+                "jul15"
+              ],
+              "false_or_late_alarms": 14,
+              "unscorable_alarms": 12,
+              "monitored_anchor_days": 25.041666666666668,
+              "false_or_late_per_anchor_day": 0.5590682196339434,
+              "scenario_costs": [
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 10,
+                  "total": 36
+                },
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 50,
+                  "total": 76
+                }
+              ]
+            },
+            "0.999": {
+              "threshold": 4.692923958782337,
+              "eligible_episodes": [
+                "jul15"
+              ],
+              "alarms": [
+                {
+                  "epoch_seconds": 1592840700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593063000,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593388800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594123200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594232100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594693800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594840500,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594964700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596160800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596450600,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596618900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                }
+              ],
+              "first_actionable_lead_minutes": {},
+              "missed_eligible_episodes": [
+                "jul15"
+              ],
+              "false_or_late_alarms": 5,
+              "unscorable_alarms": 6,
+              "monitored_anchor_days": 25.041666666666668,
+              "false_or_late_per_anchor_day": 0.19966722129783693,
+              "scenario_costs": [
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 10,
+                  "total": 21
+                },
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 50,
+                  "total": 61
+                }
+              ]
+            }
+          }
+        },
+        "360": {
+          "status": "descriptive_single_asset",
+          "test_prevalence_by_window": 0.009983361064891847,
+          "window_average_precision": 0.03490746734897026,
+          "marginal_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 420
+          },
+          "interval_hazard_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 420
+          },
+          "calibration_evaluation_status": "withheld_sparse_or_single_class_test",
+          "marginal_reliability": null,
+          "ordered_reliability": null,
+          "shared_hazard_status": "withheld_by_interval_gates",
+          "shared_reliability": null,
+          "ap_interval": {
+            "status": "withheld",
+            "reason": "Insufficient distinct test episodes"
+          },
+          "policy": {
+            "threshold": 4.2074702133565225,
+            "eligible_episodes": [
+              "jul15"
+            ],
+            "alarms": [
+              {
+                "epoch_seconds": 1592839800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592862300,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592885700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592917200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592945100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592966700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592999100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593022500,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593062100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593388800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594123200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594231200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594427400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594531800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594693800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594839600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594964700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595403000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1595824200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595979900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596159900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596449700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596618900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1597454100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1597631400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1598211900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              }
+            ],
+            "first_actionable_lead_minutes": {},
+            "missed_eligible_episodes": [
+              "jul15"
+            ],
+            "false_or_late_alarms": 14,
+            "unscorable_alarms": 12,
+            "monitored_anchor_days": 25.041666666666668,
+            "false_or_late_per_anchor_day": 0.5590682196339434,
+            "scenario_costs": [
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 10,
+                "total": 36
+              },
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 50,
+                "total": 76
+              }
+            ]
+          },
+          "threshold_stress": {
+            "0.99": {
+              "threshold": 4.2022563702359905,
+              "eligible_episodes": [
+                "jul15"
+              ],
+              "alarms": [
+                {
+                  "epoch_seconds": 1592839800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592862300,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592885700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592917200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592945100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592966700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592999100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593022500,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593062100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593388800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594123200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594231200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594427400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594531800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594693800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594839600,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594964700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595403000,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1595824200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595979900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596159900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596449700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596618900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1597454100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1597631400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1598211900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                }
+              ],
+              "first_actionable_lead_minutes": {},
+              "missed_eligible_episodes": [
+                "jul15"
+              ],
+              "false_or_late_alarms": 14,
+              "unscorable_alarms": 12,
+              "monitored_anchor_days": 25.041666666666668,
+              "false_or_late_per_anchor_day": 0.5590682196339434,
+              "scenario_costs": [
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 10,
+                  "total": 36
+                },
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 50,
+                  "total": 76
+                }
+              ]
+            },
+            "0.995": {
+              "threshold": 4.2074702133565225,
+              "eligible_episodes": [
+                "jul15"
+              ],
+              "alarms": [
+                {
+                  "epoch_seconds": 1592839800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592862300,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592885700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592917200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592945100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592966700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592999100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593022500,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593062100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593388800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594123200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594231200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594427400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594531800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594693800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594839600,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594964700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595403000,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1595824200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595979900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596159900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596449700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596618900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1597454100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1597631400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1598211900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                }
+              ],
+              "first_actionable_lead_minutes": {},
+              "missed_eligible_episodes": [
+                "jul15"
+              ],
+              "false_or_late_alarms": 14,
+              "unscorable_alarms": 12,
+              "monitored_anchor_days": 25.041666666666668,
+              "false_or_late_per_anchor_day": 0.5590682196339434,
+              "scenario_costs": [
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 10,
+                  "total": 36
+                },
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 50,
+                  "total": 76
+                }
+              ]
+            },
+            "0.999": {
+              "threshold": 4.692923958782337,
+              "eligible_episodes": [
+                "jul15"
+              ],
+              "alarms": [
+                {
+                  "epoch_seconds": 1592840700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593063000,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593388800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594123200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594232100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594693800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594840500,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594964700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596160800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596450600,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596618900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                }
+              ],
+              "first_actionable_lead_minutes": {},
+              "missed_eligible_episodes": [
+                "jul15"
+              ],
+              "false_or_late_alarms": 5,
+              "unscorable_alarms": 6,
+              "monitored_anchor_days": 25.041666666666668,
+              "false_or_late_per_anchor_day": 0.19966722129783693,
+              "scenario_costs": [
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 10,
+                  "total": 21
+                },
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 50,
+                  "total": 61
+                }
+              ]
+            }
+          }
+        },
+        "1440": {
+          "status": "descriptive_single_asset",
+          "test_prevalence_by_window": 0.026622296173044926,
+          "window_average_precision": 0.07423755779542413,
+          "marginal_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 370
+          },
+          "interval_hazard_fit_gate": {
+            "status": "withheld",
+            "positive_episodes": [
+              "apr18"
+            ],
+            "negative_windows": 370
+          },
+          "calibration_evaluation_status": "withheld_sparse_or_single_class_test",
+          "marginal_reliability": null,
+          "ordered_reliability": null,
+          "shared_hazard_status": "withheld_by_interval_gates",
+          "shared_reliability": null,
+          "ap_interval": {
+            "status": "withheld",
+            "reason": "Insufficient distinct test episodes"
+          },
+          "policy": {
+            "threshold": 4.2074702133565225,
+            "eligible_episodes": [
+              "jul15"
+            ],
+            "alarms": [
+              {
+                "epoch_seconds": 1592839800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592862300,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592885700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592917200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592945100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592966700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1592999100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593022500,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593062100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1593388800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594123200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594231200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1594427400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594531800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594693800,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594839600,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1594964700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595403000,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1595824200,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1595979900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596159900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596449700,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1596618900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              },
+              {
+                "epoch_seconds": 1597454100,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1597631400,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": false
+              },
+              {
+                "epoch_seconds": 1598211900,
+                "actionable_episode": "",
+                "lead_minutes": null,
+                "outcome_scorable": true
+              }
+            ],
+            "first_actionable_lead_minutes": {},
+            "missed_eligible_episodes": [
+              "jul15"
+            ],
+            "false_or_late_alarms": 14,
+            "unscorable_alarms": 12,
+            "monitored_anchor_days": 25.041666666666668,
+            "false_or_late_per_anchor_day": 0.5590682196339434,
+            "scenario_costs": [
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 10,
+                "total": 36
+              },
+              {
+                "cost_per_alert": 1,
+                "cost_per_miss": 50,
+                "total": 76
+              }
+            ]
+          },
+          "threshold_stress": {
+            "0.99": {
+              "threshold": 4.2022563702359905,
+              "eligible_episodes": [
+                "jul15"
+              ],
+              "alarms": [
+                {
+                  "epoch_seconds": 1592839800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592862300,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592885700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592917200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592945100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592966700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592999100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593022500,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593062100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593388800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594123200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594231200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594427400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594531800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594693800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594839600,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594964700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595403000,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1595824200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595979900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596159900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596449700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596618900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1597454100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1597631400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1598211900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                }
+              ],
+              "first_actionable_lead_minutes": {},
+              "missed_eligible_episodes": [
+                "jul15"
+              ],
+              "false_or_late_alarms": 14,
+              "unscorable_alarms": 12,
+              "monitored_anchor_days": 25.041666666666668,
+              "false_or_late_per_anchor_day": 0.5590682196339434,
+              "scenario_costs": [
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 10,
+                  "total": 36
+                },
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 50,
+                  "total": 76
+                }
+              ]
+            },
+            "0.995": {
+              "threshold": 4.2074702133565225,
+              "eligible_episodes": [
+                "jul15"
+              ],
+              "alarms": [
+                {
+                  "epoch_seconds": 1592839800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592862300,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592885700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592917200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592945100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592966700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1592999100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593022500,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593062100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593388800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594123200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594231200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594427400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594531800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594693800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594839600,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594964700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595403000,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1595824200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1595979900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596159900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596449700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596618900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1597454100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1597631400,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1598211900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                }
+              ],
+              "first_actionable_lead_minutes": {},
+              "missed_eligible_episodes": [
+                "jul15"
+              ],
+              "false_or_late_alarms": 14,
+              "unscorable_alarms": 12,
+              "monitored_anchor_days": 25.041666666666668,
+              "false_or_late_per_anchor_day": 0.5590682196339434,
+              "scenario_costs": [
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 10,
+                  "total": 36
+                },
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 50,
+                  "total": 76
+                }
+              ]
+            },
+            "0.999": {
+              "threshold": 4.692923958782337,
+              "eligible_episodes": [
+                "jul15"
+              ],
+              "alarms": [
+                {
+                  "epoch_seconds": 1592840700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593063000,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1593388800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594123200,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594232100,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                },
+                {
+                  "epoch_seconds": 1594693800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594840500,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1594964700,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596160800,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596450600,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": false
+                },
+                {
+                  "epoch_seconds": 1596618900,
+                  "actionable_episode": "",
+                  "lead_minutes": null,
+                  "outcome_scorable": true
+                }
+              ],
+              "first_actionable_lead_minutes": {},
+              "missed_eligible_episodes": [
+                "jul15"
+              ],
+              "false_or_late_alarms": 5,
+              "unscorable_alarms": 6,
+              "monitored_anchor_days": 25.041666666666668,
+              "false_or_late_per_anchor_day": 0.19966722129783693,
+              "scenario_costs": [
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 10,
+                  "total": 21
+                },
+                {
+                  "cost_per_alert": 1,
+                  "cost_per_miss": 50,
+                  "total": 61
+                }
+              ]
+            }
+          }
+        }
+      },
+      "shap": {
+        "target": "regime-dependent raw score",
+        "method": "permutation interventional",
+        "draws_per_background": 64,
+        "top_k": 5,
+        "max_additivity_residual": 8.881784197001252e-16,
+        "groups": {
+          "jul15": {
+            "anchors": 12,
+            "mean_abs_shap": {
+              "mean_TP2": 0.19901009333382638,
+              "mean_TP3": 0.015415422535784325,
+              "mean_H1": 0.19536575103232523,
+              "mean_DV_pressure": 0.03854292994006284,
+              "mean_Reservoirs": 0.016156038569588946,
+              "mean_Motor_current": 0.293992738277592,
+              "mean_Oil_temperature": 0.08379774711143358,
+              "mean_COMP": 0.19319420794631242,
+              "mean_DV_eletric": 0.19680507523312124,
+              "mean_Towers": 0.19196871867370385,
+              "mean_MPG": 0.1969174094899271,
+              "mean_LPS": 0.0019531250000000004,
+              "mean_Pressure_switch": 0.033173416584085146,
+              "mean_Oil_level": 0.0006510416666666666,
+              "mean_Caudal_impulses": 0.01864605034722222,
+              "delta_TP2": 0.013531321976660843,
+              "delta_TP3": 0.02136756773225025,
+              "delta_H1": 0.014474522583032908,
+              "delta_DV_pressure": 0.02573386202292162,
+              "delta_Reservoirs": 0.02143598331233626,
+              "delta_Motor_current": 0.020827800532637743,
+              "delta_Oil_temperature": 0.01578652007968234,
+              "delta_COMP": 0.01362426592244033,
+              "delta_DV_eletric": 0.013647212666216565,
+              "delta_Towers": 0.015313375156945688,
+              "delta_MPG": 0.013498258725547696,
+              "delta_LPS": 0.001953125,
+              "delta_Pressure_switch": 0.027934506688663516,
+              "delta_Oil_level": 0.00021701388888888899,
+              "delta_Caudal_impulses": 0.0
+            },
+            "background_top_k_jaccard": 0.6626984126984127
+          },
+          "report_free": {
+            "anchors": 12,
+            "mean_abs_shap": {
+              "mean_TP2": 0.07460230284547632,
+              "mean_TP3": 0.03986748519351887,
+              "mean_H1": 0.06291917522913293,
+              "mean_DV_pressure": 0.01398521713506695,
+              "mean_Reservoirs": 0.04053589457131138,
+              "mean_Motor_current": 0.271256130582208,
+              "mean_Oil_temperature": 0.015448105798339044,
+              "mean_COMP": 0.06980656492526006,
+              "mean_DV_eletric": 0.07294119387073092,
+              "mean_Towers": 0.05665830806660874,
+              "mean_MPG": 0.0743968343520676,
+              "mean_LPS": 0.029730902777777762,
+              "mean_Pressure_switch": 0.06317874722775146,
+              "mean_Oil_level": 0.1395399305555555,
+              "mean_Caudal_impulses": 0.02446471985657532,
+              "delta_TP2": 0.016795731888548472,
+              "delta_TP3": 0.0188859944595282,
+              "delta_H1": 0.016318921368765203,
+              "delta_DV_pressure": 0.027569860248807147,
+              "delta_Reservoirs": 0.019145587239333583,
+              "delta_Motor_current": 0.019495664601985555,
+              "delta_Oil_temperature": 0.01529805919900993,
+              "delta_COMP": 0.017873500735663374,
+              "delta_DV_eletric": 0.01743115925982716,
+              "delta_Towers": 0.015128309931390306,
+              "delta_MPG": 0.01795239722610656,
+              "delta_LPS": 0.029730902777777762,
+              "delta_Pressure_switch": 0.05230718821168894,
+              "delta_Oil_level": 0.05577256944444442,
+              "delta_Caudal_impulses": 0.027777777777777762
+            },
+            "background_top_k_jaccard": 0.496031746031746
+          }
+        },
+        "episode_top_k_pairs": [],
+        "episode_stability_status": "insufficient_episodes"
+      }
+    }
+  },
+  "predictions_sha256": "5751457865f04a65be6ddd94dcb2fca1b6f6d2509d3c42a3752e8cd61d6ff923"
+}

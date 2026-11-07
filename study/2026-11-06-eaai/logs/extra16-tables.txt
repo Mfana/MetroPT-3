@@ -1,0 +1,74 @@
+== 1. False alarms, analysis A, pooled per model
+M1 FA 275 -> 271 (no rec 274 ) days 802 -> 755 (792) rate 0.343 -> 0.359 (0.346) | in removed time: 4 FA in 47 days, 0.086/day; remaining 0.359/day | median cell 0.000 -> 0.000
+M2 FA 316 -> 309 (no rec 310 ) days 802 -> 755 (792) rate 0.394 -> 0.409 (0.391) | in removed time: 7 FA in 47 days, 0.150/day; remaining 0.409/day | median cell 0.007 -> 0.000
+M3 FA 500 -> 479 (no rec 485 ) days 802 -> 755 (792) rate 0.623 -> 0.634 (0.612) | in removed time: 21 FA in 47 days, 0.450/day; remaining 0.634/day | median cell 0.055 -> 0.010
+M4 FA 212 -> 201 (no rec 205 ) days 802 -> 755 (792) rate 0.264 -> 0.266 (0.259) | in removed time: 11 FA in 47 days, 0.236/day; remaining 0.266/day | median cell 0.099 -> 0.102
+M5 FA 113 -> 113 (no rec 113 ) days 802 -> 755 (792) rate 0.141 -> 0.150 (0.143) | in removed time: 0 FA in 47 days, 0.000/day; remaining 0.150/day | median cell 0.000 -> 0.000
+M6 FA 800 -> 791 (no rec 794 ) days 802 -> 755 (792) rate 0.998 -> 1.048 (1.002) | in removed time: 9 FA in 47 days, 0.193/day; remaining 1.048/day | median cell 0.635 -> 0.658
+== Burden rule (A median <=1 and E <=1), per model and horizon
+M1 30 A/E 4: 0.0/0.0 True | 16: 0.0/0.0 True | no rec: 0.0/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M1 60 A/E 4: 0.019/0.0 True | 16: 0.02/0.0 True | no rec: 0.02/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M1 180 A/E 4: 0.166/0.0 True | 16: 0.146/0.0 True | no rec: 0.139/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M1 360 A/E 4: 0.301/0.0 True | 16: 0.308/0.0 True | no rec: 0.303/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M1 720 A/E 4: 0.279/0.0 True | 16: 0.284/0.0 True | no rec: 0.28/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 11 share 0.00 
+M3 30 A/E 4: 0.068/0.103 True | 16: 0.04/0.105 True | no rec: 0.038/0.103 True | rep 0/4 x caught 1 valid 1 before-run 1 of 12 share 0.06 
+M3 60 A/E 4: 0.037/0.026 True | 16: 0.039/0.027 True | no rec: 0.037/0.026 True | rep 0/4 x caught 1 valid 1 before-run 1 of 12 share 0.06 
+M3 180 A/E 4: 0.456/0.0 True | 16: 0.526/0.0 True | no rec: 0.465/0.0 True | rep 0/4 x caught 1 valid 1 before-run 1 of 12 share 0.06 
+M3 360 A/E 4: 0.028/0.0 True | 16: 0.0/0.0 True | no rec: 0.0/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M3 720 A/E 4: 0.0/0.0 True | 16: 0.0/0.0 True | no rec: 0.0/0.0 True | rep 0/4 x caught 1 valid 1 before-run 1 of 11 share 0.07 
+M5 30 A/E 4: 0.0/0.0 True | 16: 0.0/0.0 True | no rec: 0.0/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M5 60 A/E 4: 0.0/0.0 True | 16: 0.0/0.0 True | no rec: 0.0/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M5 180 A/E 4: 0.0/0.0 True | 16: 0.0/0.0 True | no rec: 0.0/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M5 360 A/E 4: 0.0/0.0 True | 16: 0.0/0.0 True | no rec: 0.0/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M5 720 A/E 4: 0.0/0.0 True | 16: 0.0/0.0 True | no rec: 0.0/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 11 share 0.00 
+M6 30 A/E 4: 1.575/2.077 False | 16: 1.608/2.08 False | no rec: 1.54/2.079 False | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M6 60 A/E 4: 0.635/0.544 True | 16: 0.658/0.558 True | no rec: 0.638/0.544 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M6 180 A/E 4: 0.576/0.824 True | 16: 0.6/0.848 True | no rec: 0.577/0.825 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M6 360 A/E 4: 0.595/0.0 True | 16: 0.609/0.0 True | no rec: 0.599/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 12 share 0.00 
+M6 720 A/E 4: 0.027/0.0 True | 16: 0.0/0.0 True | no rec: 0.0/0.0 True | rep 0/4 x caught 0 valid 0 before-run 0 of 11 share 0.00 
+burden pass 4: 19 16: 19 16 no rec: 19 of 20
+newly passing: [] no rec: []
+meet warn75: 0 both: 0
+== 2. Warning on intervals, analysis A
+rows 360 scorable 354 caught 4 valid 4 valid before run 4 share 0.011
+  M1 tests 59 caught 0 valid 0 before run 0 median chance 0.000
+  M2 tests 59 caught 0 valid 0 before run 0 median chance 0.000
+  M3 tests 59 caught 4 valid 4 before run 4 median chance 0.001
+  M4 tests 59 caught 0 valid 0 before run 0 median chance 0.005
+  M5 tests 59 caught 0 valid 0 before run 0 median chance 0.000
+  M6 tests 59 caught 0 valid 0 before run 0 median chance 0.000
+ h 30 tests 72 caught 1 valid 1 before run 1
+ h 60 tests 72 caught 1 valid 1 before run 1
+ h 180 tests 72 caught 1 valid 1 before run 1
+ h 360 tests 72 caught 0 valid 0 before run 0
+ h 720 tests 66 caught 1 valid 1 before run 1
+  x1 tests 30 caught 4 valid 4 before run 4 | active alarm 12 of 30
+  x3 tests 30 caught 0 valid 0 before run 0 | active alarm 4 of 30
+  x4 tests 30 caught 0 valid 0 before run 0 | active alarm 9 of 30
+  x5 tests 30 caught 0 valid 0 before run 0 | active alarm 0 of 30
+  x6 tests 30 caught 0 valid 0 before run 0 | active alarm 0 of 30
+  x7 tests 30 caught 0 valid 0 before run 0 | active alarm 0 of 30
+  x8 tests 24 caught 0 valid 0 before run 0 | active alarm 1 of 30
+  x9 tests 30 caught 0 valid 0 before run 0 | active alarm 1 of 30
+  x11 tests 30 caught 0 valid 0 before run 0 | active alarm 1 of 30
+  x12 tests 30 caught 0 valid 0 before run 0 | active alarm 7 of 30
+  x14 tests 30 caught 0 valid 0 before run 0 | active alarm 0 of 30
+  x16 tests 30 caught 0 valid 0 before run 0 | active alarm 0 of 30
+expected from chance, sum of chance rates 7.1; observed caught 4
+caught detail [('A_holdapr18', '30', 'M3', 'x1', '25', 0.031, '1'), ('A_holdapr18', '60', 'M3', 'x1', '25', 0.039, '1'), ('A_holdapr18', '180', 'M3', 'x1', '7', 0.11, '1'), ('A_holdapr18', '720', 'M3', 'x1', '20', 0.35, '1')]
+== all registered cells
+tests 685 caught 11 valid 11 before run 11
+== 4. Rank
+warning M1 30:0.50 60:0.45 180:0.49 360:0.46 720:0.35 | cells auroc>0.5 & share<.05: 3 of 20
+warning M2 30:0.43 60:0.42 180:0.48 360:0.53 720:0.52 | cells auroc>0.5 & share<.05: 1 of 20
+warning M3 30:0.44 60:0.43 180:0.44 360:0.54 720:0.47 | cells auroc>0.5 & share<.05: 0 of 20
+warning M4 30:0.33 60:0.43 180:0.51 360:0.50 720:0.50 | cells auroc>0.5 & share<.05: 2 of 20
+warning M5 30:0.41 60:0.41 180:0.30 360:0.47 720:0.53 | cells auroc>0.5 & share<.05: 1 of 20
+warning M6 30:0.58 60:0.63 180:0.62 360:0.60 720:0.58 | cells auroc>0.5 & share<.05: 0 of 20
+active M1 30:0.82 60:0.81 180:0.77 360:0.59 720:0.41 | cells auroc>0.5 & share<.05: 7 of 20
+active M2 30:0.76 60:0.58 180:0.41 360:0.34 720:0.25 | cells auroc>0.5 & share<.05: 3 of 20
+active M3 30:0.81 60:0.82 180:0.60 360:0.56 720:0.41 | cells auroc>0.5 & share<.05: 5 of 20
+active M4 30:0.80 60:0.79 180:0.74 360:0.54 720:0.60 | cells auroc>0.5 & share<.05: 6 of 20
+active M5 30:0.87 60:0.97 180:0.92 360:0.74 720:0.73 | cells auroc>0.5 & share<.05: 11 of 20
+active M6 30:0.28 60:0.32 180:0.39 360:0.38 720:0.34 | cells auroc>0.5 & share<.05: 0 of 20
+active alarm: analysis A 35 of 360 {'M1': 1, 'M2': 6, 'M3': 15, 'M4': 7, 'M5': 0, 'M6': 6}

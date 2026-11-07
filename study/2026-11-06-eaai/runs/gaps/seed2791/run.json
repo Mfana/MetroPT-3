@@ -1,0 +1,4722 @@
+{
+ "status": "completed_with_gates",
+ "phase": "seed2791",
+ "mode": "full",
+ "synthetic": false,
+ "python": "3.13.4",
+ "torch": "2.15.0",
+ "numpy": "2.2.6",
+ "arguments": [
+  "--phase",
+  "seed2791",
+  "--phases",
+  "study/2026-11-06-eaai/provenance/gaps-phases.json",
+  "--csv",
+  "data/raw/MetroPT3(AirCompressor).csv",
+  "--config",
+  "study/2026-11-06-eaai/provenance/seq-config.json",
+  "--base-config",
+  "study/2026-11-06-eaai/provenance/event-study-config.json",
+  "--events",
+  "study/2026-11-06-eaai/provenance/event-study-events.csv",
+  "--out",
+  "study/2026-11-06-eaai/runs/gaps/seed2791",
+  "--workers",
+  "6"
+ ],
+ "input": {
+  "sha256": "db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24",
+  "raw_rows": 1516948
+ },
+ "config": {
+  "hidden": 32,
+  "dropout": 0.1,
+  "kernel": 3,
+  "dilations": [
+   1,
+   2,
+   4,
+   8,
+   16
+  ],
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 256,
+  "positive_share": 0.25,
+  "train_steps": 500,
+  "score_batch": 2048,
+  "seed": 2791,
+  "torch_threads": 1,
+  "random_split_model": "M5",
+  "models_by_fold": {
+   "A": [
+    "M5",
+    "M6"
+   ],
+   "B": [
+    "M5",
+    "M6"
+   ],
+   "C": [
+    "M5",
+    "M6"
+   ],
+   "D": [
+    "M5",
+    "M6"
+   ],
+   "E": [
+    "M5",
+    "M6"
+   ]
+  }
+ },
+ "config_sha256": "40a7f7d2285c5914488729d6d8d1e4fdd394f2166ebbed29b22e9dbcc50186e9",
+ "phases_sha256": "0f348db586b09878e33b7735c7aa92585fa90bc38fb154276ce5890f23269616",
+ "base_config_sha256": "9f20fb5ca2f50dbf996506de03f24f113d16b96aa75fd7d6d677d6ee1f439926",
+ "events_sha256": "d067dc7ebe2ab01b8ba05ae3509f4999faf40ae3d37ab6b54294ba76919de6e0",
+ "script_sha256": "16d45da9545180964ae9e1d4ba4ca7ef4724fb9654f3881d440ea916e68be12e",
+ "seq_study_sha256": "e83b7f9ae2ae1afad343d6930f42b0b54dd344edb5d82afd5ac94ec6f629bb4d",
+ "results": [
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0007379710715339959,
+   "platt": [
+    -7.210867689089276,
+    0.0
+   ],
+   "oof_windows": 121956,
+   "oof_positive": 90,
+   "window": {
+    "windows": 108425,
+    "positives": 30,
+    "prevalence": 0.000276688955499193,
+    "average_precision": 0.00016111669116939328,
+    "auroc": 0.1385042360502483,
+    "distinct_scores": 106511
+   },
+   "uncalibrated": {
+    "brier": 0.00035154339330912356,
+    "brier_reference": 0.0002768251799116712,
+    "brier_skill": -0.26991118879176135,
+    "log_loss": 0.004819113791541169,
+    "calibration_intercept": -32.25464785552124,
+    "calibration_slope": -2.055105554099077,
+    "ece_5": 0.0017249919867242912,
+    "ece_10": 0.0017292233886565145,
+    "ece_15": 0.0017318408648758666,
+    "top_decile_gap": 0.014487260624317367,
+    "mean_predicted": 0.0014583987979632797,
+    "observed_rate": 0.000276688955499193
+   },
+   "platt_calibrated": {
+    "brier": 0.0002768251799116712,
+    "brier_reference": 0.0002768251799116712,
+    "brier_skill": 0.0,
+    "log_loss": 0.002733410955363012,
+    "calibration_intercept": -8.19233985980046,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0007194715984195906,
+    "ece_10": 0.000867072619007889,
+    "ece_15": 0.0009162684216829888,
+    "top_decile_gap": 0.0007379710715339959,
+    "mean_predicted": 0.0007379710715339961,
+    "observed_rate": 0.000276688955499193
+   },
+   "policy": {
+    "threshold": -1.4366845401752721,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 77.9,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "9ec474799c09bb3beea17d02ec947285756c0d9158110dde4005b1d55b81e52d"
+  },
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0007379710715339959,
+   "platt": [
+    -7.210857182862136,
+    0.0004108173972367631
+   ],
+   "oof_windows": 121956,
+   "oof_positive": 90,
+   "window": {
+    "windows": 108425,
+    "positives": 30,
+    "prevalence": 0.000276688955499193,
+    "average_precision": 0.00016401297579592293,
+    "auroc": 0.1295382628350016,
+    "distinct_scores": 108050
+   },
+   "uncalibrated": {
+    "brier": 0.013495111594368375,
+    "brier_reference": 0.0002768251799116712,
+    "brier_skill": -47.74958122911495,
+    "log_loss": 0.10580275002941797,
+    "calibration_intercept": -8.19233985980046,
+    "calibration_slope": -0.0019269025149061933,
+    "ece_5": 0.01439874614341809,
+    "ece_10": 0.014398766144340384,
+    "ece_15": 0.01439877281069962,
+    "top_decile_gap": 0.1412265845139371,
+    "mean_predicted": 0.014122097187918892,
+    "observed_rate": 0.000276688955499193
+   },
+   "platt_calibrated": {
+    "brier": 0.00027681635561982486,
+    "brier_reference": 0.0002768251799116712,
+    "brier_skill": 3.1876767312644105e-05,
+    "log_loss": 0.0027267247716571933,
+    "calibration_intercept": -8.19233985980046,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0007277364183676803,
+    "ece_10": 0.0008501149418814151,
+    "ece_15": 0.0008854181086243095,
+    "top_decile_gap": 0.000734186822337082,
+    "mean_predicted": 0.0007104618346461172,
+    "observed_rate": 0.000276688955499193
+   },
+   "policy": {
+    "threshold": -6.710886169247169,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.018
+     }
+    },
+    "false_alarm_episodes": 51,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 77.9,
+    "false_alarms_per_day": 0.6546854942233632,
+    "alarm_occupancy": 0.015455654542359417
+   },
+   "prediction_digest": "673f660a94a784c6c53fec526fd3eb004ca0a7a56ce94997e9db93ef3b4206fb"
+  },
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0014877754450928207,
+   "platt": [
+    -6.508984381233356,
+    0.0
+   ],
+   "oof_windows": 120986,
+   "oof_positive": 180,
+   "window": {
+    "windows": 107499,
+    "positives": 60,
+    "prevalence": 0.0005581447269276923,
+    "average_precision": 0.000391762363803154,
+    "auroc": 0.27804475097497183,
+    "distinct_scores": 106253
+   },
+   "uncalibrated": {
+    "brier": 0.0015680979199503575,
+    "brier_reference": 0.0005586974146636513,
+    "brier_skill": -1.8067033760920275,
+    "log_loss": 0.014909605124673786,
+    "calibration_intercept": -13.10140564186162,
+    "calibration_slope": -0.6299413460911518,
+    "ece_5": 0.008978893370436074,
+    "ece_10": 0.0091659589060182,
+    "ece_15": 0.009146370241139897,
+    "top_decile_gap": 0.05858409556197073,
+    "mean_predicted": 0.00861419018358181,
+    "observed_rate": 0.0005581447269276923
+   },
+   "platt_calibrated": {
+    "brier": 0.0005586974146636513,
+    "brier_reference": 0.0005586974146636513,
+    "brier_skill": 0.0,
+    "log_loss": 0.005121838591965068,
+    "calibration_intercept": -7.490333961411227,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0014508321378239053,
+    "ece_10": 0.0017483623150218836,
+    "ece_15": 0.0018475667205551938,
+    "top_decile_gap": 0.0014877754450928204,
+    "mean_predicted": 0.0014877754450928204,
+    "observed_rate": 0.0005581447269276923
+   },
+   "policy": {
+    "threshold": -1.1931789785862672,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.001
+     }
+    },
+    "false_alarm_episodes": 2,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 77.22916666666667,
+    "false_alarms_per_day": 0.02589695171297545,
+    "alarm_occupancy": 9.930204845939965e-05
+   },
+   "prediction_digest": "68e62f88218b12dbfcf1d0772de038e68687d085d923341da0276a4312eb7a27"
+  },
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0014877754450928207,
+   "platt": [
+    -6.508979166068064,
+    0.0008046688169466913
+   ],
+   "oof_windows": 120986,
+   "oof_positive": 180,
+   "window": {
+    "windows": 107499,
+    "positives": 60,
+    "prevalence": 0.0005581447269276923,
+    "average_precision": 0.0003255348711657707,
+    "auroc": 0.13043323808548726,
+    "distinct_scores": 107191
+   },
+   "uncalibrated": {
+    "brier": 0.005073317008430377,
+    "brier_reference": 0.0005586974146636513,
+    "brier_skill": -8.080616582921957,
+    "log_loss": 0.024069856897420555,
+    "calibration_intercept": -17.610681658756306,
+    "calibration_slope": -0.6314044513270297,
+    "ece_5": 0.006877104821938781,
+    "ece_10": 0.006877124822124828,
+    "ece_15": 0.006877131490093831,
+    "top_decile_gap": 0.06319439168793348,
+    "mean_predicted": 0.006319000095383185,
+    "observed_rate": 0.0005581447269276923
+   },
+   "platt_calibrated": {
+    "brier": 0.000558653101115726,
+    "brier_reference": 0.0005586974146636513,
+    "brier_skill": 7.93158277848649e-05,
+    "log_loss": 0.005110019068363054,
+    "calibration_intercept": -67.57631273108149,
+    "calibration_slope": -9.023149818673408,
+    "ece_5": 0.0014388756412336329,
+    "ece_10": 0.0016629628224585603,
+    "ece_15": 0.0015862467005491765,
+    "top_decile_gap": 0.0014724097116728132,
+    "mean_predicted": 0.0013506898596421192,
+    "observed_rate": 0.0005581447269276923
+   },
+   "policy": {
+    "threshold": -2.64742063666287,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.022
+     }
+    },
+    "false_alarm_episodes": 42,
+    "unscorable_alarm_episodes": 1,
+    "scored_days": 77.22916666666667,
+    "false_alarms_per_day": 0.5438359859724845,
+    "alarm_occupancy": 0.00870311524712024
+   },
+   "prediction_digest": "294bcdcbe2584b099fcbbe8f613bc86c51a22dc3c89ce70c406a4e32bb6c1620"
+  },
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.004565244959208691,
+   "platt": [
+    -5.384707408573761,
+    0.0
+   ],
+   "oof_windows": 118285,
+   "oof_positive": 540,
+   "window": {
+    "windows": 104826,
+    "positives": 180,
+    "prevalence": 0.0017171312460649076,
+    "average_precision": 0.000978092847619183,
+    "auroc": 0.1320501712652392,
+    "distinct_scores": 104442
+   },
+   "uncalibrated": {
+    "brier": 0.004449783748648086,
+    "brier_reference": 0.0017222944580716926,
+    "brier_skill": -1.5836370359283003,
+    "log_loss": 0.027238512671681637,
+    "calibration_intercept": -13.805929180042428,
+    "calibration_slope": -1.065688539364956,
+    "ece_5": 0.013922062880416062,
+    "ece_10": 0.013922062880416065,
+    "ece_15": 0.013948286440432675,
+    "top_decile_gap": 0.106188797627223,
+    "mean_predicted": 0.012376944501771804,
+    "observed_rate": 0.0017171312460649076
+   },
+   "platt_calibrated": {
+    "brier": 0.0017222944580716926,
+    "brier_reference": 0.0017222944580716926,
+    "brier_skill": 0.0,
+    "log_loss": 0.013821946856605545,
+    "calibration_intercept": -6.365381653606513,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0044562956418673794,
+    "ece_10": 0.005369379474263631,
+    "ece_15": 0.005673711717933621,
+    "top_decile_gap": 0.004565244959208693,
+    "mean_predicted": 0.004565244959208694,
+    "observed_rate": 0.0017171312460649076
+   },
+   "policy": {
+    "threshold": -1.0527610666202696,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.058
+     }
+    },
+    "false_alarm_episodes": 56,
+    "unscorable_alarm_episodes": 27,
+    "scored_days": 75.33402777777778,
+    "false_alarms_per_day": 0.7433559793880956,
+    "alarm_occupancy": 0.027832945582477443
+   },
+   "prediction_digest": "a41b4a3e5b9d54c52a178916935e7255f97ef54a7a77e2e6a5bb51fcfc8158f4"
+  },
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.004565244959208691,
+   "platt": [
+    -5.251052475424688,
+    0.001693202080044275
+   ],
+   "oof_windows": 118285,
+   "oof_positive": 540,
+   "window": {
+    "windows": 104826,
+    "positives": 180,
+    "prevalence": 0.0017171312460649076,
+    "average_precision": 0.001000680847271169,
+    "auroc": 0.14029744726665774,
+    "distinct_scores": 104608
+   },
+   "uncalibrated": {
+    "brier": 0.013497049528672906,
+    "brier_reference": 0.0017222944580716926,
+    "brier_skill": -6.836667804055069,
+    "log_loss": 0.10273996525841543,
+    "calibration_intercept": -81.60400870874048,
+    "calibration_slope": -4.674119615261596,
+    "ece_5": 0.015865511837759524,
+    "ece_10": 0.015865531838522694,
+    "ece_15": 0.015865538504807777,
+    "top_decile_gap": 0.14149140455113335,
+    "mean_predicted": 0.01414842059131303,
+    "observed_rate": 0.0017171312460649076
+   },
+   "platt_calibrated": {
+    "brier": 0.0017245843083582319,
+    "brier_reference": 0.0017222944580716926,
+    "brier_skill": -0.0013295347237562982,
+    "log_loss": 0.01406512866681622,
+    "calibration_intercept": -67.58473685875799,
+    "calibration_slope": -11.315184019199176,
+    "ece_5": 0.004745668799909892,
+    "ece_10": 0.005534412957873239,
+    "ece_15": 0.0052945641744633655,
+    "top_decile_gap": 0.0051477434001962405,
+    "mean_predicted": 0.004666843026196055,
+    "observed_rate": 0.0017171312460649076
+   },
+   "policy": {
+    "threshold": -1.33771180900464,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.041
+     }
+    },
+    "false_alarm_episodes": 46,
+    "unscorable_alarm_episodes": 4,
+    "scored_days": 75.33402777777778,
+    "false_alarms_per_day": 0.61061384021165,
+    "alarm_occupancy": 0.01424984395392385
+   },
+   "prediction_digest": "0d2ccfb77056bea4a34c0afd905a78f6a1531411f8746d087702c4c5fecf821a"
+  },
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.009351054158188666,
+   "platt": [
+    -4.662871148095359,
+    0.0
+   ],
+   "oof_windows": 115495,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 101662,
+    "positives": 360,
+    "prevalence": 0.003541146150970864,
+    "average_precision": 0.002532376148478175,
+    "auroc": 0.34286180046900466,
+    "distinct_scores": 100174
+   },
+   "uncalibrated": {
+    "brier": 0.005828710170607996,
+    "brier_reference": 0.0035623614659606624,
+    "brier_skill": -0.6361927969137648,
+    "log_loss": 0.04265620090623087,
+    "calibration_intercept": -12.332615984107546,
+    "calibration_slope": -0.868842978795663,
+    "ece_5": 0.015819435114203313,
+    "ece_10": 0.016060152272735672,
+    "ece_15": 0.016107128399827725,
+    "top_decile_gap": 0.11118898823767574,
+    "mean_predicted": 0.012913684230711375,
+    "observed_rate": 0.003541146150970864
+   },
+   "platt_calibrated": {
+    "brier": 0.0035623614659606624,
+    "brier_reference": 0.0035623614659606624,
+    "brier_skill": 0.0,
+    "log_loss": 0.025906957968581,
+    "calibration_intercept": -5.639757401928346,
+    "calibration_slope": 0.0,
+    "ece_5": 0.009151852231327263,
+    "ece_10": 0.011022026270243394,
+    "ece_15": 0.011645478937751443,
+    "top_decile_gap": 0.009351054158188666,
+    "mean_predicted": 0.009351054158188668,
+    "observed_rate": 0.003541146150970864
+   },
+   "policy": {
+    "threshold": -0.4123134205973291,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.031
+     }
+    },
+    "false_alarm_episodes": 21,
+    "unscorable_alarm_episodes": 2,
+    "scored_days": 73.15,
+    "false_alarms_per_day": 0.28708133971291866,
+    "alarm_occupancy": 0.002574760256483005
+   },
+   "prediction_digest": "6e8100ba4349f34b5d9fe5fa7f5832d599b903cc8ed3eeac41cc098ae3a31518"
+  },
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.009351054158188666,
+   "platt": [
+    -4.427857630854085,
+    0.004372840091958987
+   ],
+   "oof_windows": 115495,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 101662,
+    "positives": 360,
+    "prevalence": 0.003541146150970864,
+    "average_precision": 0.002048104373991874,
+    "auroc": 0.13327165033486232,
+    "distinct_scores": 101457
+   },
+   "uncalibrated": {
+    "brier": 0.019328456403285316,
+    "brier_reference": 0.0035623614659606624,
+    "brier_skill": -4.425742611459842,
+    "log_loss": 0.12903884467951027,
+    "calibration_intercept": -80361.08112060023,
+    "calibration_slope": -4985.47727255521,
+    "ece_5": 0.03192666691486836,
+    "ece_10": 0.031926686916442196,
+    "ece_15": 0.031926680245689905,
+    "top_decile_gap": 0.27533200449574097,
+    "mean_predicted": 0.028385561300790438,
+    "observed_rate": 0.003541146150970864
+   },
+   "platt_calibrated": {
+    "brier": 0.003589609296830877,
+    "brier_reference": 0.0035623614659606624,
+    "brier_skill": -0.007648811365880359,
+    "log_loss": 0.027058844956817565,
+    "calibration_intercept": -9.709800812709775,
+    "calibration_slope": -0.8739428956101348,
+    "ece_5": 0.011236021432720076,
+    "ece_10": 0.012109820616106362,
+    "ece_15": 0.011799292806625193,
+    "top_decile_gap": 0.011742875746815413,
+    "mean_predicted": 0.010289457529975683,
+    "observed_rate": 0.003541146150970864
+   },
+   "policy": {
+    "threshold": -0.3212949851937192,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.11
+     }
+    },
+    "false_alarm_episodes": 81,
+    "unscorable_alarm_episodes": 5,
+    "scored_days": 73.15,
+    "false_alarms_per_day": 1.1073137388926861,
+    "alarm_occupancy": 0.017200533393860296
+   },
+   "prediction_digest": "5bacecd76f54ad7a19650c8f2d534c89f4239f331dcbb8c0099b14f60cc0c4b4"
+  },
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.018680434839010975,
+   "platt": [
+    -3.961421450165902,
+    0.0
+   ],
+   "oof_windows": 115629,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 101947,
+    "positives": 720,
+    "prevalence": 0.007062493256299842,
+    "average_precision": 0.0036994168074329322,
+    "auroc": 0.04970149597768711,
+    "distinct_scores": 99124
+   },
+   "uncalibrated": {
+    "brier": 0.014027818225957722,
+    "brier_reference": 0.007147591011923852,
+    "brier_skill": -0.9625938589037963,
+    "log_loss": 0.09250165345245366,
+    "calibration_intercept": -39.77806404597436,
+    "calibration_slope": -4.678687528310287,
+    "ece_5": 0.03970954296058403,
+    "ece_10": 0.03970954296058403,
+    "ece_15": 0.03972885841810297,
+    "top_decile_gap": 0.2032004086140434,
+    "mean_predicted": 0.03284919927558375,
+    "observed_rate": 0.007062493256299842
+   },
+   "platt_calibrated": {
+    "brier": 0.007147591011923852,
+    "brier_reference": 0.007147591011923852,
+    "brier_skill": 0.0,
+    "log_loss": 0.04683463024398733,
+    "calibration_intercept": -4.945869586660004,
+    "calibration_slope": 0.0,
+    "ece_5": 0.018270900749089845,
+    "ece_10": 0.0220070976589296,
+    "ece_15": 0.023252374471056665,
+    "top_decile_gap": 0.018680434839010975,
+    "mean_predicted": 0.01868043483901097,
+    "observed_rate": 0.007062493256299842
+   },
+   "policy": {
+    "threshold": 0.31161504720924205,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.026
+     }
+    },
+    "false_alarm_episodes": 16,
+    "unscorable_alarm_episodes": 7,
+    "scored_days": 73.44722222222222,
+    "false_alarms_per_day": 0.21784350062403085,
+    "alarm_occupancy": 0.006014866935255064
+   },
+   "prediction_digest": "b20c737841425f221f0a3fa4ff74ab27e22b43b0cea2ab902068ea50f62d07c2"
+  },
+  {
+   "fold": "A_holdapr18",
+   "kind": "A",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.018680434839010975,
+   "platt": [
+    -3.7304294942079985,
+    0.005488867161308346
+   ],
+   "oof_windows": 115629,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 101947,
+    "positives": 720,
+    "prevalence": 0.007062493256299842,
+    "average_precision": 0.004117612297100263,
+    "auroc": 0.14387849969759933,
+    "distinct_scores": 101742
+   },
+   "uncalibrated": {
+    "brier": 0.02474276157465094,
+    "brier_reference": 0.007147591011923852,
+    "brier_skill": -2.461692412642838,
+    "log_loss": 0.16986059786179766,
+    "calibration_intercept": -1469.0682695879632,
+    "calibration_slope": -90.86050684190728,
+    "ece_5": 0.043106659975111025,
+    "ece_10": 0.043106679973737766,
+    "ece_15": 0.04310668664190848,
+    "top_decile_gap": 0.349595419105901,
+    "mean_predicted": 0.03604420671802647,
+    "observed_rate": 0.007062493256299842
+   },
+   "platt_calibrated": {
+    "brier": 0.007211336959303621,
+    "brier_reference": 0.007147591011923852,
+    "brier_skill": -0.008918521957038017,
+    "log_loss": 0.04770655821578693,
+    "calibration_intercept": -5.180588289521437,
+    "calibration_slope": -0.057392217422988806,
+    "ece_5": 0.022197105767762064,
+    "ece_10": 0.022920614616064247,
+    "ece_15": 0.02273762948392115,
+    "top_decile_gap": 0.023326875715946622,
+    "mean_predicted": 0.018553544747857396,
+    "observed_rate": 0.007062493256299842
+   },
+   "policy": {
+    "threshold": 0.4833938668786916,
+    "failures": {
+     "apr18": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.144
+     }
+    },
+    "false_alarm_episodes": 71,
+    "unscorable_alarm_episodes": 12,
+    "scored_days": 73.44722222222222,
+    "false_alarms_per_day": 0.9666805340191369,
+    "alarm_occupancy": 0.013164614424331839
+   },
+   "prediction_digest": "0b72b5e80abab7c60c7bb0cde1385963d1085d3071f1200c4e927f8306f85743"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0005714539693827662,
+   "platt": [
+    -7.466755004173998,
+    0.0
+   ],
+   "oof_windows": 157493,
+   "oof_positive": 90,
+   "window": {
+    "windows": 72888,
+    "positives": 30,
+    "prevalence": 0.0004115903852486006,
+    "average_precision": 0.000291284934032251,
+    "auroc": 0.33284128029866317,
+    "distinct_scores": 71943
+   },
+   "uncalibrated": {
+    "brier": 0.00041258544274589386,
+    "brier_reference": 0.00041144653496890386,
+    "brier_skill": -0.002768057767398746,
+    "log_loss": 0.004601820045153708,
+    "calibration_intercept": -20.04512398811314,
+    "calibration_slope": -1.16446020742087,
+    "ece_5": 0.0005868250237869812,
+    "ece_10": 0.0005868250237869813,
+    "ece_15": 0.0005884922323985047,
+    "top_decile_gap": 0.0017259071521847477,
+    "mean_predicted": 0.00020133864555817377,
+    "observed_rate": 0.0004115903852486006
+   },
+   "platt_calibrated": {
+    "brier": 0.00041144653496890386,
+    "brier_reference": 0.00041144653496890386,
+    "brier_skill": 0.0,
+    "log_loss": 0.003644861880158468,
+    "calibration_intercept": -7.795070238619719,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0007544564947460093,
+    "ece_10": 0.0008687504246886879,
+    "ece_15": 0.0009068536281131238,
+    "top_decile_gap": 0.0005714539693827661,
+    "mean_predicted": 0.0005714539693827662,
+    "observed_rate": 0.0004115903852486006
+   },
+   "policy": {
+    "threshold": -2.0918532772429543,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 52.334722222222226,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "ec14e84383a9bfba3d24420bc9b00ca6f181d6eb061f1199a6f8c27bde3219fb"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0005714539693827662,
+   "platt": [
+    -7.466755004173998,
+    0.0
+   ],
+   "oof_windows": 157493,
+   "oof_positive": 90,
+   "window": {
+    "windows": 72888,
+    "positives": 30,
+    "prevalence": 0.0004115903852486006,
+    "average_precision": 0.0002973244373894183,
+    "auroc": 0.2851327239287381,
+    "distinct_scores": 72767
+   },
+   "uncalibrated": {
+    "brier": 0.00041234688225379336,
+    "brier_reference": 0.00041144653496890386,
+    "brier_skill": -0.0021882485532598306,
+    "log_loss": 0.006674432365916943,
+    "calibration_intercept": -177.35272240157076,
+    "calibration_slope": -10.528748757857986,
+    "ece_5": 0.00045153700129311504,
+    "ece_10": 0.0004515570018419021,
+    "ece_15": 0.00045156366960614336,
+    "top_decile_gap": 0.0003989236416740049,
+    "mean_predicted": 3.998661714208879e-05,
+    "observed_rate": 0.0004115903852486006
+   },
+   "platt_calibrated": {
+    "brier": 0.00041144653496890386,
+    "brier_reference": 0.00041144653496890386,
+    "brier_skill": 0.0,
+    "log_loss": 0.003644861880158468,
+    "calibration_intercept": -7.795070238619719,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0007544564947460093,
+    "ece_10": 0.0008687504246886879,
+    "ece_15": 0.0009068536281131238,
+    "top_decile_gap": 0.0005714539693827661,
+    "mean_predicted": 0.0005714539693827662,
+    "observed_rate": 0.0004115903852486006
+   },
+   "policy": {
+    "threshold": -5.824308240931942,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.008
+     }
+    },
+    "false_alarm_episodes": 7,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 52.334722222222226,
+    "false_alarms_per_day": 0.13375441203789706,
+    "alarm_occupancy": 0.0010203008309666562
+   },
+   "prediction_digest": "493327c9caa92fce81c8de30701258e8e49dc46964062295632ece42a0123e58"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0011519557648986278,
+   "platt": [
+    -6.765141496195246,
+    0.0
+   ],
+   "oof_windows": 156256,
+   "oof_positive": 180,
+   "window": {
+    "windows": 72229,
+    "positives": 60,
+    "prevalence": 0.0008306912735881709,
+    "average_precision": 0.0005967985100970323,
+    "auroc": 0.32029657239719733,
+    "distinct_scores": 72105
+   },
+   "uncalibrated": {
+    "brier": 0.0008416065419483266,
+    "brier_reference": 0.0008301044364695321,
+    "brier_skill": -0.013856214921237342,
+    "log_loss": 0.009426143476369352,
+    "calibration_intercept": -11.426158110824135,
+    "calibration_slope": -0.5137158734285496,
+    "ece_5": 0.002409561489269165,
+    "ece_10": 0.0025453503280021238,
+    "ece_15": 0.0025827515171852164,
+    "top_decile_gap": 0.008802362035627566,
+    "mean_predicted": 0.0018426606389128966,
+    "observed_rate": 0.0008306912735881709
+   },
+   "platt_calibrated": {
+    "brier": 0.0008301044364695321,
+    "brier_reference": 0.0008301044364695321,
+    "brier_skill": 0.0,
+    "log_loss": 0.006772363781409308,
+    "calibration_intercept": -7.092421307575296,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0015218583530633377,
+    "ece_10": 0.0017522526957750684,
+    "ece_15": 0.0018290295451322798,
+    "top_decile_gap": 0.0011519557648986282,
+    "mean_predicted": 0.0011519557648986282,
+    "observed_rate": 0.0008306912735881709
+   },
+   "policy": {
+    "threshold": -2.5907002901071223,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 51.80555555555556,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "843f17e86dde78c3952f4ec858a7ffe17f42850d0cf23edcab508985d7951ce7"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0011519557648986278,
+   "platt": [
+    -6.765141496195246,
+    0.0
+   ],
+   "oof_windows": 156256,
+   "oof_positive": 180,
+   "window": {
+    "windows": 72229,
+    "positives": 60,
+    "prevalence": 0.0008306912735881709,
+    "average_precision": 0.0004237050885858415,
+    "auroc": 0.003456008350769259,
+    "distinct_scores": 72134
+   },
+   "uncalibrated": {
+    "brier": 0.0009292225179552543,
+    "brier_reference": 0.0008301044364695321,
+    "brier_skill": -0.11940435098416691,
+    "log_loss": 0.014380727230627192,
+    "calibration_intercept": -50.32256348304728,
+    "calibration_slope": -2.6911802568031775,
+    "ece_5": 0.0017665875947729733,
+    "ece_10": 0.0017666075950498708,
+    "ece_15": 0.0017666142599628558,
+    "top_decile_gap": 0.00935938558236713,
+    "mean_predicted": 0.000935936321738597,
+    "observed_rate": 0.0008306912735881709
+   },
+   "platt_calibrated": {
+    "brier": 0.0008301044364695321,
+    "brier_reference": 0.0008301044364695321,
+    "brier_skill": 0.0,
+    "log_loss": 0.006772363781409308,
+    "calibration_intercept": -7.092421307575296,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0015218583530633377,
+    "ece_10": 0.0017522526957750684,
+    "ece_15": 0.0018290295451322798,
+    "top_decile_gap": 0.0011519557648986282,
+    "mean_predicted": 0.0011519557648986282,
+    "observed_rate": 0.0008306912735881709
+   },
+   "policy": {
+    "threshold": -7.356386358453488,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.068
+     }
+    },
+    "false_alarm_episodes": 88,
+    "unscorable_alarm_episodes": 1,
+    "scored_days": 51.80555555555556,
+    "false_alarms_per_day": 1.6986595174262733,
+    "alarm_occupancy": 0.02534974229515094
+   },
+   "prediction_digest": "a4b6cfd32f4eac111e621441b8f4fb32d59bb7d4d3d251ada1242acc6e0ab468"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0035351419294019065,
+   "platt": [
+    -4.5351850620734995,
+    0.1340581373361745
+   ],
+   "oof_windows": 152752,
+   "oof_positive": 540,
+   "window": {
+    "windows": 70359,
+    "positives": 180,
+    "prevalence": 0.002558308105572848,
+    "average_precision": 0.009079392925610592,
+    "auroc": 0.8615586175668252,
+    "distinct_scores": 69202
+   },
+   "uncalibrated": {
+    "brier": 0.0025813250313121015,
+    "brier_reference": 0.002552717369529184,
+    "brier_skill": -0.011206748590500526,
+    "log_loss": 0.02029861815730457,
+    "calibration_intercept": -5.307536487164487,
+    "calibration_slope": 0.09037734073006165,
+    "ece_5": 0.0012919206864111092,
+    "ece_10": 0.002130840406435607,
+    "ece_15": 0.0038052619706812835,
+    "top_decile_gap": 0.0041951352225446815,
+    "mean_predicted": 0.0017699499601535257,
+    "observed_rate": 0.002558308105572848
+   },
+   "platt_calibrated": {
+    "brier": 0.002554247488666689,
+    "brier_reference": 0.002552717369529184,
+    "brier_skill": -0.0005994079704119137,
+    "log_loss": 0.018128758258516127,
+    "calibration_intercept": -5.965837209806377,
+    "calibration_slope": 0.000707558068997052,
+    "ece_5": 0.003846457678706713,
+    "ece_10": 0.0038464576787067134,
+    "ece_15": 0.004676977779201585,
+    "top_decile_gap": 0.003319050258232787,
+    "mean_predicted": 0.004035906596888231,
+    "observed_rate": 0.002558308105572848
+   },
+   "policy": {
+    "threshold": -1.2476467622315675,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 50.36944444444445,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "a0d8a0ca5672c843906472c49395e6edb2855c7e8a18a41ea523a25ff8f648d8"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0035351419294019065,
+   "platt": [
+    -5.615300352014292,
+    0.00021309374913381732
+   ],
+   "oof_windows": 152752,
+   "oof_positive": 540,
+   "window": {
+    "windows": 70359,
+    "positives": 180,
+    "prevalence": 0.002558308105572848,
+    "average_precision": 0.0018208460325269604,
+    "auroc": 0.29518809837067433,
+    "distinct_scores": 70206
+   },
+   "uncalibrated": {
+    "brier": 0.002664721010318463,
+    "brier_reference": 0.002552717369529184,
+    "brier_skill": -0.043876240325789295,
+    "log_loss": 0.04261432572991091,
+    "calibration_intercept": -101.6542835782827,
+    "calibration_slope": -5.952908548059067,
+    "ece_5": 0.003878503908195794,
+    "ece_10": 0.003878523908480051,
+    "ece_15": 0.0038785305742939477,
+    "top_decile_gap": 0.01317226155792016,
+    "mean_predicted": 0.0013202358031914588,
+    "observed_rate": 0.002558308105572848
+   },
+   "platt_calibrated": {
+    "brier": 0.0025529365357934443,
+    "brier_reference": 0.002552717369529184,
+    "brier_skill": -8.585606337629947e-05,
+    "log_loss": 0.018004584523753822,
+    "calibration_intercept": -5.9658475490716665,
+    "calibration_slope": -0.00019775993564984234,
+    "ece_5": 0.004717489315833546,
+    "ece_10": 0.004979618637803404,
+    "ece_15": 0.005665993111878928,
+    "top_decile_gap": 0.0036239655480874333,
+    "mean_predicted": 0.003581875760943714,
+    "observed_rate": 0.002558308105572848
+   },
+   "policy": {
+    "threshold": -2.8850046163645424,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.032
+     }
+    },
+    "false_alarm_episodes": 19,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 50.36944444444445,
+    "false_alarms_per_day": 0.3772128164120664,
+    "alarm_occupancy": 0.004207426107078994
+   },
+   "prediction_digest": "5443de798fbf29805049df52edd6bc39585b438cf035d9ef7b354a4ec7454838"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.007261431712285939,
+   "platt": [
+    -4.383358334021053,
+    0.0929143611103139
+   ],
+   "oof_windows": 148731,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 68426,
+    "positives": 360,
+    "prevalence": 0.0052611580393417704,
+    "average_precision": 0.0029392143604770452,
+    "auroc": 0.11788074564883104,
+    "distinct_scores": 68279
+   },
+   "uncalibrated": {
+    "brier": 0.005608335966120505,
+    "brier_reference": 0.005237479350193514,
+    "brier_skill": -0.07080822493615924,
+    "log_loss": 0.05478542847277103,
+    "calibration_intercept": -14.276826414005376,
+    "calibration_slope": -1.2379110935811384,
+    "ece_5": 0.016914856116140933,
+    "ece_10": 0.016914856116140933,
+    "ece_15": 0.016914856116140933,
+    "top_decile_gap": 0.04183652577373984,
+    "mean_predicted": 0.011768903608167298,
+    "observed_rate": 0.0052611580393417704
+   },
+   "platt_calibrated": {
+    "brier": 0.005255785028421424,
+    "brier_reference": 0.005237479350193514,
+    "brier_skill": -0.0034951313416125007,
+    "log_loss": 0.03443535695585381,
+    "calibration_intercept": -72.67416195678292,
+    "calibration_slope": -13.322607219994142,
+    "ece_5": 0.010321769369508006,
+    "ece_10": 0.010321769369508007,
+    "ece_15": 0.010760890478478396,
+    "top_decile_gap": 0.00923461987213193,
+    "mean_predicted": 0.007365524082276266,
+    "observed_rate": 0.0052611580393417704
+   },
+   "policy": {
+    "threshold": -0.5309468020816697,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 49.05,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "6bc1a31e3dd051f31456a26761e121a64afdf0d6a52ed69b2dda8118a074a9bf"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.007261431712285939,
+   "platt": [
+    -4.917890339804319,
+    0.0
+   ],
+   "oof_windows": 148731,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 68426,
+    "positives": 360,
+    "prevalence": 0.0052611580393417704,
+    "average_precision": 0.0037707767213464344,
+    "auroc": 0.30388438345788565,
+    "distinct_scores": 68310
+   },
+   "uncalibrated": {
+    "brier": 0.00603704602026006,
+    "brier_reference": 0.005237479350193514,
+    "brier_skill": -0.15266249594607073,
+    "log_loss": 0.09495508262646277,
+    "calibration_intercept": -246.57073318683143,
+    "calibration_slope": -15.039862059958224,
+    "ece_5": 0.014963817206574123,
+    "ece_10": 0.014963837207743266,
+    "ece_15": 0.01496384387479965,
+    "top_decile_gap": 0.07031385951090793,
+    "mean_predicted": 0.009702699169570644,
+    "observed_rate": 0.0052611580393417704
+   },
+   "platt_calibrated": {
+    "brier": 0.005237479350193514,
+    "brier_reference": 0.005237479350193514,
+    "brier_skill": 0.0,
+    "log_loss": 0.03316172253240695,
+    "calibration_intercept": -5.242129070227177,
+    "calibration_slope": 0.0,
+    "ece_5": 0.009618059515090923,
+    "ece_10": 0.011070218512415339,
+    "ece_15": 0.011554342258819463,
+    "top_decile_gap": 0.007261431712285938,
+    "mean_predicted": 0.007261431712285938,
+    "observed_rate": 0.0052611580393417704
+   },
+   "policy": {
+    "threshold": 0.024323331738651532,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.005
+     }
+    },
+    "false_alarm_episodes": 1,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 49.05,
+    "false_alarms_per_day": 0.020387359836901122,
+    "alarm_occupancy": 9.466708740927737e-05
+   },
+   "prediction_digest": "26c7be2705cb00b4baeb1d7976303854f56359454aad38e237d538c0142ceab7"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.014430207233809441,
+   "platt": [
+    -4.223896209736301,
+    0.0
+   ],
+   "oof_windows": 149686,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 67890,
+    "positives": 720,
+    "prevalence": 0.010605391073795847,
+    "average_precision": 0.008127369738006715,
+    "auroc": 0.3611200746861198,
+    "distinct_scores": 67632
+   },
+   "uncalibrated": {
+    "brier": 0.012497766864930216,
+    "brier_reference": 0.010507545972625607,
+    "brier_skill": -0.1894087256424628,
+    "log_loss": 0.09966287121165683,
+    "calibration_intercept": -6.296700840126166,
+    "calibration_slope": -0.31072261428104886,
+    "ece_5": 0.03842629507172153,
+    "ece_10": 0.039374004335161285,
+    "ece_15": 0.04053475832397772,
+    "top_decile_gap": 0.08619320750537471,
+    "mean_predicted": 0.03084912057845003,
+    "observed_rate": 0.010605391073795847
+   },
+   "platt_calibrated": {
+    "brier": 0.010507545972625607,
+    "brier_reference": 0.010507545972625607,
+    "brier_skill": 0.0,
+    "log_loss": 0.05933140640520072,
+    "calibration_intercept": -4.535730786250809,
+    "calibration_slope": 0.0,
+    "ece_5": 0.019263515414081517,
+    "ece_10": 0.0221495568608434,
+    "ece_15": 0.02311157067643069,
+    "top_decile_gap": 0.014430207233809443,
+    "mean_predicted": 0.014430207233809444,
+    "observed_rate": 0.010605391073795847
+   },
+   "policy": {
+    "threshold": 0.4546415825505159,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 48.90069444444445,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "5ddcbc984e8d711bd61d74f6bc70ce75ccce2842ebba2826555f7f166e5892bd"
+  },
+  {
+   "fold": "A_holdjul15",
+   "kind": "A",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.014430207233809441,
+   "platt": [
+    -4.029100376042673,
+    0.00312020119328888
+   ],
+   "oof_windows": 149686,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 67890,
+    "positives": 720,
+    "prevalence": 0.010605391073795847,
+    "average_precision": 0.007726253775486405,
+    "auroc": 0.31421488594445274,
+    "distinct_scores": 67675
+   },
+   "uncalibrated": {
+    "brier": 0.016859971537640468,
+    "brier_reference": 0.010507545972625607,
+    "brier_skill": -0.6045584365335428,
+    "log_loss": 0.21876337154517828,
+    "calibration_intercept": -789.7749712222807,
+    "calibration_slope": -48.78695092574789,
+    "ece_5": 0.05482003377498511,
+    "ece_10": 0.05482005377498511,
+    "ece_15": 0.05482006044165178,
+    "top_decile_gap": 0.19605347368262216,
+    "mean_predicted": 0.04421468270118926,
+    "observed_rate": 0.010605391073795847
+   },
+   "platt_calibrated": {
+    "brier": 0.010511358009761416,
+    "brier_reference": 0.010507545972625607,
+    "brier_skill": -0.00036279043134723743,
+    "log_loss": 0.05924594509945398,
+    "calibration_intercept": 2.9816564966390238,
+    "calibration_slope": 1.8161549447191516,
+    "ece_5": 0.02037058652120187,
+    "ece_10": 0.022597822045400583,
+    "ece_15": 0.024164190453823668,
+    "top_decile_gap": 0.017402171860524018,
+    "mean_predicted": 0.015498007076158742,
+    "observed_rate": 0.010605391073795847
+   },
+   "policy": {
+    "threshold": 0.6853625618039958,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.003
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 1,
+    "scored_days": 48.90069444444445,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 7.36299568738824e-05
+   },
+   "prediction_digest": "bcaeaa3b3d8cd62d8de4b3fa089fda2c69b623e3da3ddcf1b221e2f0d98384ef"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0004398031636507572,
+   "platt": [
+    -7.72874338657898,
+    0.0
+   ],
+   "oof_windows": 204637,
+   "oof_positive": 90,
+   "window": {
+    "windows": 25744,
+    "positives": 30,
+    "prevalence": 0.0011653200745804849,
+    "average_precision": 0.008082898526308498,
+    "auroc": 0.6015776101215939,
+    "distinct_scores": 25606
+   },
+   "uncalibrated": {
+    "brier": 0.0011654207593682238,
+    "brier_reference": 0.0011644884784923093,
+    "brier_skill": -0.0008005926148118014,
+    "log_loss": 0.014426071069885296,
+    "calibration_intercept": -0.9844236283999251,
+    "calibration_slope": 0.4481280916182914,
+    "ece_5": 0.001149372347304078,
+    "ece_10": 0.0011499640515769656,
+    "ece_15": 0.0011499462315762833,
+    "top_decile_gap": 0.0037414933004584327,
+    "mean_predicted": 1.594772727640682e-05,
+    "observed_rate": 0.0011653200745804849
+   },
+   "platt_calibrated": {
+    "brier": 0.0011644884784923093,
+    "brier_reference": 0.0011644884784923093,
+    "brier_skill": 0.0,
+    "log_loss": 0.009446359725089731,
+    "calibration_intercept": -6.753593487982038,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0014291951392848656,
+    "ece_10": 0.0015171421050428713,
+    "ece_15": 0.0015464577602955396,
+    "top_decile_gap": 0.000439803163650757,
+    "mean_predicted": 0.00043980316365075696,
+    "observed_rate": 0.0011653200745804849
+   },
+   "policy": {
+    "threshold": -3.46819337426155,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 18.370833333333334,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "c6dd71eef5b1ae7479ccdbcb78cd53af84771574d7175af63209b1632ba8feb5"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0004398031636507572,
+   "platt": [
+    -7.72874338657898,
+    0.0
+   ],
+   "oof_windows": 204637,
+   "oof_positive": 90,
+   "window": {
+    "windows": 25744,
+    "positives": 30,
+    "prevalence": 0.0011653200745804849,
+    "average_precision": 0.1306341496512785,
+    "auroc": 0.6500246299032952,
+    "distinct_scores": 25709
+   },
+   "uncalibrated": {
+    "brier": 0.0010847400585095835,
+    "brier_reference": 0.0011644884784923093,
+    "brier_skill": 0.06848364879142299,
+    "log_loss": 0.014827392776890297,
+    "calibration_intercept": -4.122092387237703,
+    "calibration_slope": 0.19420649730973874,
+    "ece_5": 0.0013177458034524068,
+    "ece_10": 0.0014715027830398144,
+    "ece_15": 0.0014723874756328464,
+    "top_decile_gap": 0.006178776288700304,
+    "mean_predicted": 0.0009295018513313663,
+    "observed_rate": 0.0011653200745804849
+   },
+   "platt_calibrated": {
+    "brier": 0.0011644884784923093,
+    "brier_reference": 0.0011644884784923093,
+    "brier_skill": 0.0,
+    "log_loss": 0.009446359725089731,
+    "calibration_intercept": -6.753593487982038,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0014291951392848656,
+    "ece_10": 0.0015171421050428713,
+    "ece_15": 0.0015464577602955396,
+    "top_decile_gap": 0.000439803163650757,
+    "mean_predicted": 0.00043980316365075696,
+    "observed_rate": 0.0011653200745804849
+   },
+   "policy": {
+    "threshold": -5.957813129102942,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.035
+     }
+    },
+    "false_alarm_episodes": 17,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 18.370833333333334,
+    "false_alarms_per_day": 0.925379904740304,
+    "alarm_occupancy": 0.027283617849655585
+   },
+   "prediction_digest": "2fd7ea3ce9f7b1c7f79d5b324c95fb75e002bb51319e6261ee7ae2f20f58010f"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0008872808293118151,
+   "platt": [
+    -7.02646134530474,
+    0.0
+   ],
+   "oof_windows": 202867,
+   "oof_positive": 180,
+   "window": {
+    "windows": 25618,
+    "positives": 60,
+    "prevalence": 0.002342103208681396,
+    "average_precision": 0.0022109451428731245,
+    "auroc": 0.385186960377703,
+    "distinct_scores": 25057
+   },
+   "uncalibrated": {
+    "brier": 0.0025281940174432037,
+    "brier_reference": 0.0023387342693967942,
+    "brier_skill": -0.08100952319618382,
+    "log_loss": 0.025455168883392724,
+    "calibration_intercept": -5.4637287402956645,
+    "calibration_slope": 0.06015058605565241,
+    "ece_5": 0.004142341289208122,
+    "ece_10": 0.004150185302120043,
+    "ece_15": 0.00415266546291207,
+    "top_decile_gap": 0.021754466233455297,
+    "mean_predicted": 0.0025586171236517304,
+    "observed_rate": 0.002342103208681396
+   },
+   "platt_calibrated": {
+    "brier": 0.0023387342693967942,
+    "brier_reference": 0.0023387342693967942,
+    "brier_skill": 0.0,
+    "log_loss": 0.01734437235845828,
+    "calibration_intercept": -6.054361095946548,
+    "calibration_slope": 0.0,
+    "ece_5": 0.002874443998224787,
+    "ece_10": 0.0030519140181089993,
+    "ece_15": 0.0031110706914037386,
+    "top_decile_gap": 0.0008872808293118156,
+    "mean_predicted": 0.0008872808293118159,
+    "observed_rate": 0.002342103208681396
+   },
+   "policy": {
+    "threshold": -1.819765803837119,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 18.25486111111111,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "9c175e9497376c220cb72578e460418f39e07fe0cab556b3920a62472ef9312a"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0008872808293118151,
+   "platt": [
+    -7.02646134530474,
+    0.0
+   ],
+   "oof_windows": 202867,
+   "oof_positive": 180,
+   "window": {
+    "windows": 25618,
+    "positives": 60,
+    "prevalence": 0.002342103208681396,
+    "average_precision": 0.013256361917901945,
+    "auroc": 0.677491066071941,
+    "distinct_scores": 25612
+   },
+   "uncalibrated": {
+    "brier": 0.002335685864018407,
+    "brier_reference": 0.0023387342693967942,
+    "brier_skill": 0.001303442386882847,
+    "log_loss": 0.03404333164203061,
+    "calibration_intercept": -6.054361095946548,
+    "calibration_slope": -4.2189091287853326e-05,
+    "ece_5": 0.002166160220854271,
+    "ece_10": 0.0021661802224156737,
+    "ece_15": 0.0021661735552285393,
+    "top_decile_gap": 0.000611618472969391,
+    "mean_predicted": 0.00017602299407273322,
+    "observed_rate": 0.002342103208681396
+   },
+   "platt_calibrated": {
+    "brier": 0.0023387342693967942,
+    "brier_reference": 0.0023387342693967942,
+    "brier_skill": 0.0,
+    "log_loss": 0.01734437235845828,
+    "calibration_intercept": -6.054361095946548,
+    "calibration_slope": 0.0,
+    "ece_5": 0.002874443998224787,
+    "ece_10": 0.0030519140181089993,
+    "ece_15": 0.0031110706914037386,
+    "top_decile_gap": 0.0008872808293118156,
+    "mean_predicted": 0.0008872808293118159,
+    "observed_rate": 0.002342103208681396
+   },
+   "policy": {
+    "threshold": -4.859758719069311,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.007
+     }
+    },
+    "false_alarm_episodes": 3,
+    "unscorable_alarm_episodes": 1,
+    "scored_days": 18.25486111111111,
+    "false_alarms_per_day": 0.1643397877277742,
+    "alarm_occupancy": 0.0005091344713986223
+   },
+   "prediction_digest": "511a07be771c9764b6750c708ee35dc73e3dc917c4b0d2f12870893f6c702f2a"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0027306377556180345,
+   "platt": [
+    -5.90048571420365,
+    0.0
+   ],
+   "oof_windows": 197756,
+   "oof_positive": 540,
+   "window": {
+    "windows": 25355,
+    "positives": 180,
+    "prevalence": 0.007099191480970223,
+    "average_precision": 0.0066771054134237865,
+    "auroc": 0.5009414101290963,
+    "distinct_scores": 25002
+   },
+   "uncalibrated": {
+    "brier": 0.007401179096604718,
+    "brier_reference": 0.007067877222938029,
+    "brier_skill": -0.04715728119682017,
+    "log_loss": 0.06559759050799967,
+    "calibration_intercept": -5.427538714879052,
+    "calibration_slope": -0.05959789448544058,
+    "ece_5": 0.011426730736383176,
+    "ece_10": 0.011426266824124863,
+    "ece_15": 0.011426266824124865,
+    "top_decile_gap": 0.043656439220360096,
+    "mean_predicted": 0.0063372192806456255,
+    "observed_rate": 0.007099191480970223
+   },
+   "platt_calibrated": {
+    "brier": 0.007067877222938029,
+    "brier_reference": 0.007067877222938029,
+    "brier_skill": 0.0,
+    "log_loss": 0.04462305066357833,
+    "calibration_intercept": -4.940649866696552,
+    "calibration_slope": 0.0,
+    "ece_5": 0.008737574134341043,
+    "ece_10": 0.009283593989240805,
+    "ece_15": 0.009465600607540725,
+    "top_decile_gap": 0.0027306377556180345,
+    "mean_predicted": 0.002730637755618034,
+    "observed_rate": 0.007099191480970223
+   },
+   "policy": {
+    "threshold": 0.12106285301318487,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 18.063194444444445,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "f01508f8997d7ac3241d85e46ff7bc92a642aad3d3865bcaf6746c8d7f407022"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0027306377556180345,
+   "platt": [
+    -5.90048571420365,
+    0.0
+   ],
+   "oof_windows": 197756,
+   "oof_positive": 540,
+   "window": {
+    "windows": 25355,
+    "positives": 180,
+    "prevalence": 0.007099191480970223,
+    "average_precision": 0.016421308982870024,
+    "auroc": 0.7527082643716209,
+    "distinct_scores": 25338
+   },
+   "uncalibrated": {
+    "brier": 0.007098946720225896,
+    "brier_reference": 0.007067877222938029,
+    "brier_skill": -0.004395873938929595,
+    "log_loss": 0.08279949959980216,
+    "calibration_intercept": -2.5615097456362026,
+    "calibration_slope": 0.18630662200618156,
+    "ece_5": 0.006571984976911485,
+    "ece_10": 0.006572004988743471,
+    "ece_15": 0.006745207481609885,
+    "top_decile_gap": 0.005804419305187232,
+    "mean_predicted": 0.0005272465040587378,
+    "observed_rate": 0.007099191480970223
+   },
+   "platt_calibrated": {
+    "brier": 0.007067877222938029,
+    "brier_reference": 0.007067877222938029,
+    "brier_skill": 0.0,
+    "log_loss": 0.04462305066357833,
+    "calibration_intercept": -4.940649866696552,
+    "calibration_slope": 0.0,
+    "ece_5": 0.008737574134341043,
+    "ece_10": 0.009283593989240805,
+    "ece_15": 0.009465600607540725,
+    "top_decile_gap": 0.0027306377556180345,
+    "mean_predicted": 0.002730637755618034,
+    "observed_rate": 0.007099191480970223
+   },
+   "policy": {
+    "threshold": -0.7890245178593494,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 18.063194444444445,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "cc4e948b11b5fa7d161cb1f20795535e392e35202cd018df60bdeedf5c242332"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.00563259814019954,
+   "platt": [
+    -5.173535940854183,
+    0.0
+   ],
+   "oof_windows": 191741,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 25416,
+    "positives": 360,
+    "prevalence": 0.014164305949008499,
+    "average_precision": 0.011754980969635665,
+    "auroc": 0.45099721069249327,
+    "distinct_scores": 24891
+   },
+   "uncalibrated": {
+    "brier": 0.05714887929138917,
+    "brier_reference": 0.014036468424126274,
+    "brier_skill": -3.071457119025757,
+    "log_loss": 0.23272047482666375,
+    "calibration_intercept": -5.299878178317147,
+    "calibration_slope": -0.14499684569362406,
+    "ece_5": 0.1012419871646564,
+    "ece_10": 0.10124080072085696,
+    "ece_15": 0.10124080072085696,
+    "top_decile_gap": 0.5171169755455048,
+    "mean_predicted": 0.0890772715836796,
+    "observed_rate": 0.014164305949008499
+   },
+   "platt_calibrated": {
+    "brier": 0.014036468424126274,
+    "brier_reference": 0.014036468424126274,
+    "brier_skill": 0.0,
+    "log_loss": 0.0789280669452375,
+    "calibration_intercept": -4.242764567340374,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0175435102471578,
+    "ece_10": 0.018670207168182917,
+    "ece_15": 0.01829434603953252,
+    "top_decile_gap": 0.005632598140199542,
+    "mean_predicted": 0.00563259814019954,
+    "observed_rate": 0.014164305949008499
+   },
+   "policy": {
+    "threshold": -1.5817453135867965,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.189
+     }
+    },
+    "false_alarm_episodes": 78,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 18.15138888888889,
+    "false_alarms_per_day": 4.2971918279898995,
+    "alarm_occupancy": 0.13791554357592092
+   },
+   "prediction_digest": "bf98ccca5784292b7ac51d711d6291fec32fcf4b2aca795a5b84562ff2f94fef"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.00563259814019954,
+   "platt": [
+    -5.173535940854183,
+    0.0
+   ],
+   "oof_windows": 191741,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 25416,
+    "positives": 360,
+    "prevalence": 0.014164305949008499,
+    "average_precision": 0.013315842421943329,
+    "auroc": 0.4955561763871151,
+    "distinct_scores": 25392
+   },
+   "uncalibrated": {
+    "brier": 0.16102708614131006,
+    "brier_reference": 0.014036468424126274,
+    "brier_skill": -10.472051322007195,
+    "log_loss": 1.470741988600523,
+    "calibration_intercept": -4.716337309536766,
+    "calibration_slope": -0.06225913431216879,
+    "ece_5": 0.1638873166584284,
+    "ece_10": 0.16388624789845377,
+    "ece_15": 0.16388624789845377,
+    "top_decile_gap": 0.9999238784217891,
+    "mean_predicted": 0.15091357239096342,
+    "observed_rate": 0.014164305949008499
+   },
+   "platt_calibrated": {
+    "brier": 0.014036468424126274,
+    "brier_reference": 0.014036468424126274,
+    "brier_skill": 0.0,
+    "log_loss": 0.0789280669452375,
+    "calibration_intercept": -4.242764567340374,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0175435102471578,
+    "ece_10": 0.018670207168182917,
+    "ece_15": 0.01829434603953252,
+    "top_decile_gap": 0.005632598140199542,
+    "mean_predicted": 0.00563259814019954,
+    "observed_rate": 0.014164305949008499
+   },
+   "policy": {
+    "threshold": 0.5005986090664867,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.142
+     }
+    },
+    "false_alarm_episodes": 63,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 18.15138888888889,
+    "false_alarms_per_day": 3.4708087841456883,
+    "alarm_occupancy": 0.11159029649595688
+   },
+   "prediction_digest": "9ae2d86309c8b288e83c1bb25bd1957d4f7e3fcf84f0d3758d3dfa08f49f4ada"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.011251640864292709,
+   "platt": [
+    -4.475925886927959,
+    0.0
+   ],
+   "oof_windows": 191972,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 25604,
+    "positives": 720,
+    "prevalence": 0.028120606155288237,
+    "average_precision": 0.03658180517224429,
+    "auroc": 0.6455863819232349,
+    "distinct_scores": 25570
+   },
+   "uncalibrated": {
+    "brier": 0.03947592686932201,
+    "brier_reference": 0.0276143996547362,
+    "brier_skill": -0.4295413756189126,
+    "log_loss": 0.17289537875252825,
+    "calibration_intercept": -2.4121066492604273,
+    "calibration_slope": 0.21161944032937596,
+    "ece_5": 0.04104049610192555,
+    "ece_10": 0.044493753696305025,
+    "ece_15": 0.04587943288712887,
+    "top_decile_gap": 0.21950830695571377,
+    "mean_predicted": 0.02752165528718407,
+    "observed_rate": 0.028120606155288237
+   },
+   "platt_calibrated": {
+    "brier": 0.0276143996547362,
+    "brier_reference": 0.0276143996547362,
+    "brier_skill": 0.0,
+    "log_loss": 0.13718116848226158,
+    "calibration_intercept": -3.5427290936248093,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0348714148944409,
+    "ece_10": 0.03712139150845349,
+    "ece_15": 0.03637169226948758,
+    "top_decile_gap": 0.01125164086429271,
+    "mean_predicted": 0.01125164086429271,
+    "observed_rate": 0.028120606155288237
+   },
+   "policy": {
+    "threshold": -0.8408873407225688,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.063
+     }
+    },
+    "false_alarm_episodes": 16,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 18.24652777777778,
+    "false_alarms_per_day": 0.8768791627021884,
+    "alarm_occupancy": 0.0259958071278826
+   },
+   "prediction_digest": "66829dd2e4518d218b7f7d93fd6062883bec3cee02c08d1d749c734863a889c7"
+  },
+  {
+   "fold": "A_holdjun05",
+   "kind": "A",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.011251640864292709,
+   "platt": [
+    -4.379899339538777,
+    0.0022704914158093565
+   ],
+   "oof_windows": 191972,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 25604,
+    "positives": 720,
+    "prevalence": 0.028120606155288237,
+    "average_precision": 0.022696986975143472,
+    "auroc": 0.4312702327689368,
+    "distinct_scores": 25594
+   },
+   "uncalibrated": {
+    "brier": 0.028575397916946063,
+    "brier_reference": 0.0276143996547362,
+    "brier_skill": -0.03480062120579319,
+    "log_loss": 0.20578788056848876,
+    "calibration_intercept": -3.9386686697432505,
+    "calibration_slope": -0.05834611367469313,
+    "ece_5": 0.029000591823397807,
+    "ece_10": 0.029728801806863492,
+    "ece_15": 0.02998737918986619,
+    "top_decile_gap": 0.055724207252435334,
+    "mean_predicted": 0.009534904689483523,
+    "observed_rate": 0.028120606155288237
+   },
+   "platt_calibrated": {
+    "brier": 0.02758410605735945,
+    "brier_reference": 0.0276143996547362,
+    "brier_skill": 0.001097021762396122,
+    "log_loss": 0.13587146452817783,
+    "calibration_intercept": -3.5427290936248093,
+    "calibration_slope": -2.1126869318755352e-05,
+    "ece_5": 0.01593406740952283,
+    "ece_10": 0.016595528024425123,
+    "ece_15": 0.017220786508050215,
+    "top_decile_gap": 0.0033078198406168713,
+    "mean_predicted": 0.012186538745765411,
+    "observed_rate": 0.028120606155288237
+   },
+   "policy": {
+    "threshold": 1.2244676629374598,
+    "failures": {
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 18.24652777777778,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "db6e7a0a7cd107bd0c299819aa9a5d3724a66ff24db58bdd789b9a44589759a9"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0004346629189063881,
+   "platt": [
+    -7.7405049689186205,
+    0.0
+   ],
+   "oof_windows": 207057,
+   "oof_positive": 90,
+   "window": {
+    "windows": 23324,
+    "positives": 30,
+    "prevalence": 0.0012862287772251759,
+    "average_precision": 0.0024227709371421654,
+    "auroc": 0.6326049626513265,
+    "distinct_scores": 22773
+   },
+   "uncalibrated": {
+    "brier": 0.0013538080265882706,
+    "brier_reference": 0.0012852995571688685,
+    "brier_skill": -0.05330155840892514,
+    "log_loss": 0.014302232924749405,
+    "calibration_intercept": -4.857130043179735,
+    "calibration_slope": 0.1780223710275474,
+    "ece_5": 0.002552799582868931,
+    "ece_10": 0.0027971872739823117,
+    "ece_15": 0.002916835381414838,
+    "top_decile_gap": 0.019960305288449852,
+    "mean_predicted": 0.0024811212774309113,
+    "observed_rate": 0.0012862287772251759
+   },
+   "platt_calibrated": {
+    "brier": 0.0012852995571688685,
+    "brier_reference": 0.0012852995571688685,
+    "brier_skill": 0.0,
+    "log_loss": 0.010390817653493317,
+    "calibration_intercept": -6.654753714000441,
+    "calibration_slope": 0.0,
+    "ece_5": 0.001547056345953259,
+    "ece_10": 0.0016339740210424116,
+    "ece_15": 0.001662934155495358,
+    "top_decile_gap": 0.00043466291890638826,
+    "mean_predicted": 0.0004346629189063882,
+    "observed_rate": 0.0012862287772251759
+   },
+   "policy": {
+    "threshold": -1.3425412973392727,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 16.775,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "7e89e448a9697d8eec33df8f89b10ffb2fef787fdb70bbaf2fe952d0346fc365"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0004346629189063881,
+   "platt": [
+    -7.7405049689186205,
+    0.0
+   ],
+   "oof_windows": 207057,
+   "oof_positive": 90,
+   "window": {
+    "windows": 23324,
+    "positives": 30,
+    "prevalence": 0.0012862287772251759,
+    "average_precision": 0.03498918794981151,
+    "auroc": 0.8463509916716752,
+    "distinct_scores": 23223
+   },
+   "uncalibrated": {
+    "brier": 0.001276787137885046,
+    "brier_reference": 0.0012852995571688685,
+    "brier_skill": 0.006622906882947088,
+    "log_loss": 0.018517081069315797,
+    "calibration_intercept": -1.5506561871790454,
+    "calibration_slope": 0.33106863436169004,
+    "ece_5": 0.001241314449329643,
+    "ece_10": 0.001241314449329643,
+    "ece_15": 0.0012413277832346336,
+    "top_decile_gap": 0.0025517947753707507,
+    "mean_predicted": 4.507433475541967e-05,
+    "observed_rate": 0.0012862287772251759
+   },
+   "platt_calibrated": {
+    "brier": 0.0012852995571688685,
+    "brier_reference": 0.0012852995571688685,
+    "brier_skill": 0.0,
+    "log_loss": 0.010390817653493317,
+    "calibration_intercept": -6.654753714000441,
+    "calibration_slope": 0.0,
+    "ece_5": 0.001547056345953259,
+    "ece_10": 0.0016339740210424116,
+    "ece_15": 0.001662934155495358,
+    "top_decile_gap": 0.00043466291890638826,
+    "mean_predicted": 0.0004346629189063882,
+    "observed_rate": 0.0012862287772251759
+   },
+   "policy": {
+    "threshold": -2.3683777496968648,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 16.775,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "0ba05ecef4cace96fab6b3cebc8447a585c48a1ede2a7cad1fec528a42348091"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0008765693025430249,
+   "platt": [
+    -7.038617835652307,
+    0.0
+   ],
+   "oof_windows": 205346,
+   "oof_positive": 180,
+   "window": {
+    "windows": 23139,
+    "positives": 60,
+    "prevalence": 0.0025930247633864905,
+    "average_precision": 0.003036131685967564,
+    "auroc": 0.5955316521513064,
+    "distinct_scores": 22809
+   },
+   "uncalibrated": {
+    "brier": 0.002773453753055837,
+    "brier_reference": 0.0025892472053120146,
+    "brier_skill": -0.07114289719649403,
+    "log_loss": 0.030090385406295377,
+    "calibration_intercept": -6.8032880540856295,
+    "calibration_slope": -0.08585622779818274,
+    "ece_5": 0.005487642985888127,
+    "ece_10": 0.006203984441251597,
+    "ece_15": 0.005809568745478728,
+    "top_decile_gap": 0.03746622129138988,
+    "mean_predicted": 0.00388376663647514,
+    "observed_rate": 0.0025930247633864905
+   },
+   "platt_calibrated": {
+    "brier": 0.0025892472053120146,
+    "brier_reference": 0.0025892472053120146,
+    "brier_skill": 0.0,
+    "log_loss": 0.019128264061932965,
+    "calibration_intercept": -5.952333829904943,
+    "calibration_slope": 0.0,
+    "ece_5": 0.003119026957336527,
+    "ece_10": 0.0032943483943981594,
+    "ece_15": 0.0033527636182419445,
+    "top_decile_gap": 0.0008765693025430244,
+    "mean_predicted": 0.0008765693025430244,
+    "observed_rate": 0.0025930247633864905
+   },
+   "policy": {
+    "threshold": -1.0481881529331922,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 16.593055555555555,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "0a410c78a395b77a0aad55341dca1717d0312f67254ccb3e1cf36d721fe94598"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0008765693025430249,
+   "platt": [
+    -7.038617835652307,
+    0.0
+   ],
+   "oof_windows": 205346,
+   "oof_positive": 180,
+   "window": {
+    "windows": 23139,
+    "positives": 60,
+    "prevalence": 0.0025930247633864905,
+    "average_precision": 0.016192110067027556,
+    "auroc": 0.9135657235293269,
+    "distinct_scores": 23041
+   },
+   "uncalibrated": {
+    "brier": 0.0026072238072082136,
+    "brier_reference": 0.0025892472053120146,
+    "brier_skill": -0.006942790885056782,
+    "log_loss": 0.03926552593389802,
+    "calibration_intercept": -4.018467719159255,
+    "calibration_slope": 0.1250807123533235,
+    "ece_5": 0.0024208990743017768,
+    "ece_10": 0.0024208990743017768,
+    "ece_15": 0.002420912411092477,
+    "top_decile_gap": 0.006924152131547261,
+    "mean_predicted": 0.00017228569599944617,
+    "observed_rate": 0.0025930247633864905
+   },
+   "platt_calibrated": {
+    "brier": 0.0025892472053120146,
+    "brier_reference": 0.0025892472053120146,
+    "brier_skill": 0.0,
+    "log_loss": 0.019128264061932965,
+    "calibration_intercept": -5.952333829904943,
+    "calibration_slope": 0.0,
+    "ece_5": 0.003119026957336527,
+    "ece_10": 0.0032943483943981594,
+    "ece_15": 0.0033527636182419445,
+    "top_decile_gap": 0.0008765693025430244,
+    "mean_predicted": 0.0008765693025430244,
+    "observed_rate": 0.0025930247633864905
+   },
+   "policy": {
+    "threshold": 12.93378932175628,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 16.593055555555555,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "8074875ac49e3c97590eb261a4e5937bcc1a3fccb8e699a3ec068cbe86f72546"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0026927296299990027,
+   "platt": [
+    -5.914503505971854,
+    0.0
+   ],
+   "oof_windows": 200540,
+   "oof_positive": 540,
+   "window": {
+    "windows": 22571,
+    "positives": 180,
+    "prevalence": 0.007974834965220858,
+    "average_precision": 0.008371925686767827,
+    "auroc": 0.5267365608205677,
+    "distinct_scores": 22306
+   },
+   "uncalibrated": {
+    "brier": 0.008326244590326428,
+    "brier_reference": 0.007939137609270728,
+    "brier_skill": -0.04875932375875003,
+    "log_loss": 0.07700236409635217,
+    "calibration_intercept": -5.0396530414497525,
+    "calibration_slope": -0.024375582543814604,
+    "ece_5": 0.009543561762820108,
+    "ece_10": 0.011463509845571733,
+    "ece_15": 0.011845955459544269,
+    "top_decile_gap": 0.045685751285482495,
+    "mean_predicted": 0.005648070558604775,
+    "observed_rate": 0.007974834965220858
+   },
+   "platt_calibrated": {
+    "brier": 0.007939137609270728,
+    "brier_reference": 0.007939137609270728,
+    "brier_skill": 0.0,
+    "log_loss": 0.0498635509090883,
+    "calibration_intercept": -4.823457520501128,
+    "calibration_slope": 0.0,
+    "ece_5": 0.009590520463385606,
+    "ece_10": 0.009590520463385606,
+    "ece_15": 0.01030870895182626,
+    "top_decile_gap": 0.002692729629999003,
+    "mean_predicted": 0.0026927296299990027,
+    "observed_rate": 0.007974834965220858
+   },
+   "policy": {
+    "threshold": -0.13657238311044229,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 16.221527777777776,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "a0171c3ae0d3ed3cee3e6c4f141c30224409a7ef0da98c2f7d8551ff81b489f5"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0026927296299990027,
+   "platt": [
+    -5.914503505971854,
+    0.0
+   ],
+   "oof_windows": 200540,
+   "oof_positive": 540,
+   "window": {
+    "windows": 22571,
+    "positives": 180,
+    "prevalence": 0.007974834965220858,
+    "average_precision": 0.04950003591644012,
+    "auroc": 0.929994938442529,
+    "distinct_scores": 22468
+   },
+   "uncalibrated": {
+    "brier": 0.008016518952544127,
+    "brier_reference": 0.007939137609270728,
+    "brier_skill": -0.009746819753198244,
+    "log_loss": 0.08289090567104626,
+    "calibration_intercept": -1.250152451469728,
+    "calibration_slope": 0.2674051897020038,
+    "ece_5": 0.007166421108460692,
+    "ece_10": 0.007166421108460692,
+    "ece_15": 0.007166421126182547,
+    "top_decile_gap": 0.05970423033625906,
+    "mean_predicted": 0.0008085738585323522,
+    "observed_rate": 0.007974834965220858
+   },
+   "platt_calibrated": {
+    "brier": 0.007939137609270728,
+    "brier_reference": 0.007939137609270728,
+    "brier_skill": 0.0,
+    "log_loss": 0.0498635509090883,
+    "calibration_intercept": -4.823457520501128,
+    "calibration_slope": 0.0,
+    "ece_5": 0.009590520463385606,
+    "ece_10": 0.009590520463385606,
+    "ece_15": 0.01030870895182626,
+    "top_decile_gap": 0.002692729629999003,
+    "mean_predicted": 0.0026927296299990027,
+    "observed_rate": 0.007974834965220858
+   },
+   "policy": {
+    "threshold": 0.566967124278654,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 16.221527777777776,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "b02fd5b991a2ef92769a4fa28d7ab4dc43dd84e31da6a466e0297e9bfa9483a5"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.005524183648416401,
+   "platt": [
+    -5.1930803000601715,
+    0.0
+   ],
+   "oof_windows": 195504,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 21653,
+    "positives": 360,
+    "prevalence": 0.01662587170369002,
+    "average_precision": 0.043117885475767635,
+    "auroc": 0.7502463642198531,
+    "distinct_scores": 21519
+   },
+   "uncalibrated": {
+    "brier": 0.016488895359655236,
+    "brier_reference": 0.016472699571459054,
+    "brier_skill": -0.0009831896785299499,
+    "log_loss": 0.09356804493315954,
+    "calibration_intercept": -0.6196745393594982,
+    "calibration_slope": 0.5848324393964801,
+    "ece_5": 0.01290980764269049,
+    "ece_10": 0.012944343457920152,
+    "ece_15": 0.01435188761298095,
+    "top_decile_gap": 0.021780402660322433,
+    "mean_predicted": 0.0037160640609995308,
+    "observed_rate": 0.01662587170369002
+   },
+   "platt_calibrated": {
+    "brier": 0.016472699571459054,
+    "brier_reference": 0.016472699571459054,
+    "brier_skill": 0.0,
+    "log_loss": 0.09187898519362717,
+    "calibration_intercept": -4.080029627736243,
+    "calibration_slope": 0.0,
+    "ece_5": 0.01994068804063521,
+    "ece_10": 0.019940688040635215,
+    "ece_15": 0.021413769663780106,
+    "top_decile_gap": 0.005524183648416401,
+    "mean_predicted": 0.005524183648416401,
+    "observed_rate": 0.01662587170369002
+   },
+   "policy": {
+    "threshold": 0.3782418669397559,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 15.6375,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "5735ada55d3f7412f302d8db7ca79f96d1a3756182e615326f5ec5dc7f16d3ed"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.005524183648416401,
+   "platt": [
+    -5.193075543157924,
+    0.0009189952170817185
+   ],
+   "oof_windows": 195504,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 21653,
+    "positives": 360,
+    "prevalence": 0.01662587170369002,
+    "average_precision": 0.18535670790646566,
+    "auroc": 0.8965195917281109,
+    "distinct_scores": 21559
+   },
+   "uncalibrated": {
+    "brier": 0.016132126287871022,
+    "brier_reference": 0.016472699571459054,
+    "brier_skill": 0.02067501335228117,
+    "log_loss": 0.11851876419430664,
+    "calibration_intercept": 0.03256815686193574,
+    "calibration_slope": 0.3955594250995557,
+    "ece_5": 0.015619089957812131,
+    "ece_10": 0.015619109964277745,
+    "ece_15": 0.015619116651572812,
+    "top_decile_gap": 0.10419523283841789,
+    "mean_predicted": 0.0010068617532671654,
+    "observed_rate": 0.01662587170369002
+   },
+   "platt_calibrated": {
+    "brier": 0.016472575483195025,
+    "brier_reference": 0.016472699571459054,
+    "brier_skill": 7.5329646783695026e-06,
+    "log_loss": 0.09186630040245324,
+    "calibration_intercept": 1929.6289303497433,
+    "calibration_slope": 371.63285135725863,
+    "ece_5": 0.01681997287942104,
+    "ece_10": 0.01681997287942104,
+    "ece_15": 0.016926673080146917,
+    "top_decile_gap": 0.10859227980036332,
+    "mean_predicted": 0.0054043360953631315,
+    "observed_rate": 0.01662587170369002
+   },
+   "policy": {
+    "threshold": 15.464010842022129,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 15.6375,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "f5b4484e7dad5fee407efb5e0ac910f5c5ee674786f03942787d20f8bb8ad75e"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.011051928715059788,
+   "platt": [
+    -4.4940368668780515,
+    0.0
+   ],
+   "oof_windows": 195441,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 22135,
+    "positives": 720,
+    "prevalence": 0.03252767110910323,
+    "average_precision": 0.07622468563359025,
+    "auroc": 0.7166021674838509,
+    "distinct_scores": 21958
+   },
+   "uncalibrated": {
+    "brier": 0.03221254767963277,
+    "brier_reference": 0.031930829232696564,
+    "brier_skill": -0.008822772652823163,
+    "log_loss": 0.18362821568187337,
+    "calibration_intercept": 0.5227863514327467,
+    "calibration_slope": 0.6814146354036249,
+    "ece_5": 0.028914006689906527,
+    "ece_10": 0.029184605952591206,
+    "ece_15": 0.029164490411778373,
+    "top_decile_gap": 0.05995927104596606,
+    "mean_predicted": 0.003613664419196703,
+    "observed_rate": 0.03252767110910323
+   },
+   "platt_calibrated": {
+    "brier": 0.031930829232696564,
+    "brier_reference": 0.031930829232696564,
+    "brier_skill": 0.0,
+    "log_loss": 0.15729400818010797,
+    "calibration_intercept": -3.3925956780393705,
+    "calibration_slope": 0.0,
+    "ece_5": 0.03915882833813911,
+    "ece_10": 0.03915982693120123,
+    "ece_15": 0.042106675057529803,
+    "top_decile_gap": 0.011051928715059792,
+    "mean_predicted": 0.011051928715059788,
+    "observed_rate": 0.03252767110910323
+   },
+   "policy": {
+    "threshold": 0.7955296323227674,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 15.986805555555556,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "2ecfb469a758861cbc80519cbad7d502e7b323c9e9cd54a4828806da28adc10d"
+  },
+  {
+   "fold": "A_holdmay29",
+   "kind": "A",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.011051928715059788,
+   "platt": [
+    -4.393655802805639,
+    0.0024458940412016186
+   ],
+   "oof_windows": 195441,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 22135,
+    "positives": 720,
+    "prevalence": 0.03252767110910323,
+    "average_precision": 0.20010055465310664,
+    "auroc": 0.780009793239422,
+    "distinct_scores": 22042
+   },
+   "uncalibrated": {
+    "brier": 0.030849763676824727,
+    "brier_reference": 0.031930829232696564,
+    "brier_skill": 0.03385648233541161,
+    "log_loss": 0.241138214485881,
+    "calibration_intercept": -0.6822384492041547,
+    "calibration_slope": 0.2775356101543963,
+    "ece_5": 0.029420552404698902,
+    "ece_10": 0.029420580417673658,
+    "ece_15": 0.02942056575911499,
+    "top_decile_gap": 0.08463459593431436,
+    "mean_predicted": 0.0031071987044043307,
+    "observed_rate": 0.03252767110910323
+   },
+   "platt_calibrated": {
+    "brier": 0.03187903236986724,
+    "brier_reference": 0.031930829232696564,
+    "brier_skill": 0.0016221583990773114,
+    "log_loss": 0.15500934036448732,
+    "calibration_intercept": 355.71980212520185,
+    "calibration_slope": 81.22328160369209,
+    "ece_5": 0.02969872845750057,
+    "ece_10": 0.0320151062828424,
+    "ece_15": 0.03142419034268307,
+    "top_decile_gap": 0.10269934386319891,
+    "mean_predicted": 0.011445902922376018,
+    "observed_rate": 0.03252767110910323
+   },
+   "policy": {
+    "threshold": 4.47149704093147,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 15.986805555555556,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "56cae2d4a38382141014008709c2f04370874e1b821be13495891502b55178e3"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.00033091945971882875,
+   "platt": [
+    -5.864115657464251,
+    0.16837757234695983
+   ],
+   "oof_windows": 181313,
+   "oof_positive": 60,
+   "window": {
+    "windows": 49068,
+    "positives": 60,
+    "prevalence": 0.001222792858889704,
+    "average_precision": 0.0015751499706634267,
+    "auroc": 0.6070491892480139,
+    "distinct_scores": 46602
+   },
+   "uncalibrated": {
+    "brier": 0.0012829691180856807,
+    "brier_reference": 0.001222093074674101,
+    "brier_skill": -0.04981293542458998,
+    "log_loss": 0.019227869288223932,
+    "calibration_intercept": -8.986851788644547,
+    "calibration_slope": -0.1767551762921077,
+    "ece_5": 0.0032134196565513813,
+    "ece_10": 0.0032136776856323598,
+    "ece_15": 0.0039222777987316096,
+    "top_decile_gap": 0.02160544977111422,
+    "mean_predicted": 0.0028891833614740135,
+    "observed_rate": 0.001222792858889704
+   },
+   "platt_calibrated": {
+    "brier": 0.0012224344995385918,
+    "brier_reference": 0.001222093074674101,
+    "brier_skill": -0.00027937713711523315,
+    "log_loss": 0.010372514845292028,
+    "calibration_intercept": -15.143744418342397,
+    "calibration_slope": -1.0500701957901937,
+    "ece_5": 0.0007669958780999146,
+    "ece_10": 0.0011395727253288143,
+    "ece_15": 0.0012393627659299542,
+    "top_decile_gap": 0.001491659680392654,
+    "mean_predicted": 0.0004557969807897893,
+    "observed_rate": 0.001222792858889704
+   },
+   "policy": {
+    "threshold": -5.221796268299574,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.099
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.124
+     }
+    },
+    "false_alarm_episodes": 117,
+    "unscorable_alarm_episodes": 1,
+    "scored_days": 35.145833333333336,
+    "false_alarms_per_day": 3.3289863663307644,
+    "alarm_occupancy": 0.10211735522546732
+   },
+   "prediction_digest": "5a4a2af201dda0ecc0eb033ff57b207b17b5d6b1b260e579cdca2adcd9f481c7"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.00033091945971882875,
+   "platt": [
+    -8.01330456208198,
+    0.0
+   ],
+   "oof_windows": 181313,
+   "oof_positive": 60,
+   "window": {
+    "windows": 49068,
+    "positives": 60,
+    "prevalence": 0.001222792858889704,
+    "average_precision": 0.0006951309367987833,
+    "auroc": 0.16665986505604527,
+    "distinct_scores": 48786
+   },
+   "uncalibrated": {
+    "brier": 0.0016895956863078843,
+    "brier_reference": 0.001222093074674101,
+    "brier_skill": -0.3825425586005007,
+    "log_loss": 0.025293348179263778,
+    "calibration_intercept": -25.829276644950742,
+    "calibration_slope": -1.1961402155097327,
+    "ece_5": 0.0065456945876376915,
+    "ece_10": 0.006545734589268082,
+    "ece_15": 0.006545747925862197,
+    "top_decile_gap": 0.05277291530868821,
+    "mean_predicted": 0.005322981732008769,
+    "observed_rate": 0.001222792858889704
+   },
+   "platt_calibrated": {
+    "brier": 0.001222093074674101,
+    "brier_reference": 0.001222093074674101,
+    "brier_skill": 0.0,
+    "log_loss": 0.010129585820267809,
+    "calibration_intercept": -6.705394266850456,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0014213391394416386,
+    "ece_10": 0.0014213391394416381,
+    "ece_15": 0.0014654725246295414,
+    "top_decile_gap": 0.0003309194597188286,
+    "mean_predicted": 0.0003309194597188287,
+    "observed_rate": 0.001222792858889704
+   },
+   "policy": {
+    "threshold": -7.4690586663041465,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.098
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.124
+     }
+    },
+    "false_alarm_episodes": 117,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 35.145833333333336,
+    "false_alarms_per_day": 3.3289863663307644,
+    "alarm_occupancy": 0.09430647018870153
+   },
+   "prediction_digest": "8a4a2520da9495740a688cb6bc22f81165a8a912ca8a6a64272256a343c6a339"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0006676755986824535,
+   "platt": [
+    -4.9672558466388015,
+    0.20126421745642836
+   ],
+   "oof_windows": 179728,
+   "oof_positive": 120,
+   "window": {
+    "windows": 48757,
+    "positives": 120,
+    "prevalence": 0.0024611850606066823,
+    "average_precision": 0.0024472473988699536,
+    "auroc": 0.5336911713304686,
+    "distinct_scores": 46270
+   },
+   "uncalibrated": {
+    "brier": 0.003086247163513954,
+    "brier_reference": 0.0024583443048941398,
+    "brier_skill": -0.2554169720530064,
+    "log_loss": 0.0393838495632096,
+    "calibration_intercept": -8.640190353821048,
+    "calibration_slope": -0.2165745577316959,
+    "ece_5": 0.00944983584018297,
+    "ece_10": 0.009449835721236777,
+    "ece_15": 0.010225201466750298,
+    "top_decile_gap": 0.07407074974902492,
+    "mean_predicted": 0.00797712696652818,
+    "observed_rate": 0.0024611850606066823
+   },
+   "platt_calibrated": {
+    "brier": 0.002460791596745233,
+    "brier_reference": 0.0024583443048941398,
+    "brier_skill": -0.000995504106654721,
+    "log_loss": 0.01948036538346187,
+    "calibration_intercept": -13.988705954962326,
+    "calibration_slope": -1.0764746353948207,
+    "ece_5": 0.0016470594743190807,
+    "ece_10": 0.0024105853616867234,
+    "ece_15": 0.0026755011844454665,
+    "top_decile_gap": 0.00410536346076877,
+    "mean_predicted": 0.0009996044595525326,
+    "observed_rate": 0.0024611850606066823
+   },
+   "policy": {
+    "threshold": -3.9655256243320673,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.067
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.08
+     }
+    },
+    "false_alarm_episodes": 77,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 34.84791666666667,
+    "false_alarms_per_day": 2.2096012434985353,
+    "alarm_occupancy": 0.06681333608953725
+   },
+   "prediction_digest": "a47033d8a596cf267168f16e06f59761eef42d7b5a31fddbea733a6e03b14ea0"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0006676755986824535,
+   "platt": [
+    -7.311040234506005,
+    0.0
+   ],
+   "oof_windows": 179728,
+   "oof_positive": 120,
+   "window": {
+    "windows": 48757,
+    "positives": 120,
+    "prevalence": 0.0024611850606066823,
+    "average_precision": 0.001485580438764897,
+    "auroc": 0.2329346313848853,
+    "distinct_scores": 48499
+   },
+   "uncalibrated": {
+    "brier": 0.06264105992209107,
+    "brier_reference": 0.0024583443048941398,
+    "brier_skill": -24.480995398969753,
+    "log_loss": 0.2111886501705275,
+    "calibration_intercept": -26.561297227071897,
+    "calibration_slope": -1.2850974853245483,
+    "ece_5": 0.06999088755668594,
+    "ece_10": 0.06999092755504516,
+    "ece_15": 0.0699909408905662,
+    "top_decile_gap": 0.6753883684912027,
+    "mean_predicted": 0.06752978249689966,
+    "observed_rate": 0.0024611850606066823
+   },
+   "platt_calibrated": {
+    "brier": 0.0024583443048941398,
+    "brier_reference": 0.0024583443048941398,
+    "brier_skill": 0.0,
+    "log_loss": 0.018661721595959743,
+    "calibration_intercept": -6.00464809432428,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0028618013749708796,
+    "ece_10": 0.0028617739870840666,
+    "ece_15": 0.002950812007114695,
+    "top_decile_gap": 0.0006676755986824537,
+    "mean_predicted": 0.0006676755986824538,
+    "observed_rate": 0.0024611850606066823
+   },
+   "policy": {
+    "threshold": -10.26293712177899,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.068
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.081
+     }
+    },
+    "false_alarm_episodes": 77,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 34.84791666666667,
+    "false_alarms_per_day": 2.2096012434985353,
+    "alarm_occupancy": 0.06774355491244131
+   },
+   "prediction_digest": "a6613052c9fe8ce56995fb42bb84cd04d2825d0040fd11eafbfcf600d4a49df6"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0020549704597996403,
+   "platt": [
+    -5.287905596194972,
+    0.08298435596575088
+   ],
+   "oof_windows": 175185,
+   "oof_positive": 360,
+   "window": {
+    "windows": 47926,
+    "positives": 360,
+    "prevalence": 0.0075115803530442764,
+    "average_precision": 0.0059262847158325,
+    "auroc": 0.4251390757637341,
+    "distinct_scores": 45805
+   },
+   "uncalibrated": {
+    "brier": 0.019204537138568154,
+    "brier_reference": 0.0074849311051710925,
+    "brier_skill": -1.5657600409041001,
+    "log_loss": 0.1310555464093764,
+    "calibration_intercept": -8.783306504978535,
+    "calibration_slope": -0.36017055275049753,
+    "ece_5": 0.045477440209770126,
+    "ece_10": 0.045477439497178286,
+    "ece_15": 0.04547744020977012,
+    "top_decile_gap": 0.31590825953887514,
+    "mean_predicted": 0.03902817801640161,
+    "observed_rate": 0.0075115803530442764
+   },
+   "platt_calibrated": {
+    "brier": 0.007488264188840115,
+    "brier_reference": 0.0074849311051710925,
+    "brier_skill": -0.00044530585815549806,
+    "log_loss": 0.04910600740315494,
+    "calibration_intercept": -31.719578428421624,
+    "calibration_slope": -4.337889703422901,
+    "ece_5": 0.005693801816807255,
+    "ece_10": 0.006080577934682484,
+    "ece_15": 0.00637475978572655,
+    "top_decile_gap": 0.004707909924408548,
+    "mean_predicted": 0.0023724665237645276,
+    "observed_rate": 0.0075115803530442764
+   },
+   "policy": {
+    "threshold": -1.6535693649415195,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.116
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.103
+     }
+    },
+    "false_alarm_episodes": 118,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 34.28472222222222,
+    "false_alarms_per_day": 3.441766254810614,
+    "alarm_occupancy": 0.10047839825177923
+   },
+   "prediction_digest": "0c6d735bf66c19978043a1bb1a7ac0be3e6e69547fbb5e8bfb7e90e74d801be5"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0020549704597996403,
+   "platt": [
+    -6.185436721121912,
+    0.0
+   ],
+   "oof_windows": 175185,
+   "oof_positive": 360,
+   "window": {
+    "windows": 47926,
+    "positives": 360,
+    "prevalence": 0.0075115803530442764,
+    "average_precision": 0.005355373119183706,
+    "auroc": 0.35368537634257896,
+    "distinct_scores": 47639
+   },
+   "uncalibrated": {
+    "brier": 0.007659689288694052,
+    "brier_reference": 0.0074849311051710925,
+    "brier_skill": -0.023348001613832547,
+    "log_loss": 0.12422918211621882,
+    "calibration_intercept": -20.154950747811505,
+    "calibration_slope": -0.957500496448636,
+    "ece_5": 0.01058984687188888,
+    "ece_10": 0.010589886866881159,
+    "ece_15": 0.010589900204109385,
+    "top_decile_gap": 0.030301944968074878,
+    "mean_predicted": 0.0030783465171753633,
+    "observed_rate": 0.0075115803530442764
+   },
+   "platt_calibrated": {
+    "brier": 0.0074849311051710925,
+    "brier_reference": 0.0074849311051710925,
+    "brier_skill": 0.0,
+    "log_loss": 0.04851948975808588,
+    "calibration_intercept": -4.883769467831487,
+    "calibration_slope": 0.0,
+    "ece_5": 0.008744579780119319,
+    "ece_10": 0.008744494024143028,
+    "ece_15": 0.00901857012436085,
+    "top_decile_gap": 0.0020549704597996403,
+    "mean_predicted": 0.00205497045979964,
+    "observed_rate": 0.0075115803530442764
+   },
+   "policy": {
+    "threshold": 12.651035613619886,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 34.28472222222222,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "ace405ccb9e92964699201d6e10a567cb4eabfba0fe8d8389d7e70635aee760e"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.004233102864399605,
+   "platt": [
+    -5.460577929338675,
+    0.0
+   ],
+   "oof_windows": 170088,
+   "oof_positive": 720,
+   "window": {
+    "windows": 47069,
+    "positives": 720,
+    "prevalence": 0.015296692090335465,
+    "average_precision": 0.011975043585217733,
+    "auroc": 0.4239678849597618,
+    "distinct_scores": 42542
+   },
+   "uncalibrated": {
+    "brier": 0.045507559735715325,
+    "brier_reference": 0.015185106307989176,
+    "brier_skill": -1.996854866387924,
+    "log_loss": 0.24672320337859363,
+    "calibration_intercept": -9.182996317212147,
+    "calibration_slope": -0.47526200369017785,
+    "ece_5": 0.06826403306729047,
+    "ece_10": 0.06896565349770495,
+    "ece_15": 0.06959503780974846,
+    "top_decile_gap": 0.5410716331155694,
+    "mean_predicted": 0.05452467370031792,
+    "observed_rate": 0.015296692090335465
+   },
+   "platt_calibrated": {
+    "brier": 0.015185106307989176,
+    "brier_reference": 0.015185106307989176,
+    "brier_skill": 0.0,
+    "log_loss": 0.08777086702980105,
+    "calibration_intercept": -4.164703783778126,
+    "calibration_slope": 0.0,
+    "ece_5": 0.01783651783538017,
+    "ece_10": 0.01783651783538017,
+    "ece_15": 0.018400943541831794,
+    "top_decile_gap": 0.004233102864399604,
+    "mean_predicted": 0.004233102864399604,
+    "observed_rate": 0.015296692090335465
+   },
+   "policy": {
+    "threshold": 0.46075428939811713,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 33.78888888888889,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "976511b56224a6c8e83b3b27cd28ec35d2dbc98d6f868e379845eaa8c2e77193"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.004233102864399605,
+   "platt": [
+    -5.460577929338675,
+    0.0
+   ],
+   "oof_windows": 170088,
+   "oof_positive": 720,
+   "window": {
+    "windows": 47069,
+    "positives": 720,
+    "prevalence": 0.015296692090335465,
+    "average_precision": 0.010549967965585395,
+    "auroc": 0.3317316566820332,
+    "distinct_scores": 46878
+   },
+   "uncalibrated": {
+    "brier": 0.09327077098308613,
+    "brier_reference": 0.015185106307989176,
+    "brier_skill": -5.142253408790071,
+    "log_loss": 0.6142734008436628,
+    "calibration_intercept": -50.84208156267901,
+    "calibration_slope": -2.9063255116803317,
+    "ece_5": 0.09766998076700288,
+    "ece_10": 0.0976700207678527,
+    "ece_15": 0.0976700341014693,
+    "top_decile_gap": 0.823550679953535,
+    "mean_predicted": 0.08237336867836705,
+    "observed_rate": 0.015296692090335465
+   },
+   "platt_calibrated": {
+    "brier": 0.015185106307989176,
+    "brier_reference": 0.015185106307989176,
+    "brier_skill": 0.0,
+    "log_loss": 0.08777086702980105,
+    "calibration_intercept": -4.164703783778126,
+    "calibration_slope": 0.0,
+    "ece_5": 0.01783651783538017,
+    "ece_10": 0.01783651783538017,
+    "ece_15": 0.018400943541831794,
+    "top_decile_gap": 0.004233102864399604,
+    "mean_predicted": 0.004233102864399604,
+    "observed_rate": 0.015296692090335465
+   },
+   "policy": {
+    "threshold": 43.64418429113382,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 33.78888888888889,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "88ecdc0ffb7ff202f3b5e018c22bea1226d63a9f0cc96694f7c9c282e8f3223a"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.008478717829448236,
+   "platt": [
+    -3.8923373224520055,
+    0.09103646908513063
+   ],
+   "oof_windows": 169837,
+   "oof_positive": 1440,
+   "window": {
+    "windows": 47739,
+    "positives": 1440,
+    "prevalence": 0.03016401684157607,
+    "average_precision": 0.023393823739220374,
+    "auroc": 0.41746995225478833,
+    "distinct_scores": 46336
+   },
+   "uncalibrated": {
+    "brier": 0.04844721129403603,
+    "brier_reference": 0.029724401122802592,
+    "brier_skill": -0.6298801477574778,
+    "log_loss": 0.3682681090046292,
+    "calibration_intercept": -8.063390574236848,
+    "calibration_slope": -0.47049448878390987,
+    "ece_5": 0.07807433767678931,
+    "ece_10": 0.07807433767678931,
+    "ece_15": 0.07807433520732011,
+    "top_decile_gap": 0.3981868005920032,
+    "mean_predicted": 0.049605078737424806,
+    "observed_rate": 0.03016401684157607
+   },
+   "platt_calibrated": {
+    "brier": 0.02978768974446257,
+    "brier_reference": 0.029724401122802592,
+    "brier_skill": -0.0021291807158203557,
+    "log_loss": 0.1550240842279071,
+    "calibration_intercept": -28.158170450251767,
+    "calibration_slope": -5.163716205532784,
+    "ece_5": 0.025429457457318602,
+    "ece_10": 0.025429457457318602,
+    "ece_15": 0.025505649804476085,
+    "top_decile_gap": 0.01925759208367254,
+    "mean_predicted": 0.009701674831897657,
+    "observed_rate": 0.03016401684157607
+   },
+   "policy": {
+    "threshold": 1.2117845728141436,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 34.233333333333334,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "7fa8b39bf788aabe2d54d78b97027f8507f78f4eda4cfb8590053bd9faf71ba2"
+  },
+  {
+   "fold": "B_hold_may29_jun05",
+   "kind": "B",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.008478717829448236,
+   "platt": [
+    -4.761681173334792,
+    0.0
+   ],
+   "oof_windows": 169837,
+   "oof_positive": 1440,
+   "window": {
+    "windows": 47739,
+    "positives": 1440,
+    "prevalence": 0.03016401684157607,
+    "average_precision": 0.018680318210784495,
+    "auroc": 0.2571672414331003,
+    "distinct_scores": 47514
+   },
+   "uncalibrated": {
+    "brier": 0.11752591857904719,
+    "brier_reference": 0.029724401122802592,
+    "brier_skill": -2.953853202744229,
+    "log_loss": 0.8446714465722023,
+    "calibration_intercept": -16.08947549392284,
+    "calibration_slope": -0.7932044599566423,
+    "ece_5": 0.12280249816845526,
+    "ece_10": 0.12280253816929314,
+    "ece_15": 0.12280255150011282,
+    "top_decile_gap": 0.9131608105466824,
+    "mean_predicted": 0.09263856132855497,
+    "observed_rate": 0.03016401684157607
+   },
+   "platt_calibrated": {
+    "brier": 0.029724401122802592,
+    "brier_reference": 0.029724401122802592,
+    "brier_skill": 0.0,
+    "log_loss": 0.15214629773951413,
+    "calibration_intercept": -3.4704772489988946,
+    "calibration_slope": 0.0,
+    "ece_5": 0.03525117649697073,
+    "ece_10": 0.03525117649697074,
+    "ece_15": 0.035250821285599324,
+    "top_decile_gap": 0.008478717829448236,
+    "mean_predicted": 0.008478717829448233,
+    "observed_rate": 0.03016401684157607
+   },
+   "policy": {
+    "threshold": 9.245493063238762,
+    "failures": {
+     "may29": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     },
+     "jun05": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 34.233333333333334,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "597b72e589bd8dfb513233e6175aa6fc66393aef64c5ebc5a50e8920265984cf"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.000276688955499193,
+   "platt": [
+    -6.705394266850456,
+    0.0
+   ],
+   "oof_windows": 49068,
+   "oof_positive": 60,
+   "window": {
+    "windows": 72888,
+    "positives": 30,
+    "prevalence": 0.0004115903852486006,
+    "average_precision": 0.0006457546634132229,
+    "auroc": 0.6960155370721128,
+    "distinct_scores": 69259
+   },
+   "uncalibrated": {
+    "brier": 0.00041540346388300575,
+    "brier_reference": 0.0004114391769991201,
+    "brier_skill": -0.009635171139509957,
+    "log_loss": 0.005611381405669481,
+    "calibration_intercept": -7.795068242680739,
+    "calibration_slope": 0.00036383096767914747,
+    "ece_5": 0.00044887405864148423,
+    "ece_10": 0.0005307311890004998,
+    "ece_15": 0.0005581935813035354,
+    "top_decile_gap": 0.0013324572947063247,
+    "mean_predicted": 0.00014828232530759563,
+    "observed_rate": 0.0004115903852486006
+   },
+   "platt_calibrated": {
+    "brier": 0.000412079028056613,
+    "brier_reference": 0.0004114391769991201,
+    "brier_skill": -0.0015551534546605073,
+    "log_loss": 0.003983416889622873,
+    "calibration_intercept": -7.795070238619719,
+    "calibration_slope": 0.0,
+    "ece_5": 0.00114525267952152,
+    "ece_10": 0.0013898179618299124,
+    "ece_15": 0.0014713509068167965,
+    "top_decile_gap": 0.0012227928588897043,
+    "mean_predicted": 0.0012227928588897043,
+    "observed_rate": 0.0004115903852486006
+   },
+   "policy": {
+    "threshold": -3.273764633300476,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 1,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 52.334722222222226,
+    "false_alarms_per_day": 0.01910777314827101,
+    "alarm_occupancy": 2.103713053539497e-05
+   },
+   "prediction_digest": "fd48b7baf520404af616d99d69de6e0a2cf2ad04cfa3922710ebf3600a232ba2"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.000276688955499193,
+   "platt": [
+    -6.705394266850456,
+    0.0
+   ],
+   "oof_windows": 49068,
+   "oof_positive": 60,
+   "window": {
+    "windows": 72888,
+    "positives": 30,
+    "prevalence": 0.0004115903852486006,
+    "average_precision": 0.008622984972742557,
+    "auroc": 0.9777205889081043,
+    "distinct_scores": 71698
+   },
+   "uncalibrated": {
+    "brier": 0.00042051247418187893,
+    "brier_reference": 0.0004114391769991201,
+    "brier_skill": -0.02205258441584479,
+    "log_loss": 0.006797427535373223,
+    "calibration_intercept": -7.795070238619719,
+    "calibration_slope": -0.0003085079235892678,
+    "ece_5": 0.0005700779329496951,
+    "ece_10": 0.0005700979334984821,
+    "ece_15": 0.0005701046012627233,
+    "top_decile_gap": 0.0015845493930896498,
+    "mean_predicted": 0.00015852754879866872,
+    "observed_rate": 0.0004115903852486006
+   },
+   "platt_calibrated": {
+    "brier": 0.000412079028056613,
+    "brier_reference": 0.0004114391769991201,
+    "brier_skill": -0.0015551534546605073,
+    "log_loss": 0.003983416889622873,
+    "calibration_intercept": -7.795070238619719,
+    "calibration_slope": 0.0,
+    "ece_5": 0.00114525267952152,
+    "ece_10": 0.0013898179618299124,
+    "ece_15": 0.0014713509068167965,
+    "top_decile_gap": 0.0012227928588897043,
+    "mean_predicted": 0.0012227928588897043,
+    "observed_rate": 0.0004115903852486006
+   },
+   "policy": {
+    "threshold": -2.52657623684663,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 2,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 52.334722222222226,
+    "false_alarms_per_day": 0.03821554629654202,
+    "alarm_occupancy": 4.207426107078994e-05
+   },
+   "prediction_digest": "3f974dea128bc36edd9aa8e86d44c70b8cdb2b7bcb78ccf21401000ee88a5b06"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0005581447269276923,
+   "platt": [
+    -6.00464809432428,
+    0.0
+   ],
+   "oof_windows": 48757,
+   "oof_positive": 120,
+   "window": {
+    "windows": 72229,
+    "positives": 60,
+    "prevalence": 0.0008306912735881709,
+    "average_precision": 0.02585695837119598,
+    "auroc": 0.9494408956754286,
+    "distinct_scores": 69860
+   },
+   "uncalibrated": {
+    "brier": 0.0008498589556027987,
+    "brier_reference": 0.0008300755072162516,
+    "brier_skill": -0.023833311806648716,
+    "log_loss": 0.010402314183468073,
+    "calibration_intercept": -3.756170195024699,
+    "calibration_slope": 0.26431392289032496,
+    "ece_5": 0.000501763356242699,
+    "ece_10": 0.0005027042656974338,
+    "ece_15": 0.0005026607573296335,
+    "top_decile_gap": 0.003914528380741929,
+    "mean_predicted": 0.0003306618135643241,
+    "observed_rate": 0.0008306912735881709
+   },
+   "platt_calibrated": {
+    "brier": 0.000832659735585662,
+    "brier_reference": 0.0008300755072162516,
+    "brier_skill": -0.0031132449360864456,
+    "log_loss": 0.007452227528159146,
+    "calibration_intercept": -7.092421307575296,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0023073886800524974,
+    "ece_10": 0.0027996325071236745,
+    "ece_15": 0.002963668349815122,
+    "top_decile_gap": 0.0024611850606066827,
+    "mean_predicted": 0.002461185060606683,
+    "observed_rate": 0.0008306912735881709
+   },
+   "policy": {
+    "threshold": -2.340241379469193,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 51.80555555555556,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "f8c463a2f032201b66d6fae15854c519850fee124ea802c3692e62d2f3c29e35"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0005581447269276923,
+   "platt": [
+    -6.00464809432428,
+    0.0
+   ],
+   "oof_windows": 48757,
+   "oof_positive": 120,
+   "window": {
+    "windows": 72229,
+    "positives": 60,
+    "prevalence": 0.0008306912735881709,
+    "average_precision": 0.0004241770509268904,
+    "auroc": 0.027632824804740726,
+    "distinct_scores": 71449
+   },
+   "uncalibrated": {
+    "brier": 0.0008404503175076488,
+    "brier_reference": 0.0008300755072162516,
+    "brier_skill": -0.012498634402778874,
+    "log_loss": 0.0136202258522044,
+    "calibration_intercept": -7.092421307575296,
+    "calibration_slope": -0.00032386204748723307,
+    "ece_5": 0.0010566640378041196,
+    "ece_10": 0.0010566840380810164,
+    "ece_15": 0.0010566907029940019,
+    "top_decile_gap": 0.0022595091784206245,
+    "mean_predicted": 0.00022601276476974261,
+    "observed_rate": 0.0008306912735881709
+   },
+   "platt_calibrated": {
+    "brier": 0.000832659735585662,
+    "brier_reference": 0.0008300755072162516,
+    "brier_skill": -0.0031132449360864456,
+    "log_loss": 0.007452227528159146,
+    "calibration_intercept": -7.092421307575296,
+    "calibration_slope": 0.0,
+    "ece_5": 0.0023073886800524974,
+    "ece_10": 0.0027996325071236745,
+    "ece_15": 0.002963668349815122,
+    "top_decile_gap": 0.0024611850606066827,
+    "mean_predicted": 0.002461185060606683,
+    "observed_rate": 0.0008306912735881709
+   },
+   "policy": {
+    "threshold": -2.187235083311354,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 51.80555555555556,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "24234dc59e3039491471746e3e4eaf6bee3e3907468e2e230cc634849908e121"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0017171312460649076,
+   "platt": [
+    -4.883769467831487,
+    0.0
+   ],
+   "oof_windows": 47926,
+   "oof_positive": 360,
+   "window": {
+    "windows": 70359,
+    "positives": 180,
+    "prevalence": 0.002558308105572848,
+    "average_precision": 0.003195979838600532,
+    "auroc": 0.6196005136072678,
+    "distinct_scores": 68522
+   },
+   "uncalibrated": {
+    "brier": 0.002740324280259423,
+    "brier_reference": 0.0025524707437187795,
+    "brier_skill": -0.07359674425374751,
+    "log_loss": 0.030604424053786536,
+    "calibration_intercept": -9.703966076581093,
+    "calibration_slope": -0.3279039971949339,
+    "ece_5": 0.00360658353627072,
+    "ece_10": 0.0036065835362707205,
+    "ece_15": 0.003611708260217304,
+    "top_decile_gap": 0.010502378716439621,
+    "mean_predicted": 0.0010630219503166296,
+    "observed_rate": 0.002558308105572848
+   },
+   "platt_calibrated": {
+    "brier": 0.0025762980711673787,
+    "brier_reference": 0.0025524707437187795,
+    "brier_skill": -0.00933500511503782,
+    "log_loss": 0.02003412136617338,
+    "calibration_intercept": -5.9658475490716665,
+    "calibration_slope": 0.0,
+    "ece_5": 0.007065213613095183,
+    "ece_10": 0.008567551035856151,
+    "ece_15": 0.009068259002936093,
+    "top_decile_gap": 0.007511580353044275,
+    "mean_predicted": 0.007511580353044277,
+    "observed_rate": 0.002558308105572848
+   },
+   "policy": {
+    "threshold": -1.1051327501388968,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 50.36944444444445,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "cbf5c74c8bc5d10edbb5ebdcfca5cb18bb09e28c966e3d57f01788689dab89cb"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0017171312460649076,
+   "platt": [
+    -4.883769467831487,
+    0.0
+   ],
+   "oof_windows": 47926,
+   "oof_positive": 360,
+   "window": {
+    "windows": 70359,
+    "positives": 180,
+    "prevalence": 0.002558308105572848,
+    "average_precision": 0.0013421300809918378,
+    "auroc": 0.11343413905077651,
+    "distinct_scores": 69897
+   },
+   "uncalibrated": {
+    "brier": 0.0025666227475448864,
+    "brier_reference": 0.0025524707437187795,
+    "brier_skill": -0.0055444333146355,
+    "log_loss": 0.041456185183049436,
+    "calibration_intercept": -1353.1817887784737,
+    "calibration_slope": -83.59449319726178,
+    "ece_5": 0.002775110178305126,
+    "ece_10": 0.002775130178589384,
+    "ece_15": 0.0027751368444032813,
+    "top_decile_gap": 0.002167764431401029,
+    "mean_predicted": 0.00021684207330079167,
+    "observed_rate": 0.002558308105572848
+   },
+   "platt_calibrated": {
+    "brier": 0.0025762980711673787,
+    "brier_reference": 0.0025524707437187795,
+    "brier_skill": -0.00933500511503782,
+    "log_loss": 0.02003412136617338,
+    "calibration_intercept": -5.9658475490716665,
+    "calibration_slope": 0.0,
+    "ece_5": 0.007065213613095183,
+    "ece_10": 0.008567551035856151,
+    "ece_15": 0.009068259002936093,
+    "top_decile_gap": 0.007511580353044275,
+    "mean_predicted": 0.007511580353044277,
+    "observed_rate": 0.002558308105572848
+   },
+   "policy": {
+    "threshold": -1.6286081348511183,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 50.36944444444445,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "d50da1b007eafb6f8b566188aef5b9e19de5382a04a149b606bba0cacd9882c8"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.003541146150970864,
+   "platt": [
+    -4.164703783778126,
+    0.0
+   ],
+   "oof_windows": 47069,
+   "oof_positive": 720,
+   "window": {
+    "windows": 68426,
+    "positives": 360,
+    "prevalence": 0.0052611580393417704,
+    "average_precision": 0.01936504222526057,
+    "auroc": 0.7548232189672116,
+    "distinct_scores": 66361
+   },
+   "uncalibrated": {
+    "brier": 0.00613464568663631,
+    "brier_reference": 0.005236436696322976,
+    "brier_skill": -0.17153057363303081,
+    "log_loss": 0.059949063668810365,
+    "calibration_intercept": -3.8607054267785488,
+    "calibration_slope": 0.12617574936682566,
+    "ece_5": 0.0028973659259892044,
+    "ece_10": 0.003479800652002952,
+    "ece_15": 0.004092940578573827,
+    "top_decile_gap": 0.0029004228729944334,
+    "mean_predicted": 0.002363792113352565,
+    "observed_rate": 0.0052611580393417704
+   },
+   "platt_calibrated": {
+    "brier": 0.005334190199115496,
+    "brier_reference": 0.005236436696322976,
+    "brier_skill": -0.01866794319525744,
+    "log_loss": 0.0373260582204619,
+    "calibration_intercept": -5.242129070227177,
+    "calibration_slope": 0.0,
+    "ece_5": 0.014439262713892566,
+    "ece_10": 0.017498332870911102,
+    "ece_15": 0.01851817195716647,
+    "top_decile_gap": 0.01529669209033546,
+    "mean_predicted": 0.01529669209033546,
+    "observed_rate": 0.0052611580393417704
+   },
+   "policy": {
+    "threshold": -0.17437017276951217,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 49.05,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "3adcc2be4190217d8ec9b5c1221fce13fa643120b44b7b90fa5dbdadac595b86"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.003541146150970864,
+   "platt": [
+    -4.164703783778126,
+    0.0
+   ],
+   "oof_windows": 47069,
+   "oof_positive": 720,
+   "window": {
+    "windows": 68426,
+    "positives": 360,
+    "prevalence": 0.0052611580393417704,
+    "average_precision": 0.0026569398203091245,
+    "auroc": 0.03325756945056595,
+    "distinct_scores": 67926
+   },
+   "uncalibrated": {
+    "brier": 0.00531914131056213,
+    "brier_reference": 0.005236436696322976,
+    "brier_skill": -0.015794063603829844,
+    "log_loss": 0.08543688634346241,
+    "calibration_intercept": -2192.027651860824,
+    "calibration_slope": -135.67733797097637,
+    "ece_5": 0.005866999684887843,
+    "ece_10": 0.005867019683134122,
+    "ece_15": 0.005867026350190502,
+    "top_decile_gap": 0.006058447681691826,
+    "mean_predicted": 0.0006058816449614981,
+    "observed_rate": 0.0052611580393417704
+   },
+   "platt_calibrated": {
+    "brier": 0.005334190199115496,
+    "brier_reference": 0.005236436696322976,
+    "brier_skill": -0.01866794319525744,
+    "log_loss": 0.0373260582204619,
+    "calibration_intercept": -5.242129070227177,
+    "calibration_slope": 0.0,
+    "ece_5": 0.014439262713892566,
+    "ece_10": 0.017498332870911102,
+    "ece_15": 0.01851817195716647,
+    "top_decile_gap": 0.01529669209033546,
+    "mean_predicted": 0.01529669209033546,
+    "observed_rate": 0.0052611580393417704
+   },
+   "policy": {
+    "threshold": -0.3707885630435612,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 49.05,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "493f8df32cefe2c30ebcd1f9e5b0dc09ade1848492c58b036c7a34ffe1a1b947"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.007062493256299842,
+   "platt": [
+    -3.4704772489988946,
+    0.0
+   ],
+   "oof_windows": 47739,
+   "oof_positive": 1440,
+   "window": {
+    "windows": 67890,
+    "positives": 720,
+    "prevalence": 0.010605391073795847,
+    "average_precision": 0.04019360499370379,
+    "auroc": 0.7951577878682613,
+    "distinct_scores": 66622
+   },
+   "uncalibrated": {
+    "brier": 0.013427914360924378,
+    "brier_reference": 0.010505468878912912,
+    "brier_skill": -0.2781832506188793,
+    "log_loss": 0.1146352949933208,
+    "calibration_intercept": -3.0047332067833086,
+    "calibration_slope": 0.14820606569556144,
+    "ece_5": 0.006340773630214986,
+    "ece_10": 0.006397621159665201,
+    "ece_15": 0.00781399271667693,
+    "top_decile_gap": 0.0002842376472510788,
+    "mean_predicted": 0.004264617443580861,
+    "observed_rate": 0.010605391073795847
+   },
+   "platt_calibrated": {
+    "brier": 0.010875456595891776,
+    "brier_reference": 0.010505468878912912,
+    "brier_skill": -0.03521858198271577,
+    "log_loss": 0.06743407974769687,
+    "calibration_intercept": -4.535730786250809,
+    "calibration_slope": 0.0,
+    "ece_5": 0.028703801178741495,
+    "ece_10": 0.03473660454705671,
+    "ece_15": 0.036747539003161786,
+    "top_decile_gap": 0.03016401684157609,
+    "mean_predicted": 0.030164016841576092,
+    "observed_rate": 0.010605391073795847
+   },
+   "policy": {
+    "threshold": 1.2517105546005771,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 48.90069444444445,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "ba24c8e235c8a08d1e96af193444f4605be1e16518e7864da3dd3e33be04a31a"
+  },
+  {
+   "fold": "D_forward_jul15",
+   "kind": "D",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.007062493256299842,
+   "platt": [
+    -3.4704772489988946,
+    0.0
+   ],
+   "oof_windows": 47739,
+   "oof_positive": 1440,
+   "window": {
+    "windows": 67890,
+    "positives": 720,
+    "prevalence": 0.010605391073795847,
+    "average_precision": 0.024622400606767743,
+    "auroc": 0.709228481216813,
+    "distinct_scores": 67055
+   },
+   "uncalibrated": {
+    "brier": 0.01502689388479582,
+    "brier_reference": 0.010505468878912912,
+    "brier_skill": -0.43038773975700706,
+    "log_loss": 0.18324938332109933,
+    "calibration_intercept": -6.899270315172646,
+    "calibration_slope": -0.14711915750972535,
+    "ece_5": 0.015976031927321832,
+    "ece_10": 0.015976051927321832,
+    "ece_15": 0.0159760585939885,
+    "top_decile_gap": 0.05370590853525983,
+    "mean_predicted": 0.005370680853525984,
+    "observed_rate": 0.010605391073795847
+   },
+   "platt_calibrated": {
+    "brier": 0.010875456595891776,
+    "brier_reference": 0.010505468878912912,
+    "brier_skill": -0.03521858198271577,
+    "log_loss": 0.06743407974769687,
+    "calibration_intercept": -4.535730786250809,
+    "calibration_slope": 0.0,
+    "ece_5": 0.028703801178741495,
+    "ece_10": 0.03473660454705671,
+    "ece_15": 0.036747539003161786,
+    "top_decile_gap": 0.03016401684157609,
+    "mean_predicted": 0.030164016841576092,
+    "observed_rate": 0.010605391073795847
+   },
+   "policy": {
+    "threshold": 4.167879888058527,
+    "failures": {
+     "jul15": {
+      "caught": false,
+      "first_lead_minutes": null,
+      "chance_rate_under_circular_shift": 0.0
+     }
+    },
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 48.90069444444445,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "1bb2ddac7b4be49924546a76fb3cc37aafb4ad7ef28233a62efee6f9a7944d6c"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 30,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0005714539693827662,
+   "platt": [
+    -7.466755004173998,
+    0.0
+   ],
+   "oof_windows": 157493,
+   "oof_positive": 90,
+   "window": {
+    "windows": 54364,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 53841
+   },
+   "uncalibrated": {
+    "brier": 8.564781904432103e-07,
+    "brier_reference": 3.265596391233194e-07,
+    "brier_skill": -1.6227313110172092,
+    "log_loss": 0.0001746163075273998,
+    "ece_5": 0.00017418603820470774,
+    "ece_10": 0.0001741860382047077,
+    "ece_15": 0.0001741860382047077,
+    "top_decile_gap": 0.0014339762635709773,
+    "mean_predicted": 0.00017418603820470774,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 3.265596391233194e-07,
+    "brier_reference": 3.265596391233194e-07,
+    "brier_skill": 0.0,
+    "log_loss": 0.0005716173114335751,
+    "ece_5": 0.0005714539693827662,
+    "ece_10": 0.0005714539693827663,
+    "ece_15": 0.000571453969382766,
+    "top_decile_gap": 0.0005714539693827662,
+    "mean_predicted": 0.0005714539693827662,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": -2.0918532772429543,
+    "failures": {},
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 39.00625,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "e38f2634511bd23537bc36c74c7eb97917ad123e4b8fc9c2c42a764e5dbad168"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 30,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0005714539693827662,
+   "platt": [
+    -7.466755004173998,
+    0.0
+   ],
+   "oof_windows": 157493,
+   "oof_positive": 90,
+   "window": {
+    "windows": 54364,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 54271
+   },
+   "uncalibrated": {
+    "brier": 3.2070664268751214e-08,
+    "brier_reference": 3.265596391233194e-07,
+    "brier_skill": 0.901792320830437,
+    "log_loss": 1.3550103743493235e-05,
+    "ece_5": 1.353398770865648e-05,
+    "ece_10": 1.3533987708656479e-05,
+    "ece_15": 1.353398770865648e-05,
+    "top_decile_gap": 0.00013442153893616067,
+    "mean_predicted": 1.3533987708656479e-05,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 3.265596391233194e-07,
+    "brier_reference": 3.265596391233194e-07,
+    "brier_skill": 0.0,
+    "log_loss": 0.0005716173114335751,
+    "ece_5": 0.0005714539693827662,
+    "ece_10": 0.0005714539693827663,
+    "ece_15": 0.000571453969382766,
+    "top_decile_gap": 0.0005714539693827662,
+    "mean_predicted": 0.0005714539693827662,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": -5.824308240931942,
+    "failures": {},
+    "false_alarm_episodes": 2,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 39.00625,
+    "false_alarms_per_day": 0.051273834321422844,
+    "alarm_occupancy": 8.833922261484099e-05
+   },
+   "prediction_digest": "22b633291fb6d1b087d5f07ed2f96ff2572154d8b9f94dbf682dbbe33f28a1a1"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 60,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0011519557648986278,
+   "platt": [
+    -6.765141496195246,
+    0.0
+   ],
+   "oof_windows": 156256,
+   "oof_positive": 180,
+   "window": {
+    "windows": 53875,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 53774
+   },
+   "uncalibrated": {
+    "brier": 1.0020409035925086e-05,
+    "brier_reference": 1.3270020842831825e-06,
+    "brier_skill": -6.551162997108547,
+    "log_loss": 0.001637466444169801,
+    "ece_5": 0.0016324252772587117,
+    "ece_10": 0.0016324252772587117,
+    "ece_15": 0.0016324252772587117,
+    "top_decile_gap": 0.00843891709572711,
+    "mean_predicted": 0.001632425277258712,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 1.327002084283183e-06,
+    "brier_reference": 1.3270020842831825e-06,
+    "brier_skill": -2.220446049250313e-16,
+    "log_loss": 0.0011526197759306972,
+    "ece_5": 0.001151955764898628,
+    "ece_10": 0.001151955764898628,
+    "ece_15": 0.0011519557648986285,
+    "top_decile_gap": 0.0011519557648986285,
+    "mean_predicted": 0.001151955764898628,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": -2.5907002901071223,
+    "failures": {},
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 38.63333333333333,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "df2ddc03bae459cbc40278967d94bc2d02c108a116290a0d93f1fe8c024925e9"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 60,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0011519557648986278,
+   "platt": [
+    -6.765141496195246,
+    0.0
+   ],
+   "oof_windows": 156256,
+   "oof_positive": 180,
+   "window": {
+    "windows": 53875,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 53818
+   },
+   "uncalibrated": {
+    "brier": 3.234395209769283e-05,
+    "brier_reference": 1.3270020842831825e-06,
+    "brier_skill": -23.3737010519952,
+    "log_loss": 0.0004904917002776736,
+    "ece_5": 0.0004729162099934076,
+    "ece_10": 0.0004729162099934076,
+    "ece_15": 0.0004729162099934074,
+    "top_decile_gap": 0.004728631987861588,
+    "mean_predicted": 0.0004729162099934075,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 1.327002084283183e-06,
+    "brier_reference": 1.3270020842831825e-06,
+    "brier_skill": -2.220446049250313e-16,
+    "log_loss": 0.0011526197759306972,
+    "ece_5": 0.001151955764898628,
+    "ece_10": 0.001151955764898628,
+    "ece_15": 0.0011519557648986285,
+    "top_decile_gap": 0.0011519557648986285,
+    "mean_predicted": 0.001151955764898628,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": -7.356386358453488,
+    "failures": {},
+    "false_alarm_episodes": 55,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 38.63333333333333,
+    "false_alarms_per_day": 1.4236410698878343,
+    "alarm_occupancy": 0.020273851590106008
+   },
+   "prediction_digest": "37a051e9c1cf2c149063f4536063a8158a215bf8fa59aa3441129633ac5d6df4"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 180,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0035351419294019065,
+   "platt": [
+    -4.5351850620734995,
+    0.1340581373361745
+   ],
+   "oof_windows": 152752,
+   "oof_positive": 540,
+   "window": {
+    "windows": 52584,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 51878
+   },
+   "uncalibrated": {
+    "brier": 2.267455234153492e-05,
+    "brier_reference": 1.249722846101544e-05,
+    "brier_skill": -0.8143664743160612,
+    "log_loss": 0.0016117963219786067,
+    "ece_5": 0.0016002919569666702,
+    "ece_10": 0.00160029195696667,
+    "ece_15": 0.0016002919569666706,
+    "top_decile_gap": 0.011469429547509444,
+    "mean_predicted": 0.0016002919569666706,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 1.643896511470384e-05,
+    "brier_reference": 1.249722846101544e-05,
+    "brier_skill": -0.3154088657324683,
+    "log_loss": 0.004022343650493207,
+    "ece_5": 0.00401410100179457,
+    "ece_10": 0.0040141010017945705,
+    "ece_15": 0.0040141010017945705,
+    "top_decile_gap": 0.005430279140846096,
+    "mean_predicted": 0.004014101001794571,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": -1.2476467622315675,
+    "failures": {},
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 37.607638888888886,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "143c89ddf8dc529ee5e544ebfc0f3ea3752b07793d9c1595780b109e4c3ccf65"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 180,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.0035351419294019065,
+   "platt": [
+    -5.615300352014292,
+    0.00021309374913381732
+   ],
+   "oof_windows": 152752,
+   "oof_positive": 540,
+   "window": {
+    "windows": 52584,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 52445
+   },
+   "uncalibrated": {
+    "brier": 3.0605969842166384e-05,
+    "brier_reference": 1.249722846101544e-05,
+    "brier_skill": -1.4490205918568564,
+    "log_loss": 0.000678708609077416,
+    "ece_5": 0.0006623495487386938,
+    "ece_10": 0.0006623495487386938,
+    "ece_15": 0.0006623495487386938,
+    "top_decile_gap": 0.006610260059360745,
+    "mean_predicted": 0.0006623495487386937,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 1.2775801755724906e-05,
+    "brier_reference": 1.249722846101544e-05,
+    "brier_skill": -0.022290805963775417,
+    "log_loss": 0.0035804230770125644,
+    "ece_5": 0.003574019909672189,
+    "ece_10": 0.003574019909672189,
+    "ece_15": 0.0035740199096721895,
+    "top_decile_gap": 0.0036233248704627377,
+    "mean_predicted": 0.0035740199096721895,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": -2.8850046163645424,
+    "failures": {},
+    "false_alarm_episodes": 6,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 37.607638888888886,
+    "false_alarms_per_day": 0.1595420552118918,
+    "alarm_occupancy": 0.0010011778563015312
+   },
+   "prediction_digest": "2536257f29083cd38d8502bdfc0560192ee27d744c9306b8ffdf6ef4c890352f"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 360,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.007261431712285939,
+   "platt": [
+    -4.383358334021053,
+    0.0929143611103139
+   ],
+   "oof_windows": 148731,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 51273,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 51156
+   },
+   "uncalibrated": {
+    "brier": 0.00030279402207795557,
+    "brier_reference": 5.272839051219191e-05,
+    "brier_skill": -4.742523508430306,
+    "log_loss": 0.010497903477815325,
+    "ece_5": 0.010342839776673433,
+    "ece_10": 0.010342839776673433,
+    "ece_15": 0.010342839776673432,
+    "top_decile_gap": 0.04054868786688415,
+    "mean_predicted": 0.010342839776673433,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 5.4047318800492033e-05,
+    "brier_reference": 5.272839051219191e-05,
+    "brier_skill": -0.025013626918787724,
+    "log_loss": 0.007270576086109829,
+    "ece_5": 0.007243413247702626,
+    "ece_10": 0.0072434132477026255,
+    "ece_15": 0.0072434132477026255,
+    "top_decile_gap": 0.009206418795230436,
+    "mean_predicted": 0.007243413247702626,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": -0.5309468020816697,
+    "failures": {},
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 36.72152777777778,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "61b3c1f5d6a097f537ef8879bf578df2db0ec314bcb9f208a2409c2d0edfcb34"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 360,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.007261431712285939,
+   "platt": [
+    -4.917890339804319,
+    0.0
+   ],
+   "oof_windows": 148731,
+   "oof_positive": 1080,
+   "window": {
+    "windows": 51273,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 51168
+   },
+   "uncalibrated": {
+    "brier": 0.0006460441040315504,
+    "brier_reference": 5.272839051219191e-05,
+    "brier_skill": -11.25230085265302,
+    "log_loss": 0.00937930804839137,
+    "ece_5": 0.009026825354762406,
+    "ece_10": 0.009026825354762406,
+    "ece_15": 0.009026825354762406,
+    "top_decile_gap": 0.06746739331288432,
+    "mean_predicted": 0.009026825354762406,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 5.272839051219194e-05,
+    "brier_reference": 5.272839051219191e-05,
+    "brier_skill": -4.440892098500626e-16,
+    "log_loss": 0.007287924234544233,
+    "ece_5": 0.007261431712285937,
+    "ece_10": 0.007261431712285942,
+    "ece_15": 0.007261431712285937,
+    "top_decile_gap": 0.00726143171228594,
+    "mean_predicted": 0.007261431712285938,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": 0.024323331738651532,
+    "failures": {},
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 36.72152777777778,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "ff5387adcbf57198aa30b11f7911e646ba711ed4f30b903520cc3e41d9528468"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 720,
+   "model": "M5",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.014430207233809441,
+   "platt": [
+    -4.223896209736301,
+    0.0
+   ],
+   "oof_windows": 149686,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 51142,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 50909
+   },
+   "uncalibrated": {
+    "brier": 0.0016466906205338078,
+    "brier_reference": 0.00020823088081068633,
+    "brier_skill": -6.908003914322877,
+    "log_loss": 0.02727960031905866,
+    "ece_5": 0.026415874214494567,
+    "ece_10": 0.026415874214494563,
+    "ece_15": 0.026415874214494563,
+    "top_decile_gap": 0.0843168118251686,
+    "mean_predicted": 0.026415874214494574,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 0.00020823088081068638,
+    "brier_reference": 0.00020823088081068633,
+    "brier_skill": -2.220446049250313e-16,
+    "log_loss": 0.014535335245823235,
+    "ece_5": 0.014430207233809444,
+    "ece_10": 0.01443020723380944,
+    "ece_15": 0.014430207233809448,
+    "top_decile_gap": 0.014430207233809443,
+    "mean_predicted": 0.014430207233809444,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": 0.4546415825505159,
+    "failures": {},
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 36.82222222222222,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "7f6b50390031b374cf14535cd53cfb9311356831e285c0e07a68ea9d19f45d58"
+  },
+  {
+   "fold": "E_false_alarm_after_jul16",
+   "kind": "E",
+   "h": 720,
+   "model": "M6",
+   "status": "done",
+   "gate": "exploratory_descriptive_below_episode_gate",
+   "train_prior": 0.014430207233809441,
+   "platt": [
+    -4.029100376042673,
+    0.00312020119328888
+   ],
+   "oof_windows": 149686,
+   "oof_positive": 2160,
+   "window": {
+    "windows": 51142,
+    "positives": 0,
+    "prevalence": 0.0,
+    "average_precision": null,
+    "auroc": null,
+    "distinct_scores": 50935
+   },
+   "uncalibrated": {
+    "brier": 0.004562192043734069,
+    "brier_reference": 0.00020823088081068633,
+    "brier_skill": -20.909296190711494,
+    "log_loss": 0.03828787821159743,
+    "ece_5": 0.03569973303824808,
+    "ece_10": 0.03569973303824809,
+    "ece_15": 0.03569973303824809,
+    "top_decile_gap": 0.17075115552930856,
+    "mean_predicted": 0.03569973303824808,
+    "observed_rate": 0.0
+   },
+   "platt_calibrated": {
+    "brier": 0.00023150435575411808,
+    "brier_reference": 0.00020823088081068633,
+    "brier_skill": -0.11176764393841698,
+    "log_loss": 0.015062609627746526,
+    "ece_5": 0.014945611489261263,
+    "ece_10": 0.014945611489261261,
+    "ece_15": 0.014945611489261263,
+    "top_decile_gap": 0.01739333814326258,
+    "mean_predicted": 0.014945611489261264,
+    "observed_rate": 0.0
+   },
+   "policy": {
+    "threshold": 0.6853625618039958,
+    "failures": {},
+    "false_alarm_episodes": 0,
+    "unscorable_alarm_episodes": 0,
+    "scored_days": 36.82222222222222,
+    "false_alarms_per_day": 0.0,
+    "alarm_occupancy": 0.0
+   },
+   "prediction_digest": "152bd9f4bb8cb7e67f8a5beff96e76ebe40362a63c41011269ebef5d564e642b"
+  }
+ ]
+}
