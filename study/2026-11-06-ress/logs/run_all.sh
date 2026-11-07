@@ -1,6 +1,6 @@
 #!/bin/zsh
 cd <repo>
-S=study/2026-11-06-eaai; K=.claude/skills/metropt-eaai; CSV="data/raw/MetroPT3(AirCompressor).csv"
+S=study/2026-11-06-ress; K=.claude/skills/metropt-eaai; CSV="data/raw/MetroPT3(AirCompressor).csv"
 python3.13 -B $K/scripts/run.py --existing-csv "$CSV" --config $S/provenance/study-frozen-draft.json --events $S/provenance/uci-events.csv --out $S/runs/bundled-default > $S/logs/bundled-default.log 2>&1 &
 python3.13 -B $K/scripts/run.py --existing-csv "$CSV" --config $S/provenance/study-frozen-draft.json --events $S/provenance/uci-events.csv --out $S/runs/bundled-rerun > $S/logs/bundled-rerun.log 2>&1 &
 wait

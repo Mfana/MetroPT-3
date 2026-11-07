@@ -1,7 +1,7 @@
 #!/bin/zsh
 # Sensitivity phases of provenance/registered-plan-addendum-gaps.md. Finished tasks resume on restart.
 cd "$(dirname "$0")/../../.."
-S=study/2026-11-06-eaai; CSV="data/raw/MetroPT3(AirCompressor).csv"; P=.venv/bin/python; L=$S/logs/gaps
+S=study/2026-11-06-ress; CSV="data/raw/MetroPT3(AirCompressor).csv"; P=.venv/bin/python; L=$S/logs/gaps
 mkdir -p $L
 stamp() { echo "$(date +%H:%M:%S) $1" >> $L/progress.txt; }
 ev() { local tag=$1

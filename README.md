@@ -6,16 +6,16 @@ Results describe one compressor and four reported air leaks, and support no risk
 
 ## Layout
 
-- `study/2026-11-06-eaai/README.md`: how the study is organised and the order to run its scripts
-- `study/2026-11-06-eaai/extensions/`: analysis code and tests
-- `study/2026-11-06-eaai/provenance/`: registered plan, addenda, frozen settings, freeze hashes and deviations
-- `study/2026-11-06-eaai/runs/`: saved scores and run records, including reruns
-- `study/2026-11-06-eaai/tables/`: derived tables
-- `study/2026-11-06-eaai/submission-ress/`: claim ledger and figure data
-- `study/2026-11-06-eaai/novelty/`: literature matrix and search log
+- `study/2026-11-06-ress/README.md`: how the study is organised and the order to run its scripts
+- `study/2026-11-06-ress/extensions/`: analysis code and tests
+- `study/2026-11-06-ress/provenance/`: registered plan, addenda, frozen settings, freeze hashes and deviations
+- `study/2026-11-06-ress/runs/`: saved scores and run records, including reruns
+- `study/2026-11-06-ress/tables/`: derived tables
+- `study/2026-11-06-ress/submission-ress/`: claim ledger and figure data
+- `study/2026-11-06-ress/novelty/`: literature matrix and search log
 - `data/raw/README.md`: where to get the raw file
 
-Run scripts from `study/2026-11-06-eaai` using the packages in `requirements.txt` on Python 3.13.
+Run scripts from `study/2026-11-06-ress` using the packages in `requirements.txt` on Python 3.13.
 
 ## Not included
 
@@ -28,6 +28,10 @@ Local paths in logs and shell scripts were replaced with `<repo>`. `MANIFEST.sha
 
 ## Licence
 
-- **Code:** MIT (`LICENSE`). This covers `scripts/` and `study/2026-11-06-eaai/extensions/`, including shell scripts in `study/2026-11-06-eaai/logs/`.
+- **Code:** MIT (`LICENSE`). This covers `scripts/` and `study/2026-11-06-ress/extensions/`, including shell scripts in `study/2026-11-06-ress/logs/`.
 - **Everything else:** CC BY 4.0 (`LICENSE-CC-BY-4.0.txt`). This covers tables, scores, run records, logs, figure data, plans, settings and notes.
 - **Source data:** the scores and tables derive from the MetroPT-3 dataset by Davari, Veloso, Ribeiro and Gama, UCI Machine Learning Repository, DOI 10.24432/C5VW3R, CC BY 4.0. Please credit it as well.
+
+## Folder name
+
+The study folder was named `2026-11-06-eaai` until 2026-11-07, when it was renamed for the RESS target. Run records in `runs/` and `provenance/plan-freeze-hashes.txt` keep the old path, because they record what was run at the time. Nothing else changed in them.

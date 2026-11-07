@@ -10,7 +10,7 @@ Across M1 to M6, registered alarms caught 0 of 250 failure tests.
 Run from the project root. Python 3.13 with NumPy and SciPy is needed; the default `python3` on this machine is 3.8 and too old.
 
 ```sh
-S=study/2026-11-06-eaai; CSV="data/raw/MetroPT3(AirCompressor).csv"
+S=study/2026-11-06-ress; CSV="data/raw/MetroPT3(AirCompressor).csv"
 (cd $S/extensions && python3.13 -B -m unittest test_event_study test_rescore)
 python3.13 -B .claude/skills/metropt-eaai/scripts/run.py --existing-csv "$CSV" --config $S/provenance/study-frozen-draft.json --events $S/provenance/uci-events.csv --out NEW_DIR_A
 python3.13 -B $S/extensions/event_study.py --csv "$CSV" --config $S/provenance/event-study-config.json --events $S/provenance/event-study-events.csv --out NEW_DIR_B
@@ -18,9 +18,9 @@ python3.13 -B $S/extensions/event_study.py --csv "$CSV" --config $S/provenance/e
 
 Sequence models need PyTorch in the project `.venv` (`provenance/seq-requirements.txt`). `logs/run_seq.sh` runs the study and rerun.
 
-From inside `study/2026-11-06-eaai`, using `../../.venv/bin/python`, in this order: `extensions/seq_tables.py`, `extensions/rank_chance.py`, `extensions/build_ress.py`, `extensions/check_claims_ress.py`, then `extensions/ress_audit.py submission-ress` after compiling.
+From inside `study/2026-11-06-ress`, using `../../.venv/bin/python`, in this order: `extensions/seq_tables.py`, `extensions/rank_chance.py`, `extensions/build_ress.py`, `extensions/check_claims_ress.py`, then `extensions/ress_audit.py submission-ress` after compiling.
 
-Earlier tables are rebuilt from inside `study/2026-11-06-eaai` with `extensions/rescore.py`, `leakage_demo.py`, `sanity.py` and `build_tables.py`.
+Earlier tables are rebuilt from inside `study/2026-11-06-ress` with `extensions/rescore.py`, `leakage_demo.py`, `sanity.py` and `build_tables.py`.
 
 ## Layout
 
