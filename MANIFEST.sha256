@@ -92,7 +92,7 @@ c1bd90cdc218348312aff5dd701c430b651939c5771f074d59ebde94cb34bacd  ./study/2026-1
 ca1f3f1475d6aa6a929691c7f0abd8d86cda4c24e9f6cfd1102363158c9f9449  ./study/2026-11-06-ress/logs/summary-console.txt
 2735d35f04a23bab336375bcbe882777c8bbcd1cff3020d934c874d507849e40  ./study/2026-11-06-ress/logs/unit-tests.log
 28c0c9e977d9d6791d95eb9a1a54d5390465f09b76aa40ab3938374f84541293  ./study/2026-11-06-ress/novelty/novelty-matrix.csv
-6d5e3bbcc0664ece85d845531bf53a274eabe15db1647274fc5835accdd3ddaf  ./study/2026-11-06-ress/novelty/search-log.md
+fafe9e456989e0a22eaa65e93a251d8e9c0c4875cfb222d0c3bb8e6553eb06cb  ./study/2026-11-06-ress/novelty/search-log.md
 1d89bbf5a54c190dce69aadd22063dabf4449e9b05ab0181a1390b16ea7ea9f0  ./study/2026-11-06-ress/provenance/addendum-alarm-defs-freeze-hashes.txt
 dbb5405127f72d63bfa02bc1ad816d891020a5915a00eca7a3f4c1fff40eec53  ./study/2026-11-06-ress/provenance/addendum-freeze-hashes.txt
 aece217645ac835d7ef08c3e4fdd00a86bbd2d0a9ccfc945645879958b2b2354  ./study/2026-11-06-ress/provenance/addendum-gaps-freeze-hashes.txt
@@ -119,7 +119,7 @@ fc0e9d80d06a3a73d57517cb25adb3e164acf228bb32d17da26e93dd97c4a50e  ./study/2026-1
 9267e176da0e1235fa34d230a585691c2ebfee75e4738f0b8cb4d140883e4443  ./study/2026-11-06-ress/provenance/toribio2026-table1-intervals.csv
 9037dd07bdcf90664a90ddfb904304652a164c06bf10cd915e3ce43592f461e9  ./study/2026-11-06-ress/provenance/uci-events.csv
 80d08258d4eaa2c925827987e6de25e313ef32ef4e546e3aed85a09857e689b9  ./study/2026-11-06-ress/review/review-passes-ress.md
-93a4d34dfda3c6597ce80e78aaa46cd151e18f655cf004ac3b7504d4ba0b7c20  ./study/2026-11-06-ress/review/review-passes.md
+4dcc6c2e17dd26d3fd8d783c96f2d72a5674d4c8bc9b4751ebb49c965f6b18e8  ./study/2026-11-06-ress/review/review-passes.md
 eb34b03b2e32775b43e9a319b73db83590ef70ae52681c3e2f6979be6afc1216  ./study/2026-11-06-ress/runs/bundled-default/run.json
 5751457865f04a65be6ddd94dcb2fca1b6f6d2509d3c42a3752e8cd61d6ff923  ./study/2026-11-06-ress/runs/bundled-default/test-predictions.csv
 287ac385e9c4e2d35a4804d5d9eca80fd01cd8a71beb4630e821ba6125d004db  ./study/2026-11-06-ress/runs/bundled-rerun/run.json

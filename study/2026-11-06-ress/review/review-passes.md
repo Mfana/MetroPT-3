@@ -6,7 +6,7 @@ These are three adversarial passes carried out by the AI assistant, not by indep
 
 | # | Objection | Severity | Evidence | Resolution |
 |---|---|---|---|---|
-| N1 | EAAI asks for novel aspects of AI. This study has no new algorithm | **High** | Guide, Aims and scope; `provenance/eaai-rule-comparison-2026-11-06.md` | **Blocker for Original Research.** Abstract says the contribution is evaluative. Route to IFAC EAAI Forum or Case Study; author decides |
+| N1 | EAAI asks for novel aspects of AI. This study has no new algorithm | **High** | Guide, Aims and scope; `provenance/journal-rule-comparison-2026-11-06.md` | **Blocker for Original Research.** Abstract says the contribution is evaluative. Route to IFAC EAAI Forum or Case Study; author decides |
 | N2 | Chance-control and evaluation-first framing is already in Chikane (2026) | High | `novelty/novelty-matrix.csv` | Cited and credited. Remaining difference: supervised models, state-only comparator, all four failures held out, five horizons, calibration, SHAP |
 | N3 | Mali et al. already cover supervised multi-horizon evaluation | High | Full text read | Cited; design difference measured |
 | N4 | Closest papers read only partly: Hamdi Alaoui (abstract), Toribio (abstract), Guha, Teng and Gao, Shikdar, Kanimozhi and Yao (metadata plus supplied audit) | **High** | Novelty matrix `full_text_access` | **Open.** The gap claim stays scoped to sources searched. Guha, Teng and Gao, Shikdar, Kanimozhi and Yao are not cited for content. Must be read before submission |

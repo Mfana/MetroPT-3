@@ -6,7 +6,7 @@
 | OpenAlex | MetroPT-3; MetroPT3; MetroPT air production unit failure prediction; MetroPT calibration probability early warning; air production unit metro compressor multi-horizon calibration SHAP | from 2020-01-01 | 113; 22; 42; 8; 2 | `openalex.json` |
 | OpenAlex | Forward citations of the MetroPT dataset paper | from 2026-01-01 | 24 records | `openalex-forward-citations-2026.json` |
 | Crossref | 7 targeted queries, including MetroPT plus calibration/Brier | from 2024 or 2025 | First run hit HTTP 429, retried with backoff; no MetroPT calibration paper | console record only |
-| Publisher | ScienceDirect guide | n/a | 403 directly; read through author's Chrome | `../provenance/eaai-rule-comparison-2026-11-06.md` |
+| Publisher | ScienceDirect guide | n/a | 403 directly; read through author's Chrome | `../provenance/journal-rule-comparison-2026-11-06.md` |
 
 Limits: Scopus and Web of Science were not searched. Backward tracing covered Mali and Chikane reference lists only. No full-text search of ScienceDirect or EAAI was run. Text search for MetroPT plus calibration cannot detect a paper that calibrates without saying so in title or abstract. The gate is therefore "in the sources searched".
 
