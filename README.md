@@ -1,6 +1,6 @@
 # MetroPT-3 whole-failure validation
 
-Analysis code, frozen settings, saved prediction scores and derived tables for "Do early-warning models transfer between failures? Whole-failure validation of statistical, tree and sequence models on a metro train compressor" (Ngwenya, under review).
+Analysis code, frozen settings, saved prediction scores and derived tables for "Do early-warning models transfer between failures? Whole-failure validation of statistical, tree and sequence models on a metro train compressor" (Ngwenya, manuscript in submission).
 
 Results describe one compressor and four reported air leaks, and support no risk claim.
 

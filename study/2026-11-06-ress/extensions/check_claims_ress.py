@@ -1,7 +1,8 @@
 """Recompute each headline number from frozen tables, confirm the manuscript prints it, and write the claim ledger with digests."""
-import csv,hashlib,re,statistics as st
+import csv,hashlib,os,re,statistics as st
+SUB=os.environ.get("SUB","submission-ress")  # Folder whose manuscript is checked.
 from pathlib import Path
-T=Path("submission-ress/manuscript.tex").read_text();T=re.sub(r"\s+"," ",T)
+T=Path(SUB+"/manuscript.tex").read_text();T=re.sub(r"\s+"," ",T)
 P=list(csv.DictReader(open("tables/primary-metrics.csv")));S=list(csv.DictReader(open("tables/seq-metrics.csv")));RC=list(csv.DictReader(open("tables/exploratory-rank-chance.csv")));R3=list(csv.DictReader(open("tables/exploratory-random-split.csv")));R5=list(csv.DictReader(open("tables/exploratory-seq-random-split.csv")));SR=list(csv.DictReader(open("tables/seq-rule-outcomes.csv")))
 n=float;A5=[r for r in S if r["kind"]=="A"];AP=[r for r in P if r["kind"]=="A"]
 F=["apr18","may29","jun05","jul15"];H=["30","60","180","360","720"]
@@ -91,7 +92,7 @@ c+=[("C65","Results; Table 8","4 of 354 tests were caught",f"{sum(r['caught']=='
 ("C72","Results","in 35 of 360 cases",f"in {sum(r['active_alarm']=='1' for r in XE if r['kind']=='A')} of {sum(r['kind']=='A' for r in XE)} cases","tables/extra16-intervals.csv","kind=A active_alarm"),
 ("C73","Results","0.81 for M1 and 0.97 for M5, but 0.32 for M6",f"{xa('M1','60'):.2f} for M1 and {xa('M5','60'):.2f} for M5, but {xa('M6','60'):.2f} for M6","tables/extra16-rank.csv","active, h=60, median"),
 ("C74","Table 8","0.43--0.54 & 0.30--0.53 & 0.58--0.63",f"{min(xw('M3')):.2f}--{max(xw('M3')):.2f} & {min(xw('M5')):.2f}--{max(xw('M5')):.2f} & {min(xw('M6')):.2f}--{max(xw('M6')):.2f}","tables/extra16-rank.csv","warning, median by horizon")]
-T+=re.sub(r"\s+"," ",Path("submission-ress/table-sensitivity.tex").read_text())
+T+=re.sub(r"\s+"," ",Path(SUB+"/table-sensitivity.tex").read_text())
 AD=list(csv.DictReader(open("tables/alarm-def-cells.csv")));AU=list(csv.DictReader(open("tables/alarm-def-rules.csv")))
 ad=lambda st_,k:sum(int(r[k]) for r in AD if r["set"].startswith(st_))
 A0=[r for r in AD if r["set"]=="registered"];FW=[r for r in A0 if r["kind"] in("C","D")];m630=next(r for r in AU if r["set"]=="registered" and r["model"]=="M6" and r["h"]=="30");m360=next(r for r in AU if r["set"]=="plus60" and r["model"]=="M3" and r["h"]=="60")
@@ -121,6 +122,6 @@ for i,loc,text,comp,path,locator in c:
 extra=[("C39","Data","60/20/20 test partition has no reported failure or positive rows","../../results/split_check_output.txt","60/20/20 by row"),("C40","Data","160 gaps; 868.5 h","../../results/split_check_output.txt","gaps >1h"),("C41","Data","Failures 6.17 days apart","../../results/fold_feasibility_output.txt","spacing"),("C42","Method","Positive rates 0.05% and 1.31%","runs/event-study/run.json","label_counts"),("C43","Results","Attribution medians","logs/build-tables.txt","across_* lines"),("C44","Results","Single-signal reversal","tables/exploratory-single-feature.csv","all rows"),("C45","Results","Oracle 6 of 20 at 2.8 false alarms a day","tables/exploratory-oracle-threshold.csv","q=0.95 model=M3"),("C46","Results","Bundled scorers 0 of 1; AP 0.0075 to 0.0917","runs/bundled-default/run.json","models.*.horizons"),("C47","Results","Training AUROC 0.99 to 1.00 on one fold","logs/sanity.txt","section 1"),("C65","Results","Sustained loaded runs: 15, 11, 5 min before and 23 min after the reported starts; 26 of 33 and 7 of 12 away from reports","logs/gaps-onset.txt","sustained run lines"),("C66","Results","Further-seed catches: leads 10, 157, 6 min; chance 0.011, 0.16, 0.15; false alarms 0, 4.08, 4.30; M3 at +60 at 1 h caught three of four at 0.17 per day, two of five rules","logs/gaps-tables.txt","ALL caught cells; burden lines"),("C48","Related work; Table 1","Published study descriptions","novelty/novelty-matrix.csv","full_text_access column states how much was read")]
 for i,loc,text,path,locator in extra:
     rows.append(dict(claim_id=i,manuscript_location=loc,claim_text=text,evidence_path=path,evidence_locator=locator,sha256=sha(path),scope="this one compressor; descriptive",verification_status="carried_from_earlier_ledger_pending_author"))
-with open("submission-ress/claim-ledger.csv","w",newline="") as x:
+with open(SUB+"/claim-ledger.csv","w",newline="") as x:
     w=csv.DictWriter(x,list(rows[0]));w.writeheader();w.writerows(rows)
 print(len(c),"recomputed;",bad,"mismatches;",len(rows),"claims in ledger")
