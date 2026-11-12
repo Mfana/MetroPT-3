@@ -16,7 +16,7 @@ for s in ("Abbreviations", "Funding statement", "Competing interests", "Data ava
     if f"\\section*{{{s}}}" not in t: issues.append(f"Missing section: {s}")
 for bad in ("CRediT", "REPLACE", "Reliability Engineering \\& System Safety", "Highlights"):
     if bad in t: issues.append(f"Leftover: {bad}")
-if "Claude Code" not in t[:t.index("\\section*{Abbreviations}")]: issues.append("AI use not declared in Methods")
+if "Claude Opus 5.5" not in t[:t.index("\\section*{Abbreviations}")]: issues.append("AI use not declared in Methods")
 if "Claude Opus 5.5" not in t[t.index("\\section*{Acknowledgements}"):]: issues.append("AI text use not declared in Acknowledgements")
 for f in ("Figure_1.pdf", "Figure_2.pdf", "Figure_3.pdf", "alt-text.txt", "cover-letter.txt", "manuscript.pdf"):
     if not (d / f).exists(): issues.append(f"Missing file: {f}")

@@ -43,15 +43,14 @@ defn = body.index("(AUROC)")
 assert defn <= first_auroc + 10, "AUROC is used before it is defined"
 
 # AI use: data and code use in Methods, text use in Acknowledgements, as the journal asks.
-AI_METHODS = (" The analysis code was developed and run with Claude Code (Anthropic; model Claude Opus 5.5), used through the Claude "
-              "desktop application between 6 and 11 November 2026 under the author's direction. The author reviewed the code and "
-              "outputs, and every reported number was recomputed from saved outputs by a script that checks it against the text.")
+AI_METHODS = (" The analysis code used to run the experiments was developed with Claude Opus 5.5 (Anthropic). The author reviewed "
+              "the code and outputs, and every reported number was recomputed from saved outputs by a script that checks it against the text.")
 anchor = "A tie-handling error in rank metrics was found after results were first viewed and corrected from saved scores, without changing any score, threshold or alarm."
 assert body.count(anchor) == 1
 body = body.replace(anchor, anchor + AI_METHODS)
-AI_TEXT = ("Claude Opus 5.5 (Anthropic), used through Claude Code between 6 and 11 November 2026, also searched and summarised "
-           "the literature and drafted and revised the manuscript text. The author reviewed and edited all content and takes full "
-           "responsibility for it.")
+AI_TEXT = ("During the preparation of this work the author used Claude Opus 5.5 (Anthropic) to develop the analysis code that was "
+           "used to run the experiments, and draft the manuscript. After using this tool, the author reviewed and edited the content "
+           "as needed and takes full responsibility for the content of the published article.")
 
 ABBREV = [("AP", "average precision"), ("AUROC", "area under the receiver operating characteristic curve"), ("BSS", "Brier skill score"),
           ("FA", "false alarms"), ("LSTM", "long short-term memory"), ("M0 to M6", "the seven models compared (Table 2)"),
