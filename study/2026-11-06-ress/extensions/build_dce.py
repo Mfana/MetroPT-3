@@ -13,6 +13,7 @@ title = re.search(r"\\title\{(.*?)\}\n", t).group(1)
 abstract = t[t.index("\\begin{abstract}") + len("\\begin{abstract}"):t.index("\\end{abstract}")].strip()
 body = t[t.index("\\section{Introduction}"):t.index("\\section*{CRediT")]
 data = re.search(r"\\section\*\{Data availability\}\n(.*?)\n\n", t, re.S).group(1).strip()
+data = re.sub(r"commit [0-9a-f]{7}", "commit "+__import__("os").environ.get("DCE_COMMIT","7fd871e"), data)
 thanks = re.search(r"\\section\*\{Acknowledgements\}\n(.*?)\n\n", t, re.S).group(1).strip()
 
 IMPACT = ("Machine-learning models for predictive maintenance often look highly accurate on public benchmarks, but that accuracy can "
